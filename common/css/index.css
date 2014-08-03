@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------
+   Local Module
+-------------------------------------------------- */
+
+
+
+/*--------------------------------------------------
+   Style
+-------------------------------------------------- */
+
+
+/* ---------- Base ----------*/
+
+body { background: #f7f7f7; }
+.pageSet { width: 980px; margin: 0 auto; padding-bottom: 100px; }
+.chintaiPartsBase { margin-top: 40px; padding: 20px; background: #fff; color: #555;   }
+
+/*============================
+#partsMainTable
+============================*/
+
+#partsMainTable { }
+#partsMainTable .dataTable { width: 100%; }
+#partsMainTable .dataTable + .dataTable { margin-top: 15px;  }
+#partsMainTable .dataTable   .item,
+#partsMainTable .dataTable   .data {border-top: 1px solid  #ddd; border-bottom: 1px solid  #ddd; font-size: 12px; color: #555; }
+#partsMainTable .dataTable   .item + .item,
+#partsMainTable .dataTable   .data + .data { border-left: 1px solid  #ddd; }
+#partsMainTable .dataTable   .item { padding: 8px 0;  font-size: 11px; background: #f2f5f6; text-align: center; vertical-align: middle; }
+#partsMainTable .dataTable   .data { padding: 15px 10px;  text-align: center; vertical-align: middle; }
+#partsMainTable .dataTable   .data .link { }
+#partsMainTable .dataTable   .data .attention { }
+
+
+/*============================
+#partsDescTable
+============================*/
+
+#partsDescTable { }
+#partsDescTable .dataTable { width: 100%; }
+#partsDescTable .dataTable + .dataTable { margin-top: 15px;  }
+#partsDescTable .dataTable   .item,
+#partsDescTable .dataTable   .data { padding: 15px 13px; border-top: 1px solid  #e0e0e0; border-bottom: 1px solid  #e0e0e0; font-size: 12px; color: #555; }
+#partsDescTable .dataTable   .item { width: 16%; white-space: nowrap; background: #e3f2fc; border-right: 1px solid  #d3e2ec; }
+#partsDescTable .dataTable  .data + .item { border-left: 1px solid  #efece2; }
+#partsDescTable .dataTable   .data { }
+#partsDescTable .dataTable   .data .link { margin-top: 5px; }
+#partsDescTable .dataTable   .data .link a { color: #3ba4ee; }
+#partsDescTable .dataTable   .data .link:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 0; line-height: 0; margin-right: 5px; border-left: 5px solid #3ba4ee; border-top: 4px solid transparent; border-bottom: 4px solid transparent;
+border-top-color: rgba(255, 255, 255, 0);
+border-bottom-color: rgba(255, 255, 255, 0);
+}
+#partsDescTable .dataTable   .data .attention {  margin-top: 5px; padding-left: 1.3em; text-indent: -1.3em; font-size: 11px; color: #777; }
+
+
+/*============================
+#partsTownTable
+============================*/
+
+#partsTownTable {}
+#partsTownTable .dataTable { width: 100%; }
+#partsTownTable .dataTable + .dataTable { margin-top: 15px;  }
+#partsTownTable .dataTable   th,
+#partsTownTable .dataTable   td { padding: 10px; border-top: 1px solid  #ddd; border-bottom: 1px solid  #ddd; font-size: 12px; color: #555; }
+#partsTownTable .dataTable   .item { width: 16%; white-space: nowrap; background: #f2f5f6; border-right: 1px solid  #e2e5e6; }
+#partsTownTable .dataTable  .data + .item { border-left: 1px solid  #e2e5e6; } 
+#partsTownTable .dataTable   .data { }
+#partsTownTable .dataTable   .qr { width: 1%; padding-left: 15px; }
+
+
+/*============================
+#partsShopTable
+============================*/
+
+#partsShopTable { width: 740px;  background: #fffcf2; }
+#partsShopTable .dataTable { width: 100%; }
+#partsShopTable .dataTable   th,
+#partsShopTable .dataTable   td { padding: 4px 10px; border-top: 1px solid  #dedcd2; border-bottom: 1px solid  #dedcd2; font-size: 12px; color: #555; }
+#partsShopTable .dataTable   .item { width: 1%; white-space: nowrap; background: #eeece2; border-right: 1px solid  #dedcd2; color: #751; font-size: 11px; }
+#partsShopTable .dataTable  .data + .item { border-left: 1px solid  #dedcd2; } 
+#partsShopTable .dataTable   .data { background: #fff; }
+#partsShopTable .dataTable   .qr { width: 1%; padding-left: 15px; }
+
+
+/*============================
+#partsForm
+============================*/
+
+#partsForm { margin-top: 40px; padding: 20px; background: #fff; color: #555;  }
+#partsForm  .base { }
+#partsForm  .base .formTable { width: 100%;v }
+#partsForm  .base .formTable .item,
+#partsForm  .base .formTable .data { padding: 13px 15px; border-top: 1px solid  #e0e0e0; font-size: 12px; }
+#partsForm  .base .formTable .item { width: 18%; background: #f2f5f6; border-right: 1px solid  #e0e0e0; }
+#partsForm  .base .formTable .must .item { background: #fff4d1; }
+#partsForm  .base .formTable .must .item:after { content: '必須'; display: inline-block; margin-left: 7px; padding: 3px 8px; background: #f27935; color: #fff;  font-size: 11px; line-height: 1; border-radius: 2px; }
+#partsForm  .base .formTable .data { }
+#partsForm  .base .formTable .must .data { background: #fffdf5; }
+#partsForm  .base .formTable .data input,
+#partsForm  .base .formTable .data textarea { padding: 8px; border: 1px solid  #ddd; border-radius: 3px; }
+#partsForm  .base .formTable .data .checkList { }
+#partsForm  .base .formTable .data .checkList .list { }
+#partsForm  .base .formTable .data .checkList .list +.list { margin-top: 7px; }
+#partsForm  .base .formTable .data .checkList .list input { margin-right: 7px; }
+#partsForm  .base .formTable .data .text { font-size: 12px; }
+#partsForm  .base .formTable .data .input { margin-top: 7px; }
+#partsForm  .base .formTable .data textarea { width: 80%; height: 100px; }
+#partsForm  .base .formTable .data .hint { margin-left: 10px; font-size: 11px; color: #888; }
+#partsForm  .base .formTable .data .method {}
+#partsForm  .base .formTable .data .method .list { display: inline-block; margin-right: 20px; }
+#partsForm  .base .formTable .data .method .list input { margin-right: 10px; }
+#partsForm  .base .formTable .data .input .mailAd { width: 300px; }
+#partsForm  .base .formTable .data .attention { margin-top: 5px; font-size: 11px; color: #888;  }
+#partsForm  .base .reserve { text-align: center; padding: 7px; background: #e3f2fc; border-top: 1px solid  #d3e2ec; border-bottom: 1px solid  #d3e2ec; color: #555; }
+#partsForm  .base .reserve input { margin-right: 10px; }
+#partsForm  .base .agreement { margin-top: 10px; padding: 15px; border-top: 1px solid  #e0e0e0; border-bottom: 1px solid  #e0e0e0; background: #f7f7f7; }
+#partsForm  .base .agreement .agreementTitle {}
+#partsForm  .base .agreement .agreementTitle .text { font-weight: bold; font-size: 14px; color: #555;  }
+#partsForm  .base .agreement .agreementTitle .must { margin-left: 7px; color: #f33; font-size: 12px; font-weight: bold; }
+#partsForm  .base .agreement .agreementText { margin-top: 7px; font-size: 12px; line-height: 1.5; }
+#partsForm  .base .button { margin-top: 20px; text-align: center; }
+#partsForm  .base .button .btn { padding: 10px 30px; border: none; border-radius: 5px; font-size: 16px; color: #fff; font-weight: bold; }
+#partsForm  .base .button .btn.errorBtn { background: #e74c3c; }
+#partsForm  .base .button .btn.errorBtn:before {
+content: "\f071";
+font-family: FontAwesome;
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+vertical-align: middle;
+margin-right: 9px;
+font-size: 18px;
+}
+
+
+
