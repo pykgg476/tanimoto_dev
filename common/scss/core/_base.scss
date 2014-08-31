@@ -1,0 +1,97 @@
+/*============================
+@import
+============================*/
+
+@import "compass";
+
+
+/*============================
+Global Style
+============================*/
+
+/* Var */
+$width_page: 980px;
+$width_base_margin: 20px;
+
+$color_blue: #0094dc;
+$color_gray: #eee;
+$color_font_base: #333;
+$color_font_link: $color_blue;
+$color_font_link_hover: adjust-lightness($color_font_link, 30%);
+
+
+/* Font */
+body {
+  font: 13px/1.385 arial, helvetica, clean, sans-serif; /* 基本文字設定 */
+}
+
+body, button, input, select, optgroup, textarea {
+  font-family: YuGothic, '游ゴシック',"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","メイリオ", Meiryo,Osaka,"ＭＳ Ｐゴシック", "MS PGothic",
+  sans-serif;
+  color: $color_font_base;
+}
+
+a { 
+  color: $color_font_link; 
+  &:hover { 
+    color: $color_font_link_hover; 
+  }
+}
+
+
+/*============================
+Function
+============================*/
+
+
+
+
+/*============================
+unit
+============================*/
+
+/* Global Header */
+#globalHeader {
+    background: #fff;
+  .base {
+    width: $width_page;
+    margin: 0 auto;
+    .logo {
+      @include inline-block;
+      vertical-align: middle;
+      padding: 25px 0;
+    }
+    .globalNavi {
+      @include inline-block;
+      vertical-align: middle;
+      .navi {
+        li {
+          @include inline-block;
+          @include clearfix;
+          @import "global/globalNavi/*.png";
+          @include all-globalNavi-sprites($dimensions:true);
+        a {
+          @include inline-block;
+          @include hide-text;
+          background-image: url('../../imageFile/global/globalNavi-s8f7fed341e.png') !important;
+          &:hover { opacity: .5; }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Global Footer */
+#globalFooter {
+  margin-top: $width_base_margin * 3;
+  padding: 100px 0;
+  background: #fff;
+  text-align: center;
+  color: #bbb;
+}
+
+/*============================
+parts
+============================*/

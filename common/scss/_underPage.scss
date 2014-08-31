@@ -1,0 +1,64 @@
+/*============================
+Global
+============================*/
+
+$width_side: 210px;
+
+/*============================
+Style
+============================*/
+
+body{
+  background: $color_gray; 
+}
+
+/* Panel */
+#panelArea {
+  .base{
+    width: $width_page;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+}
+
+/* pankuzu */
+#globalPankuzu {
+  .pankuzuBase {
+    width: $width_page;
+    margin: 0 auto;
+    .pankuzu {
+      padding: 10px 0;
+      .link {
+        @include inline-block;
+        &:after { content: ">"; margin: 0 7px; }
+        &:last-child:after { content: ""; }
+      }
+    }
+  }
+}
+
+/* PageSet */
+.pageSet {
+  @include clearfix;
+  width: $width_page;
+  margin: 0 auto;
+}
+
+/* SideNavi */
+#sideNaviArea {
+  $sideNavi_padding: $width_base_margin;
+  float: left;
+  width: $width_side - ($sideNavi_padding * 2);
+  margin-right: $width_base_margin;
+  padding: $sideNavi_padding;
+  background: #fff;
+}
+
+/* contentsArea */
+.contentsArea {
+  float: right;
+  $contentsArea_padding: $width_base_margin;
+  width: $width_page - $width_base_margin - $width_side - ($contentsArea_padding * 2);
+  padding: $contentsArea_padding;
+  background: #fff;
+}

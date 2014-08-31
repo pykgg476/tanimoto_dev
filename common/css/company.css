@@ -1,0 +1,122 @@
+/*============================
+@import
+============================*/
+/*============================
+@import
+============================*/
+/*============================
+@import
+============================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+/*============================
+Style
+============================*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { word-break: break-all; word-wrap: normal; }
+
+img { border: 0; vertical-align: bottom; }
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: bold; }
+
+em { font-style: normal; font-weight: bold; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+/* 全てのブラウザーにおいてpre-formatted textの読みやすさを改善 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* 全てのブラウザーにおいてsubおよびsup要素がline-heightに影響する問題を防ぐ */
+/*============================
+@import
+============================*/
+/*============================
+Global Style
+============================*/
+/* Var */
+/* Font */
+body { font: 13px/1.385 arial, helvetica, clean, sans-serif; /* 基本文字設定 */ }
+
+body, button, input, select, optgroup, textarea { font-family: YuGothic, '游ゴシック',"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","メイリオ", Meiryo,Osaka,"ＭＳ Ｐゴシック", "MS PGothic", sans-serif; color: #333333; }
+
+a { color: #0094dc; }
+a:hover { color: #76d2ff; }
+
+/*============================
+Function
+============================*/
+/*============================
+unit
+============================*/
+/* Global Header */
+#globalHeader { background: #fff; }
+#globalHeader .base { width: 980px; margin: 0 auto; }
+#globalHeader .base .logo { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; padding: 25px 0; }
+#globalHeader .base .globalNavi { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; }
+#globalHeader .base .globalNavi .navi li { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; overflow: hidden; *zoom: 1; }
+#globalHeader .base .globalNavi .navi li .globalNavi-sprite, #globalHeader .base .globalNavi .navi li .globalNavi-menu_1, #globalHeader .base .globalNavi .navi li .globalNavi-menu_2, #globalHeader .base .globalNavi .navi li .globalNavi-menu_3, #globalHeader .base .globalNavi .navi li .globalNavi-menu_4, #globalHeader .base .globalNavi .navi li .globalNavi-menu_5 { background: url('/imageFile/global/globalNavi-s8f7fed341e.png') no-repeat; }
+#globalHeader .base .globalNavi .navi li .globalNavi-menu_1 { background-position: 0 0; height: 40px; width: 107px; }
+#globalHeader .base .globalNavi .navi li .globalNavi-menu_2 { background-position: 0 -121px; height: 40px; width: 69px; }
+#globalHeader .base .globalNavi .navi li .globalNavi-menu_3 { background-position: 0 -80px; height: 41px; width: 69px; }
+#globalHeader .base .globalNavi .navi li .globalNavi-menu_4 { background-position: 0 -161px; height: 40px; width: 69px; }
+#globalHeader .base .globalNavi .navi li .globalNavi-menu_5 { background-position: 0 -40px; height: 40px; width: 96px; }
+#globalHeader .base .globalNavi .navi li a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url("../../imageFile/global/globalNavi-s8f7fed341e.png") !important; }
+#globalHeader .base .globalNavi .navi li a:hover { opacity: .5; }
+
+/* Global Footer */
+#globalFooter { margin-top: 60px; padding: 100px 0; background: #fff; text-align: center; color: #bbb; }
+
+/*============================
+parts
+============================*/
+/*============================
+Global
+============================*/
+/*============================
+Style
+============================*/
+body { background: #eeeeee; }
+
+/* Panel */
+#panelArea .base { width: 980px; margin: 0 auto; padding: 100px 0; }
+
+/* pankuzu */
+#globalPankuzu .pankuzuBase { width: 980px; margin: 0 auto; }
+#globalPankuzu .pankuzuBase .pankuzu { padding: 10px 0; }
+#globalPankuzu .pankuzuBase .pankuzu .link { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; }
+#globalPankuzu .pankuzuBase .pankuzu .link:after { content: ">"; margin: 0 7px; }
+#globalPankuzu .pankuzuBase .pankuzu .link:last-child:after { content: ""; }
+
+/* PageSet */
+.pageSet { overflow: hidden; *zoom: 1; width: 980px; margin: 0 auto; }
+
+/* SideNavi */
+#sideNaviArea { float: left; width: 170px; margin-right: 20px; padding: 20px; background: #fff; }
+
+/* contentsArea */
+.contentsArea { float: right; width: 710px; padding: 20px; background: #fff; }
+
+/*============================
+unit
+============================*/
+/*============================
+parts
+============================*/
