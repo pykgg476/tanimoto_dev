@@ -53,7 +53,9 @@ unit
 /* Global Header */
 #globalHeader {
     background: #fff;
+    border-bottom: 3px solid  #ddd;
   .base {
+    position: relative;
     width: $width_page;
     margin: 0 auto;
     .logo {
@@ -62,6 +64,9 @@ unit
       padding: 25px 0;
     }
     .globalNavi {
+      position: absolute;
+      top: 22px;
+      right: 0;
       @include inline-block;
       vertical-align: middle;
       .navi {
@@ -70,6 +75,7 @@ unit
           @include clearfix;
           @import "global/globalNavi/*.png";
           @include all-globalNavi-sprites($dimensions:true);
+          margin-left: 30px;
         a {
           @include inline-block;
           @include hide-text;

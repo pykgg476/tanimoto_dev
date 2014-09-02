@@ -67,11 +67,11 @@ Function
 unit
 ============================*/
 /* Global Header */
-#globalHeader { background: #fff; }
-#globalHeader .base { width: 980px; margin: 0 auto; }
+#globalHeader { background: #fff; border-bottom: 3px solid  #ddd; }
+#globalHeader .base { position: relative; width: 980px; margin: 0 auto; }
 #globalHeader .base .logo { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; padding: 25px 0; }
-#globalHeader .base .globalNavi { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; }
-#globalHeader .base .globalNavi .navi li { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; overflow: hidden; *zoom: 1; }
+#globalHeader .base .globalNavi { position: absolute; top: 22px; right: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; }
+#globalHeader .base .globalNavi .navi li { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; overflow: hidden; *zoom: 1; margin-left: 30px; }
 #globalHeader .base .globalNavi .navi li .globalNavi-sprite, #globalHeader .base .globalNavi .navi li .globalNavi-menu_1, #globalHeader .base .globalNavi .navi li .globalNavi-menu_2, #globalHeader .base .globalNavi .navi li .globalNavi-menu_3, #globalHeader .base .globalNavi .navi li .globalNavi-menu_4, #globalHeader .base .globalNavi .navi li .globalNavi-menu_5 { background: url('/imageFile/global/globalNavi-s8f7fed341e.png') no-repeat; }
 #globalHeader .base .globalNavi .navi li .globalNavi-menu_1 { background-position: 0 0; height: 40px; width: 107px; }
 #globalHeader .base .globalNavi .navi li .globalNavi-menu_2 { background-position: 0 -121px; height: 40px; width: 69px; }
