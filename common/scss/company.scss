@@ -10,7 +10,146 @@
 unit
 ============================*/
 
+/* companyDesc */
+#companyDesc {
+  margin-bottom: $width_base_margin*2;
+  .title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .contents {
+    margin-top: $width_base_margin/2;
+    padding-top: $width_base_margin/2;
+    border-top: 1px solid  #aaa;
+    font-size: 14px;
+    .descList {
+      padding-left: $width_base_margin*1.5;
+      .list {
+        list-style-type: decimal;
+      }
+      .list + .list {
+        margin-top: $width_base_margin;
+      }
+    }
+    .hint {
+      display: block;
+      text-align: right;
+      margin-top: $width_base_margin;
+      font-size: 12px;
+      color: #aaa;
+    }
+  }
+}
 
+/* companyDescEnvironment */
+#companyDesc.companyDescEnvironment {
+  .title {
+  }
+  .contents {
+    .descList {
+      .list {
+      }
+    }
+    .hint {
+    }
+  }
+}
+
+/* companyDescCSR */
+#companyDesc.companyDescCSR {
+  .title {
+  }
+  .contents {
+    .descList {
+      .list {
+        .listItem {
+          .item {
+          }
+          .data {
+          }
+        }
+      }
+    }
+  }
+}
+
+/* companyDescDetail */
+#companyDesc.companyDescDetail {
+  .title {
+  }
+  .contents {
+    .descTable {
+        .item {
+      }
+        .data {
+      }
+        .data .tableList {
+      }
+        .data .tableList .list {
+      }
+        .data .tableList .list .label {
+      }
+        .data .tableList .list .name {
+      }
+        .data .addressList {
+      }
+        .data .addressList .place {
+      }
+        .data .addressList .address {
+      }
+        .data .addressList .map {
+      }
+        .data .addressList .tel {
+      }
+        .data .other {
+      }
+        .data .addressList .label {
+      }
+        .data .addressList .num {
+      }
+        .data .addressList .num .numList {
+      }
+        .data .addressList .num .numList .numListData {
+      }
+        .data .addressList .num .numList .numListData .numLabel {
+      }
+        .data .addressList .num .numList .numListData .numData {
+      }
+        .data .dataList {
+      }
+        .data .dataList .dataListItem {
+      }
+    }
+  }
+}
+
+/* #companyHistory */
+#companyHistory {
+  .title {
+  }
+   .historyTable {
+  }
+   .historyTable   .item {
+  }
+   .historyTable   .data {
+  }
+}
+
+/* #companyShips */
+#companyShips {
+  .title {
+  }
+   .explain {
+  }
+   .shipsTalbe {
+  }
+   .shipsTalbe   .name {
+  }
+   .shipsTalbe   .detail {
+  }
+   .shipsTalbe   .num {
+  }
+}
 
 
 /*============================

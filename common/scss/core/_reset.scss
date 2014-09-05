@@ -27,7 +27,7 @@ pre {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
-} /* 全てのブラウザーにおいてpre-formatted textの読みやすさを改善 */
+} 
 
 sub, sup {
     font-size: 75%;
@@ -36,4 +36,4 @@ sub, sup {
     vertical-align: baseline;
 }
 sup { top: -0.5em; }
-sub { bottom: -0.25em; } /* 全てのブラウザーにおいてsubおよびsup要素がline-heightに影響する問題を防ぐ */
+sub { bottom: -0.25em; } 
