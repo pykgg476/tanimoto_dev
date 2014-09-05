@@ -7,12 +7,51 @@
 
 
 /*============================
-unit
+parts
 ============================*/
 
+%formUnit{
+  & + %formUnit{
+    margin-top: $width_base_margin*2;
+  }
+  .title{
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: $width_base_margin/2;
+    border-bottom: 3px solid $color_blue;
+  }
+  .dataSet{
+    margin-top: $width_base_margin;
+    font-size: 26px;
+    .label{
+
+    }
+    .num{
+      margin-right: $width_base_margin*1.5;
+    }
+  }
+}
 
 
 
 /*============================
-parts
+unit
 ============================*/
+
+.contentsArea{
+  width: $width_page - $contentsArea_padding*2;
+}
+
+#formCopyTel,#formCopyMail{
+  @extend %formUnit;
+}
+
+#formCopyTel {
+  .time{
+    margin-top: $width_base_margin/2;
+  }
+  .attention{
+    font-size: 12px;
+    color: #888;
+  }
+}

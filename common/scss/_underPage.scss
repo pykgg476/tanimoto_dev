@@ -13,56 +13,56 @@ body{
 }
 
 /* Panel */
-#panelArea {
+#panelArea{
   @include background-image(linear-gradient(-45deg, #f6f6f6 25%, white 25%, white 50%, #f6f6f6 50%, #f6f6f6 75%, white 75%, white));
   background-size: 4px 4px;
   .base{
     width: $width_page;
     margin: 0 auto;
     padding: 100px 10px;
-    .pageTitle {
+    .pageTitle{
       font-size: 30px;
       font-weight: bold;
     }
-    .copy {
+    .copy{
       margin-top: 10px;
     }
   }
 }
 
 /* pankuzu */
-#globalPankuzu {
-  .pankuzuBase {
+#globalPankuzu{
+  .pankuzuBase{
     width: $width_page;
     margin: 0 auto;
-    .pankuzu {
+    .pankuzu{
       padding: 10px 0;
-      .link {
+      .link{
         @include inline-block;
-        &:after { content: ">"; margin: 0 7px; }
-        &:last-child:after { content: ""; }
+        &:after{ content: ">"; margin: 0 7px; }
+        &:last-child:after{ content: ""; }
       }
     }
   }
 }
 
 /* PageSet */
-.pageSet {
+.pageSet{
   @include clearfix;
   width: $width_page;
   margin: 0 auto;
 }
 
 /* SideNavi */
-#sideNaviArea {
+#sideNaviArea{
   $sideNavi_padding: $width_base_margin;
   float: left;
   width: $width_side - ($sideNavi_padding * 2);
   margin-right: $width_base_margin;
   padding: $sideNavi_padding;
   background: #fff;
-  .pageTitle {
-    font-size: 15px;
+  .pageTitle{
+    font-size: 19px;
     font-weight: bold;
   }
   .sideNavi{
@@ -78,7 +78,7 @@ body{
 }
 
 /* contentsArea */
-.contentsArea {
+.contentsArea{
   float: right;
   $contentsArea_padding: $width_base_margin;
   width: $width_page - $width_base_margin - $width_side - ($contentsArea_padding * 2);

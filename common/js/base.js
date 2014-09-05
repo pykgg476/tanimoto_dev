@@ -8,7 +8,6 @@ $(function(){
 	// 所定の位置にスクロール
 	$(document).on('click','.scrollTrigger',function(){
 		
-		var globalBarH = $('#globalHeader').height();
 		var attr = $(this).attr('name');
 		if($(this).attr('href') == '#toTop'){ // toTopならばページの先頭へ
 			var HashOffset= 0;
@@ -22,7 +21,7 @@ $(function(){
 
 		
 		// スクロールする
-		$("html,body").animate({ scrollTop: HashOffset - globalBarH }, 800);
+		$("html,body").animate({ scrollTop: HashOffset}, 800);
 		return false;
 	
 	});

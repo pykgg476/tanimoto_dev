@@ -34,6 +34,8 @@ img { border: 0; vertical-align: bottom; }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: bold; }
 
+table { width: 100%; }
+
 em { font-style: normal; font-weight: bold; }
 
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
@@ -81,7 +83,7 @@ unit
 #globalHeader .base .globalNavi .navi li a:hover { opacity: .5; }
 
 /* Global Footer */
-#globalFooter { margin-top: 60px; padding: 100px 0; background: #fff; text-align: center; color: #bbb; }
+#globalFooter { margin-top: 75px; padding: 100px 0; background: #fff; text-align: center; color: #bbb; }
 
 /*============================
 parts
@@ -111,16 +113,29 @@ body { background: #eeeeee; }
 .pageSet { overflow: hidden; *zoom: 1; width: 980px; margin: 0 auto; }
 
 /* SideNavi */
-#sideNaviArea { float: left; width: 170px; margin-right: 20px; padding: 20px; background: #fff; }
-#sideNaviArea .pageTitle { font-size: 15px; font-weight: bold; }
+#sideNaviArea { float: left; width: 160px; margin-right: 25px; padding: 25px; background: #fff; }
+#sideNaviArea .pageTitle { font-size: 19px; font-weight: bold; }
 #sideNaviArea .sideNavi .naviBase .list { margin-top: 10px; }
 
 /* contentsArea */
-.contentsArea { float: right; width: 710px; padding: 20px; background: #fff; }
+.contentsArea { float: right; width: 695px; padding: 25px; background: #fff; }
+
+/*============================
+parts
+============================*/
+#recruitDesc, #recruitAbout { margin-top: 50px; }
+#recruitDesc .title, #recruitAbout .title { font-size: 26px; font-weight: bold; padding-bottom: 12.5px; border-bottom: 3px solid #0094dc; }
+#recruitDesc .recruitTable, #recruitAbout .recruitTable { margin-top: 25px; border-top: 1px solid  #ddd; }
+#recruitDesc .recruitTable .item, #recruitAbout .recruitTable .item, #recruitDesc .recruitTable .data, #recruitAbout .recruitTable .data { padding: 12.5px; border-bottom: 1px solid  #ddd; vertical-align: top; }
+#recruitDesc .recruitTable .item, #recruitAbout .recruitTable .item { width: 22%; font-weight: bold; border-right: 1px solid  #eee; background: #f6f6f6; }
 
 /*============================
 unit
 ============================*/
-/*============================
-parts
-============================*/
+/* recruitCopy */
+.recruitCopy { background: #f6f6f6; padding: 37.5px; font-size: 14px; line-height: 1.5; }
+.recruitCopy p + p { margin-top: 16.66667px; }
+
+/* recruitUnit */
+/* recruitAbout */
+#recruitAbout .hint { margin: 12.5px 0 0 5px; }

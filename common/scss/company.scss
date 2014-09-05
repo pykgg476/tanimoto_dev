@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*============================
 @import
 ============================*/
@@ -11,27 +13,27 @@ unit
 ============================*/
 
 /* companyDesc */
-#companyDesc {
+#companyDescEnvironment{
   margin-bottom: $width_base_margin*2;
-  .title {
-    font-size: 22px;
+  .title{
+    font-size: 26px;
     font-weight: bold;
+    padding-bottom: $width_base_margin/2;
+    border-bottom: 3px solid $color_blue;
   }
-  .contents {
-    margin-top: $width_base_margin/2;
-    padding-top: $width_base_margin/2;
-    border-top: 1px solid  #aaa;
+  .contents{
+    margin-top: $width_base_margin;
     font-size: 14px;
-    .descList {
+    .descList{
       padding-left: $width_base_margin*1.5;
-      .list {
+      .list{
         list-style-type: decimal;
       }
-      .list + .list {
+      .list + .list{
         margin-top: $width_base_margin;
       }
     }
-    .hint {
+    .hint{
       display: block;
       text-align: right;
       margin-top: $width_base_margin;
@@ -41,31 +43,23 @@ unit
   }
 }
 
-/* companyDescEnvironment */
-#companyDesc.companyDescEnvironment {
-  .title {
-  }
-  .contents {
-    .descList {
-      .list {
-      }
-    }
-    .hint {
-    }
-  }
-}
-
 /* companyDescCSR */
-#companyDesc.companyDescCSR {
-  .title {
+#companyDescCSR{
+  @extend #companyDescEnvironment;
+  .title{
   }
-  .contents {
-    .descList {
-      .list {
-        .listItem {
-          .item {
+  .contents{
+    .descList{
+      .list{
+        .listItem{
+          .item{
+            font-weight: bold;
           }
-          .data {
+          .data{
+            margin-top: $width_base_margin/3;
+            &:before{
+              content: '・';
+            }
           }
         }
       }
@@ -74,80 +68,116 @@ unit
 }
 
 /* companyDescDetail */
-#companyDesc.companyDescDetail {
-  .title {
+#companyDescDetail{
+  @extend #companyDescEnvironment;
+  .title{
   }
-  .contents {
-    .descTable {
-        .item {
+  .contents{
+    .descTable{
+      .item,.data{
+        padding: $width_base_margin/2;
+        border-bottom: 1px solid  #ddd;
+        vertical-align: top;
       }
-        .data {
+      .item{
+          width: 22%;
+          font-weight: bold;
+          border-right: 1px solid  #eee;
       }
-        .data .tableList {
+      .data{
+         .tableList{
+          .list{
+            .label{
+              display: inline-block;
+              width: 10em;
+              font-size: 12px;
+              font-weight: bold;
+              margin-right: $width_base_margin/2;
+            }
+            .name{
+            }
+          }
       }
-        .data .tableList .list {
+     .addressList + .addressList{ margin-top: $width_base_margin; padding-top: $width_base_margin; border-top: 1px dashed  #ccc; }
+     .addressList{
+         .place{
+          font-weight: bold;
+          font-size: 15px;
+          }
+         .address{
+          }
+         .map{
+          }
+         .tel{
+          }
       }
-        .data .tableList .list .label {
+     .other{
+        text-align: right;
       }
-        .data .tableList .list .name {
+      .numList{
+        @extend .addressList;
+        .label{
+          font-weight: bold;
+          margin-bottom: $width_base_margin/2;
+        }
+        .num{
+          .numListBase{
+            .numListData{
+              .numLabel{
+              }
+              .numData{
+              }
+            }
+          }
+        }
+           .dataList{
+        }
+           .dataList .dataListItem{
+        }
       }
-        .data .addressList {
-      }
-        .data .addressList .place {
-      }
-        .data .addressList .address {
-      }
-        .data .addressList .map {
-      }
-        .data .addressList .tel {
-      }
-        .data .other {
-      }
-        .data .addressList .label {
-      }
-        .data .addressList .num {
-      }
-        .data .addressList .num .numList {
-      }
-        .data .addressList .num .numList .numListData {
-      }
-        .data .addressList .num .numList .numListData .numLabel {
-      }
-        .data .addressList .num .numList .numListData .numData {
-      }
-        .data .dataList {
-      }
-        .data .dataList .dataListItem {
-      }
+    }
     }
   }
 }
 
 /* #companyHistory */
-#companyHistory {
-  .title {
-  }
-   .historyTable {
-  }
-   .historyTable   .item {
-  }
-   .historyTable   .data {
+#companyHistory{
+  @extend #companyDescEnvironment;
+  .historyTable{
+    .item,.data{
+      padding: $width_base_margin/2;
+      border-bottom: 1px solid  #ddd;
+      vertical-align: top;
+    }
+    .item{
+      white-space: nowrap;
+        width: 1%;
+        font-weight: bold;
+        border-right: 1px solid  #eee;
+    }
+    .data{
+    }
   }
 }
 
 /* #companyShips */
-#companyShips {
-  .title {
+#companyShips{
+  @extend #companyDescEnvironment;
+  .explain{
+    margin: $width_base_margin 0;
   }
-   .explain {
-  }
-   .shipsTalbe {
-  }
-   .shipsTalbe   .name {
-  }
-   .shipsTalbe   .detail {
-  }
-   .shipsTalbe   .num {
+  .shipsTable{
+    th,td{
+      padding: $width_base_margin/2;
+      border: 1px solid  #ddd;
+      vertical-align: top;
+    }
+    th{
+        background: #eee;
+        font-weight: bold;
+    }
+    td{
+    }
   }
 }
 

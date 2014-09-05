@@ -5,14 +5,71 @@
 @import "core";  
 @import "underPage"; 
 
+/*============================
+parts
+============================*/
+
+%recruitUnit{
+  margin-top: $width_base_margin*2;
+  .title{
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: $width_base_margin/2;
+    border-bottom: 3px solid $color_blue;
+  }
+  .recruitTable{
+    margin-top: $width_base_margin;
+    border-top: 1px solid  #ddd;
+    .item,.data{
+      padding: $width_base_margin/2;
+      border-bottom: 1px solid  #ddd;
+      vertical-align: top;
+    }
+    .item{
+        width: 22%;
+        font-weight: bold;
+        border-right: 1px solid  #eee;
+        background: #f6f6f6;
+    }
+    .data{
+    }
+  }
+}
+
+
+
 
 /*============================
 unit
 ============================*/
 
+/* recruitCopy */
+.recruitCopy{
+  background: #f6f6f6;
+  // border: 5px solid $color_blue;
+  padding: $width_base_margin*1.5;
+  font-size: 14px;
+  line-height: 1.5;
+  p{
+    & + p{
+      margin-top: $width_base_margin/1.5;
+    }
+  }
+}
+
+/* recruitUnit */
+#recruitDesc,#recruitAbout{
+  @extend %recruitUnit;
+}
+
+/* recruitAbout */
+#recruitAbout{
+  .hint{
+    margin: $width_base_margin/2 0 0 5px;
+  }
+}
 
 
 
-/*============================
-parts
-============================*/
+
+

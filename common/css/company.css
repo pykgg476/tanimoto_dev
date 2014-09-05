@@ -1,4 +1,4 @@
-@charset "US-ASCII";
+@charset "UTF-8";
 /*============================
 @import
 ============================*/
@@ -33,6 +33,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 img { border: 0; vertical-align: bottom; }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: bold; }
+
+table { width: 100%; }
 
 em { font-style: normal; font-weight: bold; }
 
@@ -81,7 +83,7 @@ unit
 #globalHeader .base .globalNavi .navi li a:hover { opacity: .5; }
 
 /* Global Footer */
-#globalFooter { margin-top: 60px; padding: 100px 0; background: #fff; text-align: center; color: #bbb; }
+#globalFooter { margin-top: 75px; padding: 100px 0; background: #fff; text-align: center; color: #bbb; }
 
 /*============================
 parts
@@ -111,30 +113,48 @@ body { background: #eeeeee; }
 .pageSet { overflow: hidden; *zoom: 1; width: 980px; margin: 0 auto; }
 
 /* SideNavi */
-#sideNaviArea { float: left; width: 170px; margin-right: 20px; padding: 20px; background: #fff; }
-#sideNaviArea .pageTitle { font-size: 15px; font-weight: bold; }
+#sideNaviArea { float: left; width: 160px; margin-right: 25px; padding: 25px; background: #fff; }
+#sideNaviArea .pageTitle { font-size: 19px; font-weight: bold; }
 #sideNaviArea .sideNavi .naviBase .list { margin-top: 10px; }
 
 /* contentsArea */
-.contentsArea { float: right; width: 710px; padding: 20px; background: #fff; }
+.contentsArea { float: right; width: 695px; padding: 25px; background: #fff; }
 
 /*============================
 unit
 ============================*/
 /* companyDesc */
-#companyDesc { margin-bottom: 40px; }
-#companyDesc .title { font-size: 22px; font-weight: bold; }
-#companyDesc .contents { margin-top: 10px; padding-top: 10px; border-top: 1px solid  #aaa; font-size: 14px; }
-#companyDesc .contents .descList { padding-left: 30px; }
-#companyDesc .contents .descList .list { list-style-type: decimal; }
-#companyDesc .contents .descList .list + .list { margin-top: 20px; }
-#companyDesc .contents .hint { display: block; text-align: right; margin-top: 20px; font-size: 12px; color: #aaa; }
+#companyDescEnvironment, #companyDescCSR, #companyDescDetail, #companyHistory, #companyShips { margin-bottom: 50px; }
+#companyDescEnvironment .title, #companyDescCSR .title, #companyDescDetail .title, #companyHistory .title, #companyShips .title { font-size: 26px; font-weight: bold; padding-bottom: 12.5px; border-bottom: 3px solid #0094dc; }
+#companyDescEnvironment .contents, #companyDescCSR .contents, #companyDescDetail .contents, #companyHistory .contents, #companyShips .contents { margin-top: 25px; font-size: 14px; }
+#companyDescEnvironment .contents .descList, #companyDescCSR .contents .descList, #companyDescDetail .contents .descList, #companyHistory .contents .descList, #companyShips .contents .descList { padding-left: 37.5px; }
+#companyDescEnvironment .contents .descList .list, #companyDescCSR .contents .descList .list, #companyDescDetail .contents .descList .list, #companyHistory .contents .descList .list, #companyShips .contents .descList .list { list-style-type: decimal; }
+#companyDescEnvironment .contents .descList .list + .list, #companyDescCSR .contents .descList .list + .list, #companyDescDetail .contents .descList .list + .list, #companyHistory .contents .descList .list + .list, #companyShips .contents .descList .list + .list { margin-top: 25px; }
+#companyDescEnvironment .contents .hint, #companyDescCSR .contents .hint, #companyDescDetail .contents .hint, #companyHistory .contents .hint, #companyShips .contents .hint { display: block; text-align: right; margin-top: 25px; font-size: 12px; color: #aaa; }
 
-/* companyDescEnvironment */
 /* companyDescCSR */
+#companyDescCSR .contents .descList .list .listItem .item { font-weight: bold; }
+#companyDescCSR .contents .descList .list .listItem .data { margin-top: 8.33333px; }
+#companyDescCSR .contents .descList .list .listItem .data:before { content: '・'; }
+
 /* companyDescDetail */
+#companyDescDetail .contents .descTable .item, #companyDescDetail .contents .descTable .data { padding: 12.5px; border-bottom: 1px solid  #ddd; vertical-align: top; }
+#companyDescDetail .contents .descTable .item { width: 22%; font-weight: bold; border-right: 1px solid  #eee; }
+#companyDescDetail .contents .descTable .data .tableList .list .label { display: inline-block; width: 10em; font-size: 12px; font-weight: bold; margin-right: 12.5px; }
+#companyDescDetail .contents .descTable .data .addressList + .addressList, #companyDescDetail .contents .descTable .data .numList + .addressList, #companyDescDetail .contents .descTable .data .addressList + .numList, #companyDescDetail .contents .descTable .data .numList + .numList { margin-top: 25px; padding-top: 25px; border-top: 1px dashed  #ccc; }
+#companyDescDetail .contents .descTable .data .addressList .place, #companyDescDetail .contents .descTable .data .numList .place { font-weight: bold; font-size: 15px; }
+#companyDescDetail .contents .descTable .data .other { text-align: right; }
+#companyDescDetail .contents .descTable .data .numList .label { font-weight: bold; margin-bottom: 12.5px; }
+
 /* #companyHistory */
+#companyHistory .historyTable .item, #companyHistory .historyTable .data { padding: 12.5px; border-bottom: 1px solid  #ddd; vertical-align: top; }
+#companyHistory .historyTable .item { white-space: nowrap; width: 1%; font-weight: bold; border-right: 1px solid  #eee; }
+
 /* #companyShips */
+#companyShips .explain { margin: 25px 0; }
+#companyShips .shipsTable th, #companyShips .shipsTable td { padding: 12.5px; border: 1px solid  #ddd; vertical-align: top; }
+#companyShips .shipsTable th { background: #eee; font-weight: bold; }
+
 /*============================
 parts
 ============================*/
