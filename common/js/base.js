@@ -30,6 +30,22 @@ $(function(){
 	$(function(){
      $("a[href^='http://']").attr("target","_blank");
 	});
+
+	// グローバルナビプルダウン
+	$('.pullDownNavi').parents('li').hover(function(){ $(this).find('.pullDownNavi').stop(true,true).slideDown(); }, function(){ $(this).find('.pullDownNavi').stop(true,true).slideUp(); });
+
+	// サイドナビ固定
+	if($('#sideNaviArea').length){
+		var cH = $('.contentsArea').offset().top;
+		var sideNavi = $('#sideNaviArea');
+		$(window).scroll(function(){
+			if($(this).scrollTop() > cH+10){
+				sideNavi.css({position: 'fixed', top:10});
+			}else{
+				sideNavi.css({position: 'relative', top:0});
+			}
+		});
+	}
 			
   
 });

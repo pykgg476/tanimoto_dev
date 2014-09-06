@@ -72,15 +72,17 @@ unit
 #globalHeader .base { position: relative; width: 980px; margin: 0 auto; }
 #globalHeader .base .logo { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; padding: 25px 0; }
 #globalHeader .base .globalNavi { position: absolute; top: 22px; right: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; }
-#globalHeader .base .globalNavi .navi li { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; overflow: hidden; *zoom: 1; margin-left: 30px; }
-#globalHeader .base .globalNavi .navi li .globalNavi-sprite, #globalHeader .base .globalNavi .navi li .globalNavi-menu_1, #globalHeader .base .globalNavi .navi li .globalNavi-menu_2, #globalHeader .base .globalNavi .navi li .globalNavi-menu_3, #globalHeader .base .globalNavi .navi li .globalNavi-menu_4, #globalHeader .base .globalNavi .navi li .globalNavi-menu_5 { background: url('/imageFile/global/globalNavi-s8f7fed341e.png') no-repeat; }
-#globalHeader .base .globalNavi .navi li .globalNavi-menu_1 { background-position: 0 0; height: 40px; width: 107px; }
-#globalHeader .base .globalNavi .navi li .globalNavi-menu_2 { background-position: 0 -121px; height: 40px; width: 69px; }
-#globalHeader .base .globalNavi .navi li .globalNavi-menu_3 { background-position: 0 -80px; height: 41px; width: 69px; }
-#globalHeader .base .globalNavi .navi li .globalNavi-menu_4 { background-position: 0 -161px; height: 40px; width: 69px; }
-#globalHeader .base .globalNavi .navi li .globalNavi-menu_5 { background-position: 0 -40px; height: 40px; width: 96px; }
-#globalHeader .base .globalNavi .navi li a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url("../../imageFile/global/globalNavi-s8f7fed341e.png") !important; }
-#globalHeader .base .globalNavi .navi li a:hover { opacity: .5; }
+#globalHeader .base .globalNavi .navi > li { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; overflow: hidden; *zoom: 1; margin-left: 30px; }
+#globalHeader .base .globalNavi .navi > li .globalNavi-sprite, #globalHeader .base .globalNavi .navi > li .globalNavi-menu_1, #globalHeader .base .globalNavi .navi > li .globalNavi-menu_2, #globalHeader .base .globalNavi .navi > li .globalNavi-menu_3, #globalHeader .base .globalNavi .navi > li .globalNavi-menu_4, #globalHeader .base .globalNavi .navi > li .globalNavi-menu_5 { background: url('/imageFile/global/globalNavi-s18bfd9b8da.png') no-repeat; }
+#globalHeader .base .globalNavi .navi > li .globalNavi-menu_1 { background-position: 0 0; height: 40px; width: 107px; }
+#globalHeader .base .globalNavi .navi > li .globalNavi-menu_2 { background-position: 0 -121px; height: 40px; width: 69px; }
+#globalHeader .base .globalNavi .navi > li .globalNavi-menu_3 { background-position: 0 -80px; height: 41px; width: 69px; }
+#globalHeader .base .globalNavi .navi > li .globalNavi-menu_4 { background-position: 0 -161px; height: 40px; width: 69px; }
+#globalHeader .base .globalNavi .navi > li .globalNavi-menu_5 { background-position: 0 -40px; height: 40px; width: 96px; }
+#globalHeader .base .globalNavi .navi > li .pullDownNavi { position: absolute; top: 40px; display: none; background: #fff; padding: 16.66667px; -webkit-box-shadow: #dddddd 0 2px 5px; -moz-box-shadow: #dddddd 0 2px 5px; box-shadow: #dddddd 0 2px 5px; }
+#globalHeader .base .globalNavi .navi > li .pullDownNavi > li + li { margin-top: 12.5px; }
+#globalHeader .base .globalNavi .navi > li > a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url("../../imageFile/global/globalNavi-s18bfd9b8da.png") !important; }
+#globalHeader .base .globalNavi .navi > li > a:hover { opacity: .5; }
 
 /* Global Footer */
 #globalFooter { margin-top: 75px; padding: 100px 0; background: #fff; text-align: center; color: #bbb; }
@@ -123,6 +125,11 @@ body { background: #eeeeee; }
 /*============================
 unit
 ============================*/
+#sideNaviArea .pageTitle { text-decoration: underline; }
+#sideNaviArea .pageTitle + .pageTitle { margin-top: 25px; }
+#sideNaviArea .pageTitle a { color: #333; }
+#sideNaviArea .pageTitle a:hover { opacity: .8; }
+
 /* companyDesc */
 #companyDescEnvironment, #companyDescCSR, #companyDescDetail, #companyHistory, #companyShips { margin-bottom: 50px; }
 #companyDescEnvironment .title, #companyDescCSR .title, #companyDescDetail .title, #companyHistory .title, #companyShips .title { font-size: 26px; font-weight: bold; padding-bottom: 12.5px; border-bottom: 3px solid #0094dc; }
@@ -154,6 +161,8 @@ unit
 #companyShips .explain { margin: 25px 0; }
 #companyShips .shipsTable th, #companyShips .shipsTable td { padding: 12.5px; border: 1px solid  #ddd; vertical-align: top; }
 #companyShips .shipsTable th { background: #eee; font-weight: bold; }
+
+.dammyArea { background-image: -webkit-linear-gradient(-45deg, #f6f6f6 25%, #ffffff 25%, #ffffff 50%, #f6f6f6 50%, #f6f6f6 75%, #ffffff 75%, #ffffff); background-image: -moz-linear-gradient(-45deg, #f6f6f6 25%, #ffffff 25%, #ffffff 50%, #f6f6f6 50%, #f6f6f6 75%, #ffffff 75%, #ffffff); background-image: -o-linear-gradient(-45deg, #f6f6f6 25%, #ffffff 25%, #ffffff 50%, #f6f6f6 50%, #f6f6f6 75%, #ffffff 75%, #ffffff); background-image: linear-gradient(-45deg, #f6f6f6 25%, #ffffff 25%, #ffffff 50%, #f6f6f6 50%, #f6f6f6 75%, #ffffff 75%, #ffffff); background-size: 4px 4px; padding: 100px 0 1000px; text-align: center; }
 
 /*============================
 parts

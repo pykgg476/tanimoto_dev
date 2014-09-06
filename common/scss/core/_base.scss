@@ -46,7 +46,10 @@ a{
 Function
 ============================*/
 
-
+@mixin dammyArea() {
+  @include background-image(linear-gradient(-45deg, #f6f6f6 25%, white 25%, white 50%, #f6f6f6 50%, #f6f6f6 75%, white 75%, white));
+  background-size: 4px 4px;
+}
 
 
 /*============================
@@ -73,16 +76,29 @@ unit
       @include inline-block;
       vertical-align: middle;
       .navi{
-        li{
+        > li{
           @include inline-block;
           @include clearfix;
           @import "global/globalNavi/*.png";
           @include all-globalNavi-sprites($dimensions:true);
           margin-left: 30px;
-        a{
+          .pullDownNavi{
+            position: absolute;
+            top: 40px;
+            display: none;
+            background: #fff;
+            padding: $width_base_margin/1.5;
+            @include box-shadow(#ddd 0 2px 5px);
+            > li{
+              &+li{
+                margin-top: $width_base_margin/2;
+              }
+            }
+          }
+        > a{
           @include inline-block;
           @include hide-text;
-          background-image: url('../../imageFile/global/globalNavi-s8f7fed341e.png') !important;
+          background-image: url('../../imageFile/global/globalNavi-s18bfd9b8da.png') !important;
           &:hover{ opacity: .5; }
           }
         }
