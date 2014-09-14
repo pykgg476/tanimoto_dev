@@ -12,29 +12,16 @@
 unit
 ============================*/
 
-#sideNaviArea{
-  .pageTitle{
-    & + .pageTitle{
-      margin-top: $width_base_margin;
-    }
-    text-decoration: underline;
-    a{
-      color: #333;
-      &:hover{
-        opacity: .8;
-      }
-    }
-  }
+/* Panel */
+#panelArea{
+  background-image: url("../../imageFile/comapny_dammy_photo.jpg");
 }
 
 /* companyDesc */
 #companyDescEnvironment{
   margin-bottom: $width_base_margin*2;
   .title{
-    font-size: 26px;
-    font-weight: bold;
-    padding-bottom: $width_base_margin/2;
-    border-bottom: 3px solid $color_blue;
+    @extend %contentsAreaTitle;
   }
   .contents{
     margin-top: $width_base_margin;

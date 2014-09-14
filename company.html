@@ -21,18 +21,18 @@
 <!-- Global Header -->
 <header id="globalHeader">
   <div class="base">
-    <h1 class="logo"><a href="index.html"><img src="imageFile/global/header_logo.png" height="32" width="256" alt="たにもと建設"></a></h1>
-    <nav class="globalNavi">
-      <ul class="navi">
-        <li><a class="globalNavi-menu_1" href="point_index.html">仕事・技術・人</a></li>
-        <li><a class="globalNavi-menu_2" href="work.html">実績紹介</a></li>
-        <li><a class="globalNavi-menu_3 now" href="company_message.html">会社情報</a>
+    <h1 class="logo"><a href="index.html"><img src="imageFile/global/header_logo.png" height="32" width="256" alt="たにもと建設"></a></h1><!-- 
+     --><nav class="globalNavi">
+      <ul class="naviBase">
+        <li class="navi"><a class="gmenu" href="point_index.html"><span class="globalNavi-menu_1">仕事・技術・人</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="work.html"><span class="globalNavi-menu_2">実績紹介</span></a></li><!-- 
+         --><li class="navi now"><a class="gmenu" href="company_message.html"><span class="globalNavi-menu_3">会社情報</span></a>
           <ul class="pullDownNavi">
-            <li><a href="company_message.html">社長メッセージ</a></li>
-            <li><a href="company.html">会社概要</a></li>
-          </ul></li>
-        <li><a class="globalNavi-menu_4" href="recruit.html">採用情報</a></li>
-        <li><a class="globalNavi-menu_5" href="form.html">お問い合わせ</a></li>
+            <li class="navi"><a href="company_message.html">社長メッセージ</a></li>
+            <li class="navi"><a href="company.html">会社概要</a></li>
+          </ul></li><!-- 
+         --><li class="navi"><a class="gmenu" href="recruit.html"><span class="globalNavi-menu_4">採用情報</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="form.html"><span class="globalNavi-menu_5">お問い合わせ</span></a></li>
       </ul>
     </nav>
   </div>
@@ -43,7 +43,7 @@
 <div id="panelArea">
   <div class="base">
     <h2 class="pageTitle">会社概要</h2>
-    <div class="copy">ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</div>
+    <div class="copy"><p>ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</p></div>
   </div>
 </div>
 <!-- /Panel -->
@@ -64,7 +64,12 @@
 <!-- SideNavi -->
 <section id="sideNaviArea">
   <h2 class="pageTitle"><a href="company_message.html">社長メッセージ</a></h2>
-  <h2 class="pageTitle"><span class="now">会社概要</span></h2>
+  <!-- <nav class="sideNavi">
+    <ol class="naviBase">
+      <li class="list"><a class="scrollTrigger" href="#comapanyMessage">社長メッセージ</a></li>
+    </ol>
+  </nav> -->
+  <h2 class="pageTitle"><a class="now" href="company.html">会社概要</a></h2>
   <nav class="sideNavi">
     <ol class="naviBase">
       <li class="list"><a class="scrollTrigger" href="#companyDescEnvironment">環境方針</a></li>
