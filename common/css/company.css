@@ -1080,7 +1080,7 @@ Global Style
 ============================*/
 /* Var */
 /* Font */
-body { font: 13px/1.385 arial, helvetica, clean, sans-serif; /* 基本文字設定 */ }
+body { font: 13px/1.75 arial, helvetica, clean, sans-serif; /* 基本文字設定 */ }
 
 body, button, input, select, optgroup, textarea { font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","メイリオ", Meiryo,Osaka,"ＭＳ Ｐゴシック", "MS PGothic", sans-serif; color: #666666; letter-spacing: 1px; }
 
@@ -1156,14 +1156,13 @@ body { background: #eeeeee; }
 #sideNaviArea .pageTitle a { display: block; padding: 16.66667px; background: #0094dc; font-size: 15px; color: #fff; position: relative; }
 #sideNaviArea .pageTitle a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 20px; position: absolute; top: 14px; right: 10px; color: white; }
 #sideNaviArea .sideNavi .naviBase .list a { z-index: 100; display: block; position: relative; padding: 16.66667px; border-bottom: 1px solid #eeeeee; opacity: .7; }
-#sideNaviArea .sideNavi .naviBase .list a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 17px; position: absolute; top: 16px; right: 10px; color: #0094dc; }
+#sideNaviArea .sideNavi .naviBase .list a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 17px; position: absolute; top: 19px; right: 10px; color: #0094dc; }
 #sideNaviArea .sideNavi .naviBase .list a:hover { -webkit-box-shadow: #dddddd 0 1px 5px; -moz-box-shadow: #dddddd 0 1px 5px; box-shadow: #dddddd 0 1px 5px; }
 #sideNaviArea .sideNavi .naviBase .list.now a { opacity: 1 !important; font-weight: bold; }
 
 /* contentsArea */
-.contentsArea { float: right; width: 695px; padding: 25px; background: #fff; }
-
-#companyDescEnvironment .title, #companyDescCSR .title, #companyDescDetail .title, #companyHistory .title, #companyShips .title { font-size: 36px; padding-bottom: 12.5px; color: #666; }
+.contentsArea { float: right; width: 745px; }
+.contentsArea .companyDescBase .title, .companyDescBase .contentsArea .title { font-size: 36px; line-height: 1.2; color: #666; }
 
 /*============================
 unit
@@ -1171,38 +1170,56 @@ unit
 /* Panel */
 #panelArea { background-image: url("../../imageFile/comapny_dammy_photo.jpg"); }
 
-/* companyDesc */
-#companyDescEnvironment, #companyDescCSR, #companyDescDetail, #companyHistory, #companyShips { margin-bottom: 50px; }
-#companyDescEnvironment .contents, #companyDescCSR .contents, #companyDescDetail .contents, #companyHistory .contents, #companyShips .contents { margin-top: 25px; font-size: 14px; }
-#companyDescEnvironment .contents .descList, #companyDescCSR .contents .descList, #companyDescDetail .contents .descList, #companyHistory .contents .descList, #companyShips .contents .descList { padding-left: 37.5px; }
-#companyDescEnvironment .contents .descList .list, #companyDescCSR .contents .descList .list, #companyDescDetail .contents .descList .list, #companyHistory .contents .descList .list, #companyShips .contents .descList .list { list-style-type: decimal; }
-#companyDescEnvironment .contents .descList .list + .list, #companyDescCSR .contents .descList .list + .list, #companyDescDetail .contents .descList .list + .list, #companyHistory .contents .descList .list + .list, #companyShips .contents .descList .list + .list { margin-top: 25px; }
-#companyDescEnvironment .contents .hint, #companyDescCSR .contents .hint, #companyDescDetail .contents .hint, #companyHistory .contents .hint, #companyShips .contents .hint { display: block; text-align: right; margin-top: 25px; font-size: 12px; color: #aaa; }
+/* Base */
+.companyDescBase { border-top: 4px solid #0094dc; background: #fff; padding: 30px; }
+.companyDescBase + .companyDescBase { margin-top: 25px; }
+.companyDescBase .contents { margin-top: 25px; font-size: 14px; line-height: 1.75; }
+.companyDescBase .contents .copy { border: 1px solid  #eee; padding: 25px; background: #fafafa; }
+.companyDescBase .contents .descList .list { margin-top: 25px; }
+.companyDescBase .contents .descList .list + .list { margin-top: 25px; padding-top: 25px; border-top: 1px dashed  #ddd; }
+.companyDescBase .contents .regist { position: relative; margin-top: 25px; padding-top: 25px; border-top: 1px dashed  #ccc; min-height: 100px; }
+.companyDescBase .contents .regist .img { position: absolute; top: 25px; left: 0; }
+.companyDescBase .contents .regist .text { padding: 8px 0 0 125px; }
+.companyDescBase .contents .regist .text .main { font-size: 18px; }
+.companyDescBase .contents .regist .text .sub { margin-top: 8.33333px; }
+
+/* Table Style */
+#companyDescDetail .contents .descTable, #companyHistory .contents .historyTable, #companyShips .shipsTable { border: 1px solid #c4c4c4; background: #fafafa; }
+#companyDescDetail .contents .descTable .item, #companyHistory .contents .historyTable .item, #companyShips .shipsTable .item, #companyDescDetail .contents .descTable .data, #companyHistory .contents .historyTable .data, #companyShips .shipsTable .data { padding: 25px; border-bottom: 1px solid #c4c4c4; vertical-align: top; }
+#companyDescDetail .contents .descTable .item, #companyHistory .contents .historyTable .item, #companyShips .shipsTable .item { width: 25%; border: 1px solid #c4c4c4; border-right: none; background: #dddddd; }
+
+/* companyDescEnvironment */
+/* companyDescEnvironmentList */
+#companyDescEnvironmentList .descList .list:nth-child(1):before, #companyDescEnvironmentList .descList .list:nth-child(2):before, #companyDescEnvironmentList .descList .list:nth-child(3):before, #companyDescEnvironmentList .descList .list:nth-child(4):before, #companyDescEnvironmentList .descList .list:nth-child(5):before { position: absolute; left: 0; top: 25px; display: inline-block; font-size: 45px; line-height: 1; font-family: 'Open Sans'; font-weight: 300; color: #ccc; }
+#companyDescEnvironmentList .descList .list { position: relative; padding-left: 45px; }
+#companyDescEnvironmentList .descList .list:nth-child(1):before { content: '1'; top: 0; }
+#companyDescEnvironmentList .descList .list:nth-child(2):before { content: '2'; }
+#companyDescEnvironmentList .descList .list:nth-child(3):before { content: '3'; }
+#companyDescEnvironmentList .descList .list:nth-child(4):before { content: '4'; top: 15px; }
+#companyDescEnvironmentList .descList .list:nth-child(5):before { content: '5'; }
 
 /* companyDescCSR */
-#companyDescCSR .contents .descList .list .listItem .item { font-weight: bold; }
-#companyDescCSR .contents .descList .list .listItem .data { margin-top: 8.33333px; }
-#companyDescCSR .contents .descList .list .listItem .data:before { content: '・'; }
+#companyDescCSR .contents .descList .list .listItem .item { font-size: 23px; color: #aaa; }
 
 /* companyDescDetail */
-#companyDescDetail .contents .descTable .item, #companyDescDetail .contents .descTable .data { padding: 12.5px; border-bottom: 1px solid  #ddd; vertical-align: top; }
-#companyDescDetail .contents .descTable .item { width: 22%; font-weight: bold; border-right: 1px solid  #eee; }
-#companyDescDetail .contents .descTable .data .tableList .list .label { display: inline-block; width: 10em; font-size: 12px; font-weight: bold; margin-right: 12.5px; }
+#companyDescDetail .contents .descTable .data .tableList .list .label { display: inline-block; width: 12em; font-size: 12px; margin-right: 12.5px; }
+#companyDescDetail .contents .descTable .data .tableList .list .name + .name { margin-left: 20px; }
 #companyDescDetail .contents .descTable .data .addressList + .addressList, #companyDescDetail .contents .descTable .data .numList + .addressList, #companyDescDetail .contents .descTable .data .addressList + .numList, #companyDescDetail .contents .descTable .data .numList + .numList { margin-top: 25px; padding-top: 25px; border-top: 1px dashed  #ccc; }
-#companyDescDetail .contents .descTable .data .addressList .place, #companyDescDetail .contents .descTable .data .numList .place { font-weight: bold; font-size: 15px; }
-#companyDescDetail .contents .descTable .data .other { text-align: right; }
-#companyDescDetail .contents .descTable .data .numList .label { font-weight: bold; margin-bottom: 12.5px; }
+#companyDescDetail .contents .descTable .data .addressList .label, #companyDescDetail .contents .descTable .data .numList .label { font-size: 25px; color: #888; }
+#companyDescDetail .contents .descTable .data .addressList .address .num, #companyDescDetail .contents .descTable .data .numList .address .num { display: block; }
+#companyDescDetail .contents .descTable .data .addressList .map, #companyDescDetail .contents .descTable .data .numList .map { margin-top: 12.5px; }
+#companyDescDetail .contents .descTable .data .addressList .telNum .fax, #companyDescDetail .contents .descTable .data .numList .telNum .fax { margin-left: 15px; }
+#companyDescDetail .contents .descTable .data .dataSet .text:after { content: "/"; margin: 0 10px; }
+#companyDescDetail .contents .descTable .data .dataSet .text:last-child:after { display: none; }
+#companyDescDetail .contents .descTable .data .other { text-align: right; font-size: 12px; }
+#companyDescDetail .contents .descTable .data .numList .label { font-size: 18px; }
 
 /* #companyHistory */
-#companyHistory .historyTable .item, #companyHistory .historyTable .data { padding: 12.5px; border-bottom: 1px solid  #ddd; vertical-align: top; }
-#companyHistory .historyTable .item { white-space: nowrap; width: 1%; font-weight: bold; border-right: 1px solid  #eee; }
-
 /* #companyShips */
 #companyShips .explain { margin: 25px 0; }
-#companyShips .shipsTable th, #companyShips .shipsTable td { padding: 12.5px; border: 1px solid  #ddd; vertical-align: top; }
-#companyShips .shipsTable th { background: #eee; font-weight: bold; }
-
-.dammyArea { background-image: -webkit-linear-gradient(-45deg, #f6f6f6 25%, #ffffff 25%, #ffffff 50%, #f6f6f6 50%, #f6f6f6 75%, #ffffff 75%, #ffffff); background-image: -moz-linear-gradient(-45deg, #f6f6f6 25%, #ffffff 25%, #ffffff 50%, #f6f6f6 50%, #f6f6f6 75%, #ffffff 75%, #ffffff); background-image: -o-linear-gradient(-45deg, #f6f6f6 25%, #ffffff 25%, #ffffff 50%, #f6f6f6 50%, #f6f6f6 75%, #ffffff 75%, #ffffff); background-image: linear-gradient(-45deg, #f6f6f6 25%, #ffffff 25%, #ffffff 50%, #f6f6f6 50%, #f6f6f6 75%, #ffffff 75%, #ffffff); background-size: 4px 4px; padding: 100px 0 1000px; text-align: center; }
+#companyShips .shipsTable { margin-top: 25px; }
+#companyShips .shipsTable .item, #companyShips .shipsTable .data { border: 1px solid #c4c4c4; }
+#companyShips .shipsTable .name { width: 1%; white-space: nowrap; }
 
 /*============================
 parts

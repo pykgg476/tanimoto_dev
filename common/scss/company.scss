@@ -17,51 +17,137 @@ unit
   background-image: url("../../imageFile/comapny_dammy_photo.jpg");
 }
 
-/* companyDesc */
-#companyDescEnvironment{
-  margin-bottom: $width_base_margin*2;
+/* Base */
+.companyDescBase{
+  $contentsArea_padding: $width_base_margin*1.2;
+  border-top: 4px solid $color_blue;
+  background: #fff;
+  padding: $contentsArea_padding;
+  & + .companyDescBase{
+    margin-top: $width_base_margin;
+  }
   .title{
     @extend %contentsAreaTitle;
   }
   .contents{
     margin-top: $width_base_margin;
     font-size: 14px;
+    line-height: 1.75;
+    .copy{
+      border: 1px solid  #eee;
+      padding: $width_base_margin;
+      background: #fafafa;
+    }
     .descList{
-      padding-left: $width_base_margin*1.5;
       .list{
-        list-style-type: decimal;
-      }
-      .list + .list{
         margin-top: $width_base_margin;
+        & + .list {
+          margin-top: $width_base_margin;
+          padding-top: $width_base_margin;
+          border-top: 1px dashed  #ddd;
+        }
       }
     }
-    .hint{
-      display: block;
-      text-align: right;
+    .regist{
+      position: relative;
       margin-top: $width_base_margin;
-      font-size: 12px;
-      color: #aaa;
+      padding-top: $width_base_margin;
+      border-top: 1px dashed  #ccc;
+      min-height: 100px;
+      .img{
+        position: absolute;
+        top: $width_base_margin;
+        left: 0;
+      }
+      .text{
+        padding: 8px 0 0 125px;
+        .main{
+          font-size: 18px;
+        }
+        .sub{
+          margin-top: $width_base_margin/3;
+        }
+      }
+    }
+  }
+}
+
+/* Table Style */
+$color_th: #ddd;
+$color_border: darken($color_th, 10%);
+%descTable{
+  border: 1px solid $color_border;
+  background: #fafafa;
+  .item,.data{
+    padding: $width_base_margin;
+    border-bottom: 1px solid $color_border;
+    vertical-align: top;
+  }
+  .item{
+      width: 25%;
+      border: 1px solid darken($color_th, 10%);
+      border-right: none;
+      background: $color_th;
+  }
+}
+
+/* companyDescEnvironment */
+#companyDescEnvironment{
+}
+
+/* companyDescEnvironmentList */
+#companyDescEnvironmentList{
+  $beforeSytleSize: 45px;
+  %beforeStyle{
+    position: absolute;
+    left: 0;
+    top: $width_base_margin;
+    display: inline-block;
+    font-size: $beforeSytleSize;
+    line-height: 1;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    color: #ccc;
+  }
+  .descList{
+    .list{
+      position: relative;
+      padding-left: $beforeSytleSize;
+      &:nth-child(1):before{
+        @extend %beforeStyle;
+        content: '1';
+        top: 0;
+      }
+      &:nth-child(2):before{
+        @extend %beforeStyle;
+        content: '2';
+      }
+      &:nth-child(3):before{
+        @extend %beforeStyle;
+        content: '3';
+      }
+      &:nth-child(4):before{
+        @extend %beforeStyle;
+        content: '4';
+        top: $width_base_margin - 10;
+      }
+      &:nth-child(5):before{
+        @extend %beforeStyle;
+        content: '5';
+      }
     }
   }
 }
 
 /* companyDescCSR */
 #companyDescCSR{
-  @extend #companyDescEnvironment;
-  .title{
-  }
   .contents{
     .descList{
       .list{
         .listItem{
           .item{
-            font-weight: bold;
-          }
-          .data{
-            margin-top: $width_base_margin/3;
-            &:before{
-              content: '・';
-            }
+            font-size: 23px;
+            color: #aaa;
           }
         }
       }
@@ -71,122 +157,98 @@ unit
 
 /* companyDescDetail */
 #companyDescDetail{
-  @extend #companyDescEnvironment;
-  .title{
-  }
   .contents{
     .descTable{
-      .item,.data{
-        padding: $width_base_margin/2;
-        border-bottom: 1px solid  #ddd;
-        vertical-align: top;
-      }
-      .item{
-          width: 22%;
-          font-weight: bold;
-          border-right: 1px solid  #eee;
-      }
+      @extend %descTable;
       .data{
-         .tableList{
+        .tableList{
           .list{
             .label{
               display: inline-block;
-              width: 10em;
+              width: 12em;
               font-size: 12px;
-              font-weight: bold;
               margin-right: $width_base_margin/2;
             }
             .name{
-            }
-          }
-      }
-     .addressList + .addressList{ margin-top: $width_base_margin; padding-top: $width_base_margin; border-top: 1px dashed  #ccc; }
-     .addressList{
-         .place{
-          font-weight: bold;
-          font-size: 15px;
-          }
-         .address{
-          }
-         .map{
-          }
-         .tel{
-          }
-      }
-     .other{
-        text-align: right;
-      }
-      .numList{
-        @extend .addressList;
-        .label{
-          font-weight: bold;
-          margin-bottom: $width_base_margin/2;
-        }
-        .num{
-          .numListBase{
-            .numListData{
-              .numLabel{
-              }
-              .numData{
+              & + .name{
+                margin-left: 20px;
               }
             }
           }
         }
-           .dataList{
+        .addressList{
+          & + .addressList{ 
+          margin-top: $width_base_margin;
+          padding-top: $width_base_margin;
+          border-top: 1px dashed  #ccc; 
+          }
+          .label{
+          font-size: 25px;
+          color: #888;
+          }
+          .address{
+          .num{
+          display: block;
+          }
+          }
+          .map{
+          margin-top: $width_base_margin/2;
+          }
+          .telNum{
+            .fax{
+              margin-left: 15px;
+            }
+          }
         }
-           .dataList .dataListItem{
+        .dataSet{
+          .text:after{
+            content: "/";
+            margin: 0 10px;
+          }
+          .text:last-child:after{
+            display: none;
+          }
+        }
+       .other{
+          text-align: right;
+          font-size: 12px;
+        }
+        .numList{
+          @extend .addressList;
+          .label{
+            font-size: 18px;
+          }
         }
       }
-    }
     }
   }
 }
 
 /* #companyHistory */
 #companyHistory{
-  @extend #companyDescEnvironment;
-  .historyTable{
-    .item,.data{
-      padding: $width_base_margin/2;
-      border-bottom: 1px solid  #ddd;
-      vertical-align: top;
-    }
-    .item{
-      white-space: nowrap;
-        width: 1%;
-        font-weight: bold;
-        border-right: 1px solid  #eee;
-    }
-    .data{
+  .contents{
+    .historyTable{
+      @extend %descTable;
     }
   }
 }
 
 /* #companyShips */
 #companyShips{
-  @extend #companyDescEnvironment;
   .explain{
     margin: $width_base_margin 0;
   }
   .shipsTable{
-    th,td{
-      padding: $width_base_margin/2;
-      border: 1px solid  #ddd;
-      vertical-align: top;
+    @extend %descTable;
+    margin-top: $width_base_margin;
+    .item,.data{
+      border: 1px solid $color_border;
     }
-    th{
-        background: #eee;
-        font-weight: bold;
-    }
-    td{
+    .name{
+      width: 1%;
+      white-space: nowrap;
     }
   }
-}
-
-.dammyArea{
-    @include dammyArea();
-    padding: 100px 0 1000px;
-    text-align: center;
 }
 
 /*============================

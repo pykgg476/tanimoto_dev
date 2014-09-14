@@ -125,7 +125,7 @@ body{
           border-bottom: 1px solid $color_gray;
           opacity: .7;
           &:after{
-            @include link_Arrow(16,10,$color_blue,17);
+            @include link_Arrow(19,10,$color_blue,17);
           }
           &:hover{
             @include box-shadow(#ddd 0 1px 5px);
@@ -144,14 +144,12 @@ body{
 /* contentsArea */
 .contentsArea{
   float: right;
-  $contentsArea_padding: $width_base_margin;
-  width: $width_page - $width_base_margin - $width_side - ($contentsArea_padding * 2);
-  padding: $contentsArea_padding;
-  background: #fff;
+  width: $width_page - $width_base_margin - $width_side;
+  // background: #fff;
+  %contentsAreaTitle{
+    font-size: 36px;
+    line-height: 1.2;
+    color: #666;
+  }
 }
 
-%contentsAreaTitle{
-  font-size: 36px;
-  padding-bottom: $width_base_margin/2;
-  color: #666;
-}

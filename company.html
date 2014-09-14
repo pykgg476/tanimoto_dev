@@ -15,6 +15,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="canonical" href="">
 <link rel="stylesheet" href="common/css/company.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -85,7 +86,7 @@
 <!-- Contents Area Start --><div class="contentsArea"><!-- /Contents Area Start -->
 
 <!-- Desc | companyDescEnvironment -->
-<section id="companyDescEnvironment">
+<section class="companyDescBase" id="companyDescEnvironment">
 <h3 class="title">環境方針</h3>
 <div class="contents">
 <div class="copy">たにもと建設株式会社の企業ビジョンは「美しく、豊かな国土づくりに貢献する」ことです。<br>
@@ -94,7 +95,7 @@
 </section>
 
 <!-- Desc | companyDescEnvironmentList -->
-<section id="companyDescEnvironmentList">
+<section class="companyDescBase" id="companyDescEnvironmentList">
 <h3 class="title">環境の行動方針</h3>
 <div class="contents">
   <div class="copy">たにもと建設株式会社は、港湾土木、陸上土木、関連サービスを通じて人と自然に優しい環境保全に取り組むために、以下の行動方針に従って事業活動を行います。</div>
@@ -106,7 +107,7 @@
     <li class="list">環境に関わる活動内容・成果を文書化し教育することで、従業員の継続的な環境意識の向上と情報の共有化に努めます。</li>
   </ol>
   <div class="regist">
-  <div class="img"><img src="http://placehold.it/200x200"></div>
+  <div class="img"><img src="http://placehold.it/100x100"></div>
   <div class="text">
     <div class="main">ISO14001認証取得</div>
     <div class="sub">当社は、2014年に環境マネジメントシステムの国際規格『ISO14001』を全社対象に認証取得いたしました。</div>
@@ -117,10 +118,10 @@
 <!-- /Desc | companyDescEnvironmentList -->
 
 <!-- Desc | companyDescCSR -->
-<section id="companyDescCSR">
+<section class="companyDescBase" id="companyDescCSR">
 <h3 class="title">地域志向CSR方針</h3>
 <div class="contents">
-  <div class="copy"></div>
+  <div class="copy">たにもと建設株式会社は、以下の方針に基づき、地域貢献の視点をもって社会的事業に取り組み、地域とともに成長・発展を目指す事業活動を行います。</div>
 <ol class="descList">
 <li class="list">
   <dl class="listItem">
@@ -161,7 +162,7 @@
 </li>
 </ol>
 <div class="regist">
-  <div class="img"><img src="http://placehold.it/200x200"></div>
+  <div class="img"><img src="http://placehold.it/100x100"></div>
   <div class="text">
     <div class="main">横浜型地域貢献企業 最上位 認定</div>
     <div class="sub">当社は、2014年に横浜型地域貢献企業 最上位認定を取得いたしました。</div>
@@ -172,7 +173,7 @@
 <!-- /Desc | companyDescCSR -->
 
 <!-- Desc | companyDescDetail -->
-<section id="companyDescDetail">
+<section class="companyDescBase" id="companyDescDetail">
 <h3 class="title">企業情報</h3>
 <div class="contents">
 <table class="descTable">
@@ -212,44 +213,51 @@
   <th class="item">所在地</th>
   <td class="data">
     <dl class="addressList">
-      <dt class="place">本社</dt>
-      <dd class="address">〒231-0047 神奈川県横浜市中区羽衣町2-7-10 関内駅前マークピル6F</dd>
-      <dd class="tel">Tel:045(264)2911 Fax:045(264)2925</dd>
+      <dt class="label">本社</dt>
+      <dd class="address"><span class="num">〒231-0047</span>
+       神奈川県横浜市中区羽衣町2-7-10 関内駅前マークピル6F</dd>
+       <dd class="telNum"><span class="tel">Tel:045(264)2911</span><span class="fax">Fax:045(264)2925</span></dd>
       <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.455643508952!2d139.63349850000006!3d35.443512549999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185cf39472bff9%3A0x84de34976fddc08d!2z44CSMjMxLTAwNDUg56We5aWI5bed55yM5qiq5rWc5biC5Lit5Yy657696KGj55S677yS5LiB55uuIOmWouWGhemnheWJjeODnuODvOOCr-ODk-ODqw!5e0!3m2!1sja!2sjp!4v1409937823721" width="500" height="380" frameborder="0" style="border:0"></iframe></dd>
     </dl>
     <dl class="addressList">
-      <dt class="place">東京支店</dt>
-      <dd class="address">〒143-0003 東京都大田区京浜島 3-4-1</dd>
-      <dd class="tel">Tel:03(3790)3122 Fax:03(3790)3133</dd>
+      <dt class="label">東京支店</dt>
+      <dd class="address"><span class="num">〒143-0003</span>
+       東京都大田区京浜島 3-4-1</dd>
+       <dd class="telNum"><span class="tel">Tel:03(3790)3122</span><span class="fax">Fax:03(3790)3133</span></dd>
       <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3245.173392018114!2d139.7638692!3d35.5741119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018617812ef3a8b%3A0x5b81334d3578786e!2z5p2x5Lqs6YO95aSn55Sw5Yy65Lqs5rWc5bO277yT5LiB55uu77yU4oiS77yR!5e0!3m2!1sja!2sjp!4v1409937856781" width="500" height="380" frameborder="0" style="border:0"></iframe></dd>
     </dl>
     <dl class="addressList">
-      <dt class="place">東北支店</dt>
-      <dd class="address">〒980-0014 宮城県仙台市青葉区本町 1-5-28 カーニープレイス仙台駅前通6F</dd>
-      <dd class="tel">Tel:022(714)8045 Fax:022(714)8046</dd>
+      <dt class="label">東北支店</dt>
+      <dd class="address"><span class="num">〒980-0014</span>
+       宮城県仙台市青葉区本町 1-5-28 カーニープレイス仙台駅前通6F</dd>
+       <dd class="telNum"><span class="tel">Tel:022(714)8045</span><span class="fax">Fax:022(714)8046</span></dd>
       <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3132.6219117175815!2d140.87966250000002!3d38.2650741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a2826b746cd79%3A0x176530842a5c3b1d!2z44CSOTgwLTAwMTQg5a6u5Z-O55yM5LuZ5Y-w5biC6Z2S6JGJ5Yy65pys55S677yR5LiB55uu77yV4oiS77yS77yYIOOCq-ODvOODi-ODvOODl-ODrOOCpOOCueS7meWPsOmnheWJjemAmg!5e0!3m2!1sja!2sjp!4v1409937921082" width="500" height="380" frameborder="0" style="border:0"></iframe></dd>
     </dl>
     <dl class="addressList">
-      <dt class="place">横須賀営業所</dt>
-      <dd class="address">〒237-0071 神奈川県横須賀市田浦港町無番地 相模運輸倉庫株式会社気付</dd>
-      <dd class="tel">Tel:046(861)8613 Fax:046(861)8614</dd>
+      <dt class="label">横須賀営業所</dt>
+      <dd class="address"><span class="num">〒237-0071</span>
+       神奈川県横須賀市田浦港町無番地 相模運輸倉庫株式会社気付</dd>
+       <dd class="telNum"><span class="tel">Tel:046(861)8613</span><span class="fax">Fax:046(861)8614</span></dd>
       <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.428396655104!2d139.6384009!3d35.295335449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601840efe43002b7%3A0x4b811aedb22f0fe8!2z55u45qih6YGL6Ly45YCJ5bqr77yI5qCq77yJIOacrOekvuWAieW6q-iqsg!5e0!3m2!1sja!2sjp!4v1409937955155" width="500" height="380" frameborder="0" style="border:0"></iframe></dd>
     </dl>
   </td>
 </tr>
 <tr>
-  <th class="item">主要取引金融機関</th>
-  <td class="data"><span class="text">りそな銀行 横浜支店</span><span class="text">東日本銀行 横浜支店</span><span class="text">みずほ銀行 横浜中央支店</span><span class="text">三井住友銀行 横浜中央支店</span><span class="text">湘南信用金庫 磯子支店</span></td>
+  <th class="item">主要取引<br>金融機関</th>
+  <td class="data">
+  <div class="dataSet"><span class="text">りそな銀行 横浜支店</span><span class="text">東日本銀行 横浜支店</span><span class="text">みずほ銀行 横浜中央支店</span><span class="text">三井住友銀行 横浜中央支店</span><span class="text">湘南信用金庫 磯子支店</span>
+  </div>
+  </td>
 </tr>
 <tr>
   <th class="item">主要受注先</th>
   <td class="data">
-    <p><span class="text">国土交通省</span><span class="text">横浜市</span><span class="text">神奈川県</span><span class="text">横須賀市</span><span class="text">川崎市</span><span class="text">東京都</span><span class="text">横浜港埠頭株式会社</span><span class="text">大成建設株式会社</span><span class="text">鹿島建設株式会社</span><span class="text">清水建設株式会社</span><span class="text">株式会社フジタ</span><span class="text">東亜建設工業株式会社</span><span class="text">東洋建設株式会社</span><span class="text">若築建設株式会社</span><span class="text">あおみ建設株式会社</span><span class="text">りんかい日産建設株式会社</span><span class="text">みらい建設工業株式会社</span></p>
+    <div class="dataSet"><span class="text">国土交通省</span><span class="text">横浜市</span><span class="text">神奈川県</span><span class="text">横須賀市</span><span class="text">川崎市</span><span class="text">東京都</span><span class="text">横浜港埠頭株式会社</span><span class="text">大成建設株式会社</span><span class="text">鹿島建設株式会社</span><span class="text">清水建設株式会社</span><span class="text">株式会社フジタ</span><span class="text">東亜建設工業株式会社</span><span class="text">東洋建設株式会社</span><span class="text">若築建設株式会社</span><span class="text">あおみ建設株式会社</span><span class="text">りんかい日産建設株式会社</span><span class="text">みらい建設工業株式会社</span></div>
     <p class="other">他(敬称略/ 順不同) </p>
     </td>
 </tr>
 <tr>
-  <th class="item">許可・登録関係</th>
+  <th class="item">許可・<br>登録関係</th>
   <td class="data">
     <dl class="numList">
       <dt class="label">建設業許可番号</dt>
@@ -297,27 +305,31 @@
   <th class="item">営業種目</th>
   <td class="data">
     <ol class="dataList">
-      <li class="dataListItem">港湾土木・陸上土木の管理監督及び請負業。</li>
-      <li class="dataListItem">建設資材の販売。(安山岩・硬質砂岩 ・軟質砂岩・砂岩ズリ ・土丹岩 ・土丹ズリ ・山砂 ・パイル砂・生コン砂・鉱滓・他)</li>
-      <li class="dataListItem">船舶、作業船の賃貸借事業。</li>
-      <li class="dataListItem">海上運送業。</li>
+      <li class="list">港湾土木・陸上土木の管理監督及び請負業。</li>
+      <li class="list">建設資材の販売。(安山岩・硬質砂岩 ・軟質砂岩・砂岩ズリ ・土丹岩 ・土丹ズリ ・山砂 ・パイル砂・生コン砂・鉱滓・他)</li>
+      <li class="list">船舶、作業船の賃貸借事業。</li>
+      <li class="list">海上運送業。</li>
     </ol>
   </td>
 </tr>
 <tr>
-  <th class="item">国家資格保有者</th>
+  <th class="item">国家資格<br>保有者</th>
   <td class="data">
     <ol class="dataList">
-      <li class="dataListItem">一級土木施工管理技士 20名</li>
-      <li class="dataListItem">二級土木施工管理技士 7名</li>
-      <li class="dataListItem">水産工学技士 3名</li>
-      <li class="dataListItem">ニ級建設業経理事務士 2名</li>
+      <li class="list">一級土木施工管理技士 20名</li>
+      <li class="list">二級土木施工管理技士 7名</li>
+      <li class="list">水産工学技士 3名</li>
+      <li class="list">ニ級建設業経理事務士 2名</li>
     </ol>
   </td>
 </tr>
 <tr>
   <th class="item">加入団体</th>
-  <td class="data"><span class="text">社団法人日本海上起重技術協会</span><span class="text">東京都港湾空港建設協会</span><span class="text">神奈川県港湾空港建設協会</span><span class="text">社団法人日本港湾協会</span><span class="text">全国浚渫業協会</span><span class="text">社団法人神奈川県建設業協会</span><span class="text">横浜保安協会</span><span class="text">横須賀保安協会</span><span class="text">横浜地方海運組合</span><span class="text">社団法人横浜港振興協会</span><span class="text">社団法人川崎港振興協会</span><span class="text">社団法人横浜清港会</span><span class="text">東京商工会議所</span><span class="text">横浜商工会議所</span><span class="text">根岸湾係留委員会ほか</span></td>
+  <td class="data">
+  <div class="dataSet">
+  <span class="text">社団法人日本海上起重技術協会</span><span class="text">東京都港湾空港建設協会</span><span class="text">神奈川県港湾空港建設協会</span><span class="text">社団法人日本港湾協会</span><span class="text">全国浚渫業協会</span><span class="text">社団法人神奈川県建設業協会</span><span class="text">横浜保安協会</span><span class="text">横須賀保安協会</span><span class="text">横浜地方海運組合</span><span class="text">社団法人横浜港振興協会</span><span class="text">社団法人川崎港振興協会</span><span class="text">社団法人横浜清港会</span><span class="text">東京商工会議所</span><span class="text">横浜商工会議所</span><span class="text">根岸湾係留委員会ほか</span>
+  </div>
+</td>
 </tr>
 </table>
 </div>
@@ -325,9 +337,9 @@
 <!-- /Desc | companyDescDetail -->
 
 <!-- History -->
-<section id="companyHistory">
+<section class="companyDescBase" id="companyHistory">
   <h3 class="title">沿革</h3>
-  <div clas="contents">
+  <div class="contents">
   <table class="historyTable">
     <tr><th class="item">1963(昭和38年)</th><td class="data">谷本久が広島にて資本金50万円にて創業。</td></tr>
     <tr><th class="item">1965(昭和40年)</th><td class="data">広島市以島町字家下38番地より横浜市磯子区久木町23番20号へ本店移転。</td></tr>
@@ -367,62 +379,62 @@
 <!-- /History -->
 
 <!-- Ships -->
-<section id="companyShips">
+<section class="companyDescBase" id="companyShips">
   <h3 class="title">船舶等機械リスト</h3>
-  <div clas="contents">
-  <div class="explain">重機土工機械は技術提供等に係わる基本合意書に基づく数量を含みます。(合意会社名:株式会社弘充建設・株式会社黒川建材工業・株式会社東京べイサポート他)</div>
+  <div class="contents">
+  <div class="copy">重機土工機械は技術提供等に係わる基本合意書に基づく数量を含みます。(合意会社名:株式会社弘充建設・株式会社黒川建材工業・株式会社東京べイサポート他)</div>
     <table class="shipsTable">
     <tr>
-      <th class="name">船舶機械名</th>
-      <th class="detail">機種名・規格</th>
+      <th class="name item">船舶機械名</th>
+      <th class="detail item">機種名・規格</th>
     </tr>
     <tr>
-      <td class="name">大型揚土トレミー船</td>
-      <td class="detail">ニ重管トレミー工法 L7Om × B30m × H4.5m(バックホー2台）</td>
+      <td class="name data">大型揚土トレミー船</td>
+      <td class="detail data">ニ重管トレミー工法 L7Om × B30m × H4.5m(バックホー2台）</td>
     </tr>
     <tr>
-      <td class="name">交通船</td>
-      <td class="detail">L11.5m × B3.4m × H1.4m / 9.7t</td>
+      <td class="name data">交通船</td>
+      <td class="detail data">L11.5m × B3.4m × H1.4m / 9.7t</td>
     </tr>
     <tr>
-      <td class="name">ガット船</td>
-      <td class="detail">299～744t</td>
+      <td class="name data">ガット船</td>
+      <td class="detail data">299～744t</td>
     </tr>
     <tr>
-      <td class="name">クレーン台船</td>
-      <td class="detail">50t吊～120t吊</td>
+      <td class="name data">クレーン台船</td>
+      <td class="detail data">50t吊～120t吊</td>
     </tr>
     <tr>
-      <td class="name">曳船</td>
-      <td class="detail">300～1,000ps級</td>
+      <td class="name data">曳船</td>
+      <td class="detail data">300～1,000ps級</td>
     </tr>
     <tr>
-      <td class="name">バックホー</td>
-      <td class="detail">0.7～3㎥級</td>
+      <td class="name data">バックホー</td>
+      <td class="detail data">0.7～3㎥級</td>
     </tr>
     <tr>
-      <td class="name">ブルドーザー</td>
-      <td class="detail">D30P、D5、D6</td>
+      <td class="name data">ブルドーザー</td>
+      <td class="detail data">D30P、D5、D6</td>
     </tr>
     <tr>
-      <td class="name">タイヤショベル</td>
-      <td class="detail">0.6~1.0㎥級</td>
+      <td class="name data">タイヤショベル</td>
+      <td class="detail data">0.6~1.0㎥級</td>
     </tr>
     <tr>
-      <td class="name">振動ローラー</td>
-      <td class="detail">DW121AD（3t）</td>
+      <td class="name data">振動ローラー</td>
+      <td class="detail data">DW121AD（3t）</td>
     </tr>
     <tr>
-      <td class="name">ラフタークレーン</td>
-      <td class="detail">TR-250M（25t吊）</td>
+      <td class="name data">ラフタークレーン</td>
+      <td class="detail data">TR-250M（25t吊）</td>
     </tr>
     <tr>
-      <td class="name">コンクリート破砕機</td>
-      <td class="detail">OSC-401、NPK-H-7X</td>
+      <td class="name data">コンクリート破砕機</td>
+      <td class="detail data">OSC-401、NPK-H-7X</td>
     </tr>
     <tr>
-      <td class="name">ユニック車</td>
-      <td class="detail">3t・8t・14t</td>
+      <td class="name data">ユニック車</td>
+      <td class="detail data">3t・8t・14t</td>
     </tr>
   </table>
   </div>
