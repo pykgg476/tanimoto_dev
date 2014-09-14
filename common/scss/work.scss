@@ -10,8 +10,8 @@
 parts
 ============================*/
 
-%projectUnit{
-  & + %projectUnit{
+.prjUnit{
+  & + .prjUnit{
     margin-top: $width_base_margin*2;
   }
   .category{
@@ -66,7 +66,3 @@ parts
 unit
 ============================*/
 
-/* Project */
-#bigProject,#syunsetsuProject {
-  @extend %projectUnit;
-}

@@ -125,18 +125,17 @@ body { background: #eeeeee; }
 /*============================
 parts
 ============================*/
-#bigProject + #bigProject, #syunsetsuProject + #bigProject, #bigProject + #syunsetsuProject, #syunsetsuProject + #syunsetsuProject { margin-top: 50px; }
-#bigProject .category, #syunsetsuProject .category { font-size: 26px; font-weight: bold; padding-bottom: 12.5px; border-bottom: 3px solid #0094dc; }
-#bigProject .workUnit, #syunsetsuProject .workUnit { display: table; margin-top: 25px; }
-#bigProject .workUnit + .workUnit, #syunsetsuProject .workUnit + .workUnit { padding-top: 25px; border-top: 1px dashed  #aaa; }
-#bigProject .workUnit .photo, #syunsetsuProject .workUnit .photo, #bigProject .workUnit .dataSet, #syunsetsuProject .workUnit .dataSet { display: table-cell; vertical-align: top; }
-#bigProject .workUnit .photo, #syunsetsuProject .workUnit .photo { padding-right: 25px; }
-#bigProject .workUnit .dataSet .dataTable, #syunsetsuProject .workUnit .dataSet .dataTable { border-top: 1px solid  #eee; border-bottom: 1px solid  #eee; }
-#bigProject .workUnit .dataSet .dataTable .item, #syunsetsuProject .workUnit .dataSet .dataTable .item, #bigProject .workUnit .dataSet .dataTable .data, #syunsetsuProject .workUnit .dataSet .dataTable .data { padding: 12.5px; }
-#bigProject .workUnit .dataSet .dataTable .item, #syunsetsuProject .workUnit .dataSet .dataTable .item { border-bottom: 1px solid  #fff; background: #f6f6f6; white-space: nowrap; font-weight: bold; font-size: 12px; vertical-align: top; text-align: center; }
-#bigProject .workUnit .dataSet .dataTable .data, #syunsetsuProject .workUnit .dataSet .dataTable .data { border-bottom: 1px solid  #eee; vertical-align: top; padding-left: 12.5px; }
+.prjUnit + .prjUnit { margin-top: 50px; }
+.prjUnit .category { font-size: 26px; font-weight: bold; padding-bottom: 12.5px; border-bottom: 3px solid #0094dc; }
+.prjUnit .workUnit { display: table; margin-top: 25px; }
+.prjUnit .workUnit + .workUnit { padding-top: 25px; border-top: 1px dashed  #aaa; }
+.prjUnit .workUnit .photo, .prjUnit .workUnit .dataSet { display: table-cell; vertical-align: top; }
+.prjUnit .workUnit .photo { padding-right: 25px; }
+.prjUnit .workUnit .dataSet .dataTable { border-top: 1px solid  #eee; border-bottom: 1px solid  #eee; }
+.prjUnit .workUnit .dataSet .dataTable .item, .prjUnit .workUnit .dataSet .dataTable .data { padding: 12.5px; }
+.prjUnit .workUnit .dataSet .dataTable .item { border-bottom: 1px solid  #fff; background: #f6f6f6; white-space: nowrap; font-weight: bold; font-size: 12px; vertical-align: top; text-align: center; }
+.prjUnit .workUnit .dataSet .dataTable .data { border-bottom: 1px solid  #eee; vertical-align: top; padding-left: 12.5px; }
 
 /*============================
 unit
 ============================*/
-/* Project */
