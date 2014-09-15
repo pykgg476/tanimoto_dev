@@ -103,6 +103,7 @@ unit
       border-left: 1px solid  #ddd;
       .naviBase{
         > .navi{
+          z-index: 100;
           $naviPadding: 3%;
           // @include inline-block;
           float: left;
@@ -131,14 +132,17 @@ unit
           }
           .pullDownNavi{
             position: absolute;
-            top: 40px;
+            left: 0;
+            width: 100%;
             display: none;
             background: #fff;
-            padding: $width_base_margin/1.5;
-            @include box-shadow(#ddd 0 2px 5px);
             > li{
-              &+li{
-                margin-top: $width_base_margin/2;
+              > a{
+                display: block;
+                border-top: 1px solid  #ddd;
+                padding: $width_base_margin;
+                opacity: .6;
+                box-shadow: none !important;
               }
             }
           }
@@ -153,6 +157,7 @@ unit
             height: 32px;
             background-image: url('../../imageFile/global/globalNavi-s56d415f372.png') !important;
             opacity: .5;
+            box-shadow: none !important;
           }
         }
         }

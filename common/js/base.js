@@ -29,6 +29,9 @@ $(function(){
 	var gnavi = $("#globalHeader").find('.navi').not('.now');
 	mouseOverEffect(gnavi,'span',1,false);
 
+	var gsubnavi = $("#globalHeader").find('.pullDownNavi').find('.navi');
+	mouseOverEffect(gsubnavi,'a',1,false);
+
 	// サイドナビマウスオーバー
 	var snavi = $("#sideNaviArea").find('.list').not('.now');
 	mouseOverEffect(snavi,'a',1,true);
@@ -47,7 +50,10 @@ $(function(){
 	});
 
 	// グローバルナビプルダウン
-	$('.pullDownNavi').parents('li').hover(function(){ $(this).find('.pullDownNavi').stop(true,true).slideDown(); }, function(){ $(this).find('.pullDownNavi').stop(true,true).slideUp(); });
+	$('.pullDownNavi').parents('.navi').hover(function(){
+	 var naviH = $('#globalHeader').height();
+	 $(this).find('.pullDownNavi').css('top',naviH).stop(true,true).slideDown(); 
+	},function(){ $(this).find('.pullDownNavi').stop(true,true).slideUp(); });
 
 	// サイドナビ固定
 	if($('#sideNaviArea').length){

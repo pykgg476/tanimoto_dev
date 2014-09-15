@@ -1,4 +1,4 @@
-@charset "US-ASCII";
+@charset "UTF-8";
 /*============================
 @import
 ============================*/
@@ -1099,7 +1099,7 @@ unit
 #globalHeader .base .logo a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 25px; }
 #globalHeader .base .logo a img { width: 100%; height: auto; max-width: 256px; }
 #globalHeader .base .globalNavi { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; width: 75%; min-width: 724px; border-left: 1px solid  #ddd; }
-#globalHeader .base .globalNavi .naviBase > .navi { float: left; position: relative; width: 20%; }
+#globalHeader .base .globalNavi .naviBase > .navi { z-index: 100; float: left; position: relative; width: 20%; }
 #globalHeader .base .globalNavi .naviBase > .navi .globalNavi-sprite, #globalHeader .base .globalNavi .naviBase > .navi .globalNavi-menu_1, #globalHeader .base .globalNavi .naviBase > .navi .globalNavi-menu_2, #globalHeader .base .globalNavi .naviBase > .navi .globalNavi-menu_3, #globalHeader .base .globalNavi .naviBase > .navi .globalNavi-menu_4, #globalHeader .base .globalNavi .naviBase > .navi .globalNavi-menu_5 { background: url('/imageFile/global/globalNavi-s56d415f372.png') no-repeat; }
 #globalHeader .base .globalNavi .naviBase > .navi .globalNavi-menu_1 { background-position: 0 -12px; height: 12px; width: 92px; }
 #globalHeader .base .globalNavi .naviBase > .navi .globalNavi-menu_2 { background-position: 0 -24px; height: 12px; width: 58px; }
@@ -1110,10 +1110,10 @@ unit
 #globalHeader .base .globalNavi .naviBase > .navi.now { position: relative; }
 #globalHeader .base .globalNavi .naviBase > .navi.now:after { width: 100%; position: absolute; bottom: -1px; left: 0; display: block; content: ""; border-bottom: 5px solid #0094dc; }
 #globalHeader .base .globalNavi .naviBase > .navi.now a span { opacity: 1; }
-#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi { position: absolute; top: 40px; display: none; background: #fff; padding: 16.66667px; -webkit-box-shadow: #dddddd 0 2px 5px; -moz-box-shadow: #dddddd 0 2px 5px; box-shadow: #dddddd 0 2px 5px; }
-#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi > li + li { margin-top: 12.5px; }
+#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi { position: absolute; left: 0; width: 100%; display: none; background: #fff; }
+#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi > li > a { display: block; border-top: 1px solid  #ddd; padding: 25px; opacity: .6; box-shadow: none !important; }
 #globalHeader .base .globalNavi .naviBase > .navi > a { display: block; border-right: 1px solid  #ddd; padding: 31px 3%; text-align: center; }
-#globalHeader .base .globalNavi .naviBase > .navi > a span { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; height: 32px; background-image: url("../../imageFile/global/globalNavi-s56d415f372.png") !important; opacity: .5; }
+#globalHeader .base .globalNavi .naviBase > .navi > a span { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; height: 32px; background-image: url("../../imageFile/global/globalNavi-s56d415f372.png") !important; opacity: .5; box-shadow: none !important; }
 
 /* Global Footer */
 #globalFooter { margin-top: 75px; padding: 100px 0; background: #fff; text-align: center; color: #bbb; }
