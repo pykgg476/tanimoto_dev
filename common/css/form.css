@@ -58,64 +58,6 @@ sub { bottom: -0.25em; }
 
 .fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-/* makes the font 33% larger relative to the icon container */
-.fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
-
-.fa-2x { font-size: 2em; }
-
-.fa-3x { font-size: 3em; }
-
-.fa-4x { font-size: 4em; }
-
-.fa-5x { font-size: 5em; }
-
-.fa-fw { width: 1.28571em; text-align: center; }
-
-.fa-ul { padding-left: 0; margin-left: 2.14286em; list-style-type: none; }
-.fa-ul > li { position: relative; }
-
-.fa-li { position: absolute; left: -2.14286em; width: 2.14286em; top: 0.14286em; text-align: center; }
-.fa-li.fa-lg { left: -1.85714em; }
-
-.fa-border { padding: .2em .25em .15em; border: solid 0.08em #eeeeee; border-radius: .1em; }
-
-.pull-right { float: right; }
-
-.pull-left { float: left; }
-
-.fa.pull-left { margin-right: .3em; }
-.fa.pull-right { margin-left: .3em; }
-
-.fa-spin { -webkit-animation: fa-spin 2s infinite linear; animation: fa-spin 2s infinite linear; }
-
-@-webkit-keyframes fa-spin { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); } }
-
-@keyframes fa-spin { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); } }
-
-.fa-rotate-90 { filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
-
-.fa-rotate-180 { filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
-
-.fa-rotate-270 { filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); -webkit-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg); }
-
-.fa-flip-horizontal { filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0); -webkit-transform: scale(-1, 1); -ms-transform: scale(-1, 1); transform: scale(-1, 1); }
-
-.fa-flip-vertical { filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); -webkit-transform: scale(1, -1); -ms-transform: scale(1, -1); transform: scale(1, -1); }
-
-:root .fa-rotate-90, :root .fa-rotate-180, :root .fa-rotate-270, :root .fa-flip-horizontal, :root .fa-flip-vertical { filter: none; }
-
-.fa-stack { position: relative; display: inline-block; width: 2em; height: 2em; line-height: 2em; vertical-align: middle; }
-
-.fa-stack-1x, .fa-stack-2x { position: absolute; left: 0; width: 100%; text-align: center; }
-
-.fa-stack-1x { line-height: inherit; }
-
-.fa-stack-2x { font-size: 2em; }
-
-.fa-inverse { color: white; }
-
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen readers do not read off random characters that represent icons */
 .fa-glass:before { content: "\f000"; }
 
@@ -1093,7 +1035,7 @@ Function
 unit
 ============================*/
 /* Global Header */
-#globalHeader { background: #fff; border-bottom: 1px solid  #ddd; }
+#globalHeader { background: #fff; }
 #globalHeader .base { position: relative; min-width: 980px; }
 #globalHeader .base .logo { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; width: 24%; text-align: center; }
 #globalHeader .base .logo a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 25px; }
@@ -1153,7 +1095,7 @@ body { background: #eeeeee; }
 /* SideNavi */
 #sideNaviArea { float: left; width: 210px; margin-right: 25px; background: #fff; }
 #sideNaviArea .pageTitle + .pageTitle { border-top: 1px solid #eeeeee; }
-#sideNaviArea .pageTitle a { display: block; padding: 16.66667px; background: #0094dc; font-size: 15px; color: #fff; position: relative; }
+#sideNaviArea .pageTitle span, #sideNaviArea .pageTitle a { display: block; padding: 16.66667px; background: #0094dc; font-size: 15px; color: #fff; position: relative; }
 #sideNaviArea .pageTitle a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 20px; position: absolute; top: 14px; right: 10px; color: white; }
 #sideNaviArea .sideNavi .naviBase .list a { z-index: 100; display: block; position: relative; padding: 16.66667px; border-bottom: 1px solid #eeeeee; opacity: .7; }
 #sideNaviArea .sideNavi .naviBase .list a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 17px; position: absolute; top: 19px; right: 10px; color: #0094dc; }
@@ -1161,7 +1103,7 @@ body { background: #eeeeee; }
 #sideNaviArea .sideNavi .naviBase .list.now a { opacity: 1 !important; font-weight: bold; }
 
 /* contentsArea */
-.contentsArea { float: right; width: 745px; }
+.contentsArea { float: right; width: 745px; /* Table Style */ }
 /*============================
 parts
 ============================*/
@@ -1173,7 +1115,7 @@ parts
 /*============================
 unit
 ============================*/
-.contentsArea { width: 980px; }
+.contentsArea { width: 920px; }
 
 #formCopyTel .time { margin-top: 12.5px; }
 #formCopyTel .attention { font-size: 12px; color: #888; }

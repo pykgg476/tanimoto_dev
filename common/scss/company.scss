@@ -19,10 +19,7 @@ unit
 
 /* Base */
 .companyDescBase{
-  $contentsArea_padding: $width_base_margin*1.2;
-  border-top: 4px solid $color_blue;
-  background: #fff;
-  padding: $contentsArea_padding;
+  @extend %contentsBase;
   & + .companyDescBase{
     margin-top: $width_base_margin;
   }
@@ -69,25 +66,6 @@ unit
         }
       }
     }
-  }
-}
-
-/* Table Style */
-$color_th: #ddd;
-$color_border: darken($color_th, 10%);
-%descTable{
-  border: 1px solid $color_border;
-  background: #fafafa;
-  .item,.data{
-    padding: $width_base_margin;
-    border-bottom: 1px solid $color_border;
-    vertical-align: top;
-  }
-  .item{
-      width: 25%;
-      border: 1px solid darken($color_th, 10%);
-      border-right: none;
-      background: $color_th;
   }
 }
 

@@ -102,13 +102,19 @@ body{
     & + .pageTitle{
       border-top: 1px solid  $color_gray;
     }
-    a{
+    %titleBaseStyle{
       display: block;
       padding: $sideNavi_padding;
       background: $color_blue;
       font-size: 15px;
       color: #fff;
       position: relative;
+    }
+    span{
+      @extend %titleBaseStyle;
+    }
+    a{
+      @extend %titleBaseStyle;
       &:after{
         @include link_Arrow(14,10,#fff);
       }
@@ -150,6 +156,30 @@ body{
     font-size: 36px;
     line-height: 1.2;
     color: #666;
+  }
+  %contentsBase{
+    $contentsArea_padding: $width_base_margin*1.2;
+    border-top: 4px solid $color_blue;
+    background: #fff;
+    padding: $contentsArea_padding;
+  }
+  /* Table Style */
+  $color_th: #ddd;
+  $color_border: darken($color_th, 10%);
+  %descTable{
+    border: 1px solid $color_border;
+    background: #fafafa;
+    .item,.data{
+      padding: $width_base_margin;
+      border-bottom: 1px solid $color_border;
+      vertical-align: top;
+    }
+    .item{
+        width: 25%;
+        border: 1px solid darken($color_th, 10%);
+        border-right: none;
+        background: $color_th;
+    }
   }
 }
 
