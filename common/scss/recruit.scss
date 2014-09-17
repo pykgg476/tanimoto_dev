@@ -5,14 +5,96 @@
 @import "core";  
 @import "underPage"; 
 
+/*============================
+parts
+============================*/
+
+/* Panel */
+#panelArea{
+  background-image: url("../../imageFile/recruit_dammy_photo.jpg");
+}
 
 /*============================
 unit
 ============================*/
 
+/* recruitCopy */
+.recruitCopy{
+  padding: $width_base_margin*2;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #fff;
+  p{
+    & + p{
+      margin-top: $width_base_margin/1.5;
+    }
+  }
+}
+
+/* recruitUnit */
+#recruitDesc{
+  @extend %contentsBase;
+  margin-top: $width_base_margin;
+  .title{
+    @extend %contentsAreaTitle;
+  }
+  .contents{
+    .recruitTable{
+      @extend %descTable;
+      margin-top: $width_base_margin;
+    }
+  }
+}
+
+/* recruitAbout */
+#recruitAbout{
+  @extend #recruitDesc;
+  .hint{
+    margin: $width_base_margin/2 0 0 5px;
+  }
+}
+
+/* Ask */
+#recruitAsk{
+  margin-top: $width_base_margin;
+  background: #fff;
+  padding: $width_base_margin;
+  display: table;
+  %tableBase{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .title{
+    @extend %tableBase;
+    width: 1%;
+    white-space: nowrap;
+    font-size: 22px;
+    color: #666;
+    padding-right: $width_base_margin;
+    border-right: 1px solid  #ddd;
+    text-align: center;
+  }
+  .contents{
+    @extend %tableBase;
+    padding: $width_base_margin;
+    .copy{
+      strong{
+        margin: 0 2px;
+        font-weight: bold;
+      }
+    }
+    .link{
+      a{
+        margin: 0 2px;
+        text-decoration: underline;
+        &:hover{
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
 
 
 
-/*============================
-parts
-============================*/
+

@@ -21,14 +21,18 @@
 <!-- Global Header -->
 <header id="globalHeader">
   <div class="base">
-    <h1 class="logo"><a href="index.html"><img src="imageFile/global/header_logo.png" height="32" width="256" alt="たにもと建設"></a></h1>
-    <nav class="globalNavi">
-      <ul class="navi">
-        <li><a class="globalNavi-menu_1" href="point_index.html">仕事・技術・人</a></li>
-        <li><a class="globalNavi-menu_2" href="work.html">実績紹介</a></li>
-        <li><a class="globalNavi-menu_3" href="company.html">会社概要</a></li>
-        <li><a class="globalNavi-menu_4 now" href="recruit.html">採用情報</a></li>
-        <li><a class="globalNavi-menu_5" href="form.html">お問い合わせ</a></li>
+    <h1 class="logo"><a href="index.html"><img src="imageFile/global/header_logo.png" height="32" width="256" alt="たにもと建設"></a></h1><!-- 
+     --><nav class="globalNavi">
+      <ul class="naviBase">
+        <li class="navi"><a class="gmenu" href="point_index.html"><span class="globalNavi-menu_1">仕事・技術・人</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="work.html"><span class="globalNavi-menu_2">実績紹介</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="company_message.html"><span class="globalNavi-menu_3">会社情報</span></a>
+          <ul class="pullDownNavi">
+            <li class="navi"><a href="company_message.html">社長メッセージ</a></li>
+            <li class="navi"><a href="company.html">会社概要</a></li>
+          </ul></li><!-- 
+         --><li class="navi now"><a class="gmenu" href="recruit.html"><span class="globalNavi-menu_4">採用情報</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="form.html"><span class="globalNavi-menu_5">お問い合わせ</span></a></li>
       </ul>
     </nav>
   </div>
@@ -39,7 +43,7 @@
 <div id="panelArea">
   <div class="base">
     <h2 class="pageTitle">採用情報</h2>
-    <div class="copy">ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</div>
+    <div class="copy"><p>ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</p></div>
   </div>
 </div>
 <!-- /Panel -->
@@ -59,11 +63,11 @@
 
 <!-- SideNavi -->
 <section id="sideNaviArea">
-  <h2 class="pageTitle">採用情報</h2>
+  <h2 class="pageTitle"><span>採用情報</span></h2>
   <nav class="sideNavi">
     <ol class="naviBase">
-      <li class="list"><a href="#">募集要項</a></li>
-      <li class="list"><a href="#">選考について</a></li>
+      <li class="list"><a class="scrollTrigger" href="#recruitDesc">募集要項</a></li>
+      <li class="list"><a class="scrollTrigger" href="#recruitAbout">選考について</a></li>
     </ol>
   </nav>
 </section>
@@ -73,11 +77,11 @@
 
 <!-- Copy -->
 <div class="recruitCopy">
-<p>広大な碧い海に囲まれた日本において、港湾土木建設という大きな仕事に携わりたい人。積極的に技術を学ぼうとする意欲と、仕事に対する情熱のある人。<br>
-常に前向きで元気な人。<br>
-ものづくりで社会に貢献したいと思っている人。<br>
-そして、好奇心旺盛な人。
-</p>
+  <p>広大な碧い海に囲まれた日本において、港湾土木建設という大きな仕事に携わりたい人。</p>
+<p>積極的に技術を学ぼうとする意欲と、仕事に対する情熱のある人。<br>
+  常に前向きで元気な人。</p>
+  <p>ものづくりで社会に貢献したいと思っている人。</p>
+<p>そして、好奇心旺盛な人。</p>
 <p>たにもと建設株式会社では、 自分がそんな人である、又は、そんな人を目指しているという方をお待ちしております。</p>
 </div>
 <!-- /Copy -->
@@ -85,33 +89,21 @@
 <!-- Desc -->
 <section id="recruitDesc">
   <h3 class="title">募集要項</h3>
-  <div clas="contents">
-雇用形態
-正社員 62歳定年制 70歳まで再雇用制度あり
-事業内容
-港湾土木建設業
-職種
-技術職 (施工管理業務) 
-勤務地
-横浜、横須賀、東京、東北(5~10年経験を積んだ後)
-勤務時間
-8:00~17:00
-給与
-当社規定による (例:大卒 235,000円以上 高卒200,000円以上)
-休日休暇
-週休2日制(隔週)、祝日、夏期休暇、年末年始休暇、創立記念日休暇、
-慶弔休暇、年次有給休暇、特別休暇
-諸手当
-現場手当、資格手当、時間外手当、通勤手当、住宅手当、家族手当
-昇給
-年1回(4月) 
-賞与
-年2回(6月・12月) 
-保険
-雇用保険、労災保険、健康保険、厚生年金保険
-福利厚生
-制度:財形貯蓄、退職金
-施設:社員寮
+  <div class="contents">
+  <table class="recruitTable">
+    <tr><th class="item">募集職種</th><td class="data">技術職 (施工管理業務)</td></tr>
+    <tr><th class="item">雇用形態</th><td class="data">正社員 60歳定年制 70歳まで再雇用制度あり</td></tr>
+    <tr><th class="item">事業内容</th><td class="data">港湾土木・陸上土木建設業</td></tr>
+    <tr><th class="item">勤務地</th><td class="data">横浜、横須賀、東京、東北</td></tr>
+    <tr><th class="item">勤務時間</th><td class="data">8:00~17:00</td></tr>
+    <tr><th class="item">給与</th><td class="data">当社規定による (例:大卒 235,000円以上 高卒200,000円以上)</td></tr>
+    <tr><th class="item">休日休暇</th><td class="data">週休2日制(隔週)、祝日、夏期休暇、年末年始休暇、創立記念日休暇、慶弔休暇、年次有給休暇、特別休暇</td></tr>
+    <tr><th class="item">諸手当</th><td class="data">現場手当、資格手当、時間外手当、通勤手当、住宅手当、家族手当</td></tr>
+    <tr><th class="item">昇給</th><td class="data">年1回(4月)</td></tr>
+    <tr><th class="item">賞与</th><td class="data">年2回(6月・12月)</td></tr>
+    <tr><th class="item">保険</th><td class="data">労災保険、雇用保険、健康保険、厚生年金保険</td></tr>
+    <tr><th class="item">福利厚生</th><td class="data">制度:財形貯蓄、退職金<br>施設:社員寮</td></tr>
+  </table>
   </div>
 </section>
 <!-- /Desc -->
@@ -119,20 +111,26 @@
 <!-- About -->
 <section id="recruitAbout">
   <h3 class="title">選考について</h3>
-  <div clas="contents">
-応募資格
-高校卒業以上
-応募書類
-履歴書、健康診断書、成績証明書、卒業見込証
-選考方法
-筆記(専門)試験、適性検査、個人面接
-選考場所
-横浜本社
-その他
-先ずは採用窓□(総務部 小堀:045-264-2911)までお問い合わせ下さい。
+  <div class="contents">
+  <table class="recruitTable">
+    <tr><th class="item">応募資格</th><td class="data">高校卒業以上</td></tr>
+    <tr><th class="item">応募書類</th><td class="data">履歴書、健康診断書、成績証明書、卒業見込証明書</td></tr>
+    <tr><th class="item">選考方法</th><td class="data">筆記(専門)試験、適性検査、個人面接</td></tr>
+    <tr><th class="item">選考場所</th><td class="data">横浜本社</td></tr>
+  </table>
   </div>
 </section>
 <!-- /About -->
+
+<!-- Ask -->
+<div id="recruitAsk">
+<h3 class="title">お問い合わせ</h3>
+<div class="contents">
+<div class="copy">まずは<strong>採用窓口(総務部 小堀:045-264-2911)</strong>までお問い合わせ下さい。</div>
+<div class="link">メールでのお問い合わせは<a href="form.html">こちら</a>から。</div>
+</div>
+</div>
+<!-- /Ask -->
 
 <!-- Contents Area End --></div><!-- /Contents Area End -->
 
@@ -146,6 +144,6 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">window.jQuery || document.write('<script src="common/js/jquery.js"><\/script>')</script>
-<script type="text/javascript" src="common/js/recruit.js"></script>
+<script type="text/javascript" src="common/js/base.js"></script><script type="text/javascript" src="common/js/recruit.js"></script>
 </body>
 </html>

@@ -13,75 +13,173 @@ body{
 }
 
 /* Panel */
-#panelArea {
-    margin: 0 auto;
-    padding: 100px 0;
-    @include background-image(linear-gradient(-45deg, #f6f6f6 25%, white 25%, white 50%, #f6f6f6 50%, #f6f6f6 75%, white 75%, white));
-    background-size: 4px 4px;
+#panelArea{
+  $position_title: 37%;
+  position: relative;
+  background-position: center center;
+  @include background-size(cover);
+  background-repeat: no-repeat;
   .base{
-      width: $width_page;
-      margin: 0 auto;
-      padding: 0 10px;
-    .pageTitle {
-      font-size: 38px;
-    }
-    .copy {
-      margin-top: 10px;
-    }
-  }
-}
-
-/* pankuzu */
-#globalPankuzu {
-  .pankuzuBase {
+    height: 500px;
     width: $width_page;
     margin: 0 auto;
-    .pankuzu {
-      padding: 10px 0;
-      .link {
+    .pageTitle{
+      position: absolute;
+      top: $position_title;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+      letter-spacing: 4px;
+      color: #fff;
+    }
+    .copy{
+      position: absolute;
+      top: $position_title + 14;
+      left: 0;
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+      p{
         @include inline-block;
-        &:after { content: ">"; margin: 0 7px; }
-        &:last-child:after { content: ""; }
+        width: 280px;
+        color: #fff;
+        text-align: left;
+        font-size: 13px;
+        line-height: 1.5;
       }
     }
   }
 }
 
-/* PageSet */
-.pageSet {
-  @include clearfix;
-  width: $width_page;
-  margin: 0 auto;
-}
-
-/* SideNavi */
-#sideNaviArea {
-  $sideNavi_padding: $width_base_margin;
-  float: left;
-  width: $width_side - ($sideNavi_padding * 2);
-  margin-right: $width_base_margin;
-  padding: $sideNavi_padding;
-  background: #fff;
-  .pageTitle {
-    font-size: 18px;
-    font-weight: bold;
+/* pankuzu */
+#globalPankuzu{
+  %pankuzuFont{
+    color: #fff;
+    font-size: 11px;
   }
-  .sideNavi {
-    .naviBase {
-      .list {
-          margin-top: 10px;
-        a {
+  background: #000;
+  .pankuzuBase{
+    width: $width_page;
+    margin: 0 auto;
+    .pankuzu{
+      padding: 10px;
+      .link{
+        @include inline-block;
+        @extend %pankuzuFont;
+        &:after{ content: ">"; margin: 0 8px; }
+        &:last-child:after{ content: ""; }
+        a{
+          @extend %pankuzuFont;
+          &:hover{
+            text-decoration: underline;
+          }       
+        }
+        span {
+          font-weight: bold;
         }
       }
     }
   }
 }
 
-/* contentsArea */
-.contentsArea {
-  float: right;
-  $contentsArea_padding: $width_base_margin;
-  width: $width_page - $width_base_margin - $width_side - ($contentsArea_padding * 2);
-  padding: $contentsArea_padding;
-  background: #fff;
+/* PageSet */
+.pageSet{
+  @include clearfix;
+  width: $width_page;
+  margin: $width_base_margin auto 0;
 }
+
+/* SideNavi */
+#sideNaviArea{
+  $sideNavi_padding: $width_base_margin/1.5;
+  float: left;
+  width: $width_side;
+  margin-right: $width_base_margin;
+  background: #fff;
+  .pageTitle{
+    & + .pageTitle{
+      border-top: 1px solid  $color_gray;
+    }
+    %titleBaseStyle{
+      display: block;
+      padding: $sideNavi_padding;
+      background: $color_blue;
+      font-size: 15px;
+      color: #fff;
+      position: relative;
+    }
+    span{
+      @extend %titleBaseStyle;
+    }
+    a{
+      @extend %titleBaseStyle;
+      &:after{
+        @include link_Arrow(14,10,#fff);
+      }
+    }
+  }
+  .sideNavi{
+    .naviBase{
+      .list{
+        a{
+          z-index: 100;
+          display: block;
+          position: relative;
+          padding: $sideNavi_padding;
+          border-bottom: 1px solid $color_gray;
+          opacity: .7;
+          &:after{
+            @include link_Arrow(19,10,$color_blue,17);
+          }
+          &:hover{
+            @include box-shadow(#ddd 0 1px 5px);
+          }
+        }
+        &.now a{
+          opacity: 1 !important;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+
+/* contentsArea */
+$color_th: #ddd;
+$color_border: darken($color_th, 10%);
+.contentsArea{
+  float: right;
+  width: $width_page - $width_base_margin - $width_side;
+  // background: #fff;
+  %contentsAreaTitle{
+    font-size: 36px;
+    line-height: 1.2;
+    color: #666;
+  }
+  %contentsBase{
+    $contentsArea_padding: $width_base_margin*1.2;
+    border-top: 4px solid $color_blue;
+    background: #fff;
+    padding: $contentsArea_padding;
+  }
+  /* Table Style */
+  %descTable{
+    border: 1px solid $color_border;
+    background: #fafafa;
+    .item,.data{
+      padding: $width_base_margin;
+      border-bottom: 1px solid $color_border;
+      vertical-align: top;
+    }
+    .item{
+        width: 25%;
+        border: 1px solid darken($color_th, 10%);
+        border-right: none;
+        background: $color_th;
+    }
+  }
+}
+

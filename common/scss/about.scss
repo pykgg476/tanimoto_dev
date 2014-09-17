@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "core";  
+@import "underPage"; 
+
+
+/*============================
+unit
+============================*/
+
+/* Panel */
+#panelArea{
+  // background-image: url("../../imageFile/comapny_dammy_photo.jpg");
+}
+
+.contentsArea{
+  width: $width_page - $contentsArea_padding*2;
+}
+
+/*============================
+parts
+============================*/

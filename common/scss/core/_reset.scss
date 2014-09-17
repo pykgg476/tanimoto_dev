@@ -12,14 +12,17 @@ Style
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
   word-break:break-all; 
   word-wrap:normal; 
+  -webkit-font-smoothing:antialiased;
 }
 
 img { border: 0; vertical-align: bottom; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size :100%;
-  font-weight: bold;
+  font-weight: normal;
 }
+
+table { width: 100%; }
 
 em { font-style: normal; font-weight: bold; }
 
@@ -27,7 +30,7 @@ pre {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
-} /* 全てのブラウザーにおいてpre-formatted textの読みやすさを改善 */
+} 
 
 sub, sup {
     font-size: 75%;
@@ -36,4 +39,4 @@ sub, sup {
     vertical-align: baseline;
 }
 sup { top: -0.5em; }
-sub { bottom: -0.25em; } /* 全てのブラウザーにおいてsubおよびsup要素がline-heightに影響する問題を防ぐ */
+sub { bottom: -0.25em; } 

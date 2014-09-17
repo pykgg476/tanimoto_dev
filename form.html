@@ -21,14 +21,18 @@
 <!-- Global Header -->
 <header id="globalHeader">
   <div class="base">
-    <h1 class="logo"><a href="index.html"><img src="imageFile/global/header_logo.png" height="32" width="256" alt="たにもと建設"></a></h1>
-    <nav class="globalNavi">
-      <ul class="navi">
-        <li><a class="globalNavi-menu_1" href="point_index.html">仕事・技術・人</a></li>
-        <li><a class="globalNavi-menu_2" href="work.html">実績紹介</a></li>
-        <li><a class="globalNavi-menu_3" href="company.html">会社概要</a></li>
-        <li><a class="globalNavi-menu_4" href="recruit.html">採用情報</a></li>
-        <li><a class="globalNavi-menu_5 now" href="form.html">お問い合わせ</a></li>
+    <h1 class="logo"><a href="index.html"><img src="imageFile/global/header_logo.png" height="32" width="256" alt="たにもと建設"></a></h1><!-- 
+     --><nav class="globalNavi">
+      <ul class="naviBase">
+        <li class="navi"><a class="gmenu" href="point_index.html"><span class="globalNavi-menu_1">仕事・技術・人</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="work.html"><span class="globalNavi-menu_2">実績紹介</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="company_message.html"><span class="globalNavi-menu_3">会社情報</span></a>
+          <ul class="pullDownNavi">
+            <li class="navi"><a href="company_message.html">社長メッセージ</a></li>
+            <li class="navi"><a href="company.html">会社概要</a></li>
+          </ul></li><!-- 
+         --><li class="navi"><a class="gmenu" href="recruit.html"><span class="globalNavi-menu_4">採用情報</span></a></li><!-- 
+         --><li class="navi now"><a class="gmenu" href="form.html"><span class="globalNavi-menu_5">お問い合わせ</span></a></li>
       </ul>
     </nav>
   </div>
@@ -60,14 +64,55 @@
 <!-- Contents Area Start --><div class="contentsArea"><!-- /Contents Area Start -->
 
 <!-- Copy -->
-<div class="formCopy">
-お電話・FAXによるお問い合わせ
-TEL：045(264)2911　FAX：045(264)2925
-【受付時間】平日9:00～17:00　※日曜・祝日、年末年始などは休みをいただいております。
-メールよるお問い合わせ
-Mail：◯◯◯◯◯◯◯@◯◯◯◯◯.co.jp
+<div id="formCopy">
+<div class="copy">
+下記からお問い合せの内容をお選びください。<br>
+お問い合せの内容によっては、返信に時間がかかる場合や、お答えできない場合があることをご了承ください。<br>
+なお、お問い合せの際には、「当サイトのご利用にあたって」をご確認の上、お問い合せください。<span style="color:#f00">(←これはどこのこと？)</span>
+</div>
 </div>
 <!-- /Copy -->
+
+<!-- JOB -->
+<div id="formJob">
+<h3 class="title">新規お取引に関するお問い合せ</h3>
+<div class="copy">新たに当社への業務依頼・ご発注を希望される法人・団体の方は、以下のメールアドレスにお問い合わせください。</div>
+<div class="dataSet">
+    <span class="label">MAIL：</span><a href="mailto:goodjob@tanimoto-const.co.jp" class="num">goodjob@tanimoto-const.co.jp</a>
+  </div>
+</div>
+<!-- /JOB -->
+
+<!-- Career -->
+<div id="formCareer">
+<h3 class="title">採用に関するお問い合せ</h3>
+<div class="copy">新卒・キャリア採用などに関するお問い合せは、以下のメールアドレスにお問い合わせください。</div>
+<div class="dataSet">
+    <span class="label">MAIL：</span><a href="career@tanimoto-const.co.jp" class="num">career@tanimoto-const.co.jp</a>
+  </div>
+</div>
+<!-- /Career -->
+
+<!-- info -->
+<div id="forminfo">
+<h3 class="title">その他、当社へのご意見・ご要望</h3>
+<div class="copy">上記以外のご意見やご要望（当サイトに関するお問い合わせ等）は、以下のメールアドレスにお問い合わせください。</div>
+<div class="dataSet">
+    <span class="label">MAIL：</span><a href="info@tanimoto-const.co.jp" class="num">info@tanimoto-const.co.jp</a>
+  </div>
+</div>
+<!-- /info -->
+
+<!-- Tel -->
+<div id="formTel">
+  <h3 class="title">お電話・FAXによるお問い合わせ</h3>
+  <div class="dataSet"><span class="tel"><span class="label">TEL：</span><span class="num">045(264)2911</span></span><span class="fax"><span class="label">FAX：</span><span class="num">045(264)2925</span></span></div>
+  <div class="time">
+    <span class="label">【受付時間】</span><span class="num">平日9:00～17:00</span>
+  </div>
+  <div class="attention">※日曜・祝日、年末年始などは休みをいただいております。</div>
+</div>
+<!-- /Tel -->
 
 <!-- Contents Area End --></div><!-- /Contents Area End -->
 
@@ -81,6 +126,6 @@ Mail：◯◯◯◯◯◯◯@◯◯◯◯◯.co.jp
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">window.jQuery || document.write('<script src="common/js/jquery.js"><\/script>')</script>
-<script type="text/javascript" src="common/js/form.js"></script>
+<script type="text/javascript" src="common/js/base.js"></script><script type="text/javascript" src="common/js/form.js"></script>
 </body>
 </html>

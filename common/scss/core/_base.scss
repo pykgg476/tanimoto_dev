@@ -1,8 +1,11 @@
+@charset "UTF-8";
+
 /*============================
 @import
 ============================*/
 
 @import "compass";
+@import "../font/font-awesome.scss";
 
 
 /*============================
@@ -11,31 +14,34 @@ Global Style
 
 /* Var */
 $width_page: 980px;
-$width_base_margin: 20px;
+$width_base_margin: 25px;
+$contentsArea_padding: 0;
 
 $color_blue: #0094dc;
 $color_gray: #eee;
-$color_font_base: #333;
+$color_font_base: #666;
+$spacing_font: 1px;
 $color_font_link: $color_blue;
 $color_font_link_hover: adjust-lightness($color_font_link, 30%);
 
+$color_line_dashed: #ccc;
+
 
 /* Font */
-body {
-  font: 13px/1.385 arial, helvetica, clean, sans-serif; /* 基本文字設定 */
+body{
+  font: 13px/1.75 arial, helvetica, clean, sans-serif; /* 基本文字設定 */
 }
 
-body, button, input, select, optgroup, textarea {
-  font-family: YuGothic, '游ゴシック',"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","メイリオ", Meiryo,Osaka,"ＭＳ Ｐゴシック", "MS PGothic",
+body, button, input, select, optgroup, textarea{
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","メイリオ", Meiryo,Osaka,"ＭＳ Ｐゴシック", "MS PGothic",
   sans-serif;
   color: $color_font_base;
+  letter-spacing: $spacing_font;
 }
 
-a { 
+a{ 
   color: $color_font_link; 
-  &:hover { 
-    color: $color_font_link_hover; 
-  }
+  text-decoration: none;
 }
 
 
@@ -43,7 +49,21 @@ a {
 Function
 ============================*/
 
+@mixin dammyArea() {
+  @include background-image(linear-gradient(-45deg, #f6f6f6 25%, white 25%, white 50%, #f6f6f6 50%, #f6f6f6 75%, white 75%, white));
+  background-size: 4px 4px;
+}
 
+@mixin link_Arrow($top,$right,$color,$size:20){
+  @include fa-icon();
+  // content: "\f054";
+  content: "\f105";
+  font-size: $size+px;
+  position: absolute;
+  top: $top+px;
+  right: $right+px;
+  color: $color;
+}
 
 
 /*============================
@@ -51,37 +71,97 @@ unit
 ============================*/
 
 /* Global Header */
-#globalHeader {
+#globalHeader{
     background: #fff;
-    border-bottom: 3px solid  #ddd;
-  .base {
+    // border-bottom: 1px solid  #ddd;
+  .base{
+    $width_logo: 256px;
+    $padding_gnavi: 25px;
+    $width_logo_per: 25%;
     position: relative;
-    width: $width_page;
-    margin: 0 auto;
-    .logo {
+    // width: $width_page;
+    // margin: 0 auto;
+    min-width: $width_page;
+    .logo{
       @include inline-block;
       vertical-align: middle;
-      padding: 25px 0;
+      width: $width_logo_per - 1;
+      text-align: center;
+      a{
+        @include inline-block;
+        padding: $padding_gnavi;
+        img{
+          width: 100%;
+          height: auto;
+          max-width: $width_logo;
+        }
+      }
     }
-    .globalNavi {
-      position: absolute;
-      top: 22px;
-      right: 0;
+    .globalNavi{
       @include inline-block;
       vertical-align: middle;
-      .navi {
-        li {
-          @include inline-block;
-          @include clearfix;
+      width: 100 - $width_logo_per;
+      min-width: $width_page - $width_logo;
+      border-left: 1px solid  #ddd;
+      .naviBase{
+        > .navi{
+          z-index: 100;
+          $naviPadding: 3%;
+          // @include inline-block;
+          float: left;
+          position: relative;
           @import "global/globalNavi/*.png";
           @include all-globalNavi-sprites($dimensions:true);
-          margin-left: 30px;
-        a {
-          @include inline-block;
-          @include hide-text;
-          background-image: url('../../imageFile/global/globalNavi-s8f7fed341e.png') !important;
-          &:hover { opacity: .5; }
+          width: 20%;
+          &:last-child a{
+            border-right: none;
+            padding-right: 0;
           }
+          &.now {
+            position: relative;
+            &:after{
+              width: 100%;
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              display: block;
+              content: "";
+              border-bottom: 5px solid $color_blue;
+            }
+            a span {
+              opacity: 1;
+            }
+          }
+          .pullDownNavi{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            display: none;
+            background: #fff;
+            > li{
+              > a{
+                display: block;
+                border-top: 1px solid  #ddd;
+                padding: $width_base_margin;
+                opacity: .6;
+                box-shadow: none !important;
+              }
+            }
+          }
+        > a{
+          display: block;
+          border-right: 1px solid  #ddd;
+          padding: $padding_gnavi+6 $naviPadding;
+          text-align: center;
+          span{
+            @include inline-block;
+            @include hide-text;
+            height: 32px;
+            background-image: url('../../imageFile/global/globalNavi-s56d415f372.png') !important;
+            opacity: .5;
+            box-shadow: none !important;
+          }
+        }
         }
       }
     }
@@ -90,7 +170,7 @@ unit
 
 
 /* Global Footer */
-#globalFooter {
+#globalFooter{
   margin-top: $width_base_margin * 3;
   padding: 100px 0;
   background: #fff;

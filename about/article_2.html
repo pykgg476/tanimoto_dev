@@ -14,68 +14,71 @@
 <meta property="fb:app_id" content="126288507475470" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="canonical" href="">
-<link rel="stylesheet" href="common/font/font-awesome.min.css">
-<link rel="stylesheet" href="common/css/reset.css">
-<link rel="stylesheet" href="common/css/index.css">
-<style>
-  .pageSet { display: none; position: relative; }
-  #globalHeader { position: fixed; z-index: 1000; width: 100%; padding: 20px 0; text-align: center; }
-  .panel {position: fixed; top: 0; left: 0; text-align: center; background: url(imageFile/parts/_img.jpg) top center no-repeat; -webkit-background-size: cover;
-  background-size: cover; }
-  .panel .copy { position: relative; top: 300px; display: none; }
-  .contentsBase {text-align: center; }
-  .contents { position: relative; z-index: 100; background: #fff; padding: 30px 0; }
-  #globalFooter { position: relative; z-index: 100; background: #fff; padding: 10px 0 30px; border-top: 1px solid  #ddd; }
-</style>
+<link rel="stylesheet" href="../common/css/about.css">
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
+<!-- Global Header -->
+<header id="globalHeader">
+  <div class="base">
+    <h1 class="logo"><a href="index.html"><img src="../imageFile/global/header_logo.png" height="32" width="256" alt="たにもと建設"></a></h1><!-- 
+     --><nav class="globalNavi">
+      <ul class="naviBase">
+        <li class="navi now "><a class="gmenu" href="point_index.html"><span class="globalNavi-menu_1">仕事・技術・人</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="work.html"><span class="globalNavi-menu_2">実績紹介</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="company_message.html"><span class="globalNavi-menu_3">会社情報</span></a>
+          <ul class="pullDownNavi">
+            <li class="navi"><a href="company_message.html">社長メッセージ</a></li>
+            <li class="navi"><a href="company.html">会社概要</a></li>
+          </ul></li><!-- 
+         --><li class="navi"><a class="gmenu" href="recruit.html"><span class="globalNavi-menu_4">採用情報</span></a></li><!-- 
+         --><li class="navi"><a class="gmenu" href="form.html"><span class="globalNavi-menu_5">お問い合わせ</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- /Global Header -->
+
+<!-- Panel -->
+<div id="panelArea">
+  <div class="base">
+    <h2 class="pageTitle">会社概要</h2>
+    <div class="copy"><p>ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</p></div>
+  </div>
+</div>
+<!-- /Panel -->
+
+<!-- Pankuzu -->
+<div id="globalPankuzu">
+  <nav class="pankuzuBase">
+    <ul class="pankuzu">
+      <li class="link"><a href="index.html">たにもと建設 ホーム</a></li>
+      <li class="link"><a href="about_index.html">仕事・技術・人</a></li>
+      <li class="link"><span>たにもとが誇る港湾土木技術</span></li>
+    </ul>
+  </nav>
+</div>
+<!-- /Pankuzu -->
+
 <!-- PageSet Start --><div class="pageSet"><!-- /PageSet Start -->
 
-<!-- Header -->
-<header id="globalHeader"><img src="imageFile/parts/_header.png" height="44" width="980"></header>
-<!-- Header -->
+<!-- Contents Area Start --><div class="contentsArea"><!-- /Contents Area Start -->
 
-<div class="panel"><img class="copy" src="imageFile/parts/_copy.png" height="29" width="529" alt=""></div>
 
-<div class="contentsBase">
 
-<div class="contents"><img src="imageFile/parts/_contents.png" height="883" width="981" alt=""></div>
-
-<footer id="globalFooter"><img src="imageFile/parts/_footer.png" height="201" width="991" alt=""></footer>
-
-</div>
+<!-- Contents Area End --></div><!-- /Contents Area End -->
 
 <!-- PageSet End --></div><!-- /PageSet End -->
 
+<!-- Footer -->
+<footer id="globalFooter">
+  ここにフッターが入ります。
+</footer>
+<!-- /Footer -->
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">window.jQuery || document.write('<script src="common/js/jquery.js"><\/script>')</script>
-<script>
-  $(function(){
-
-    sizeInit();
-    setTimeout(function(){ $('.pageSet').fadeIn(1000) }, 1000);
-    setTimeout(function(){ $('.copy').fadeIn(1000) }, 2000);
-
-    $(window).resize(function(){ sizeInit(); });
-    $(window).scroll(function(){ headerBG(); })
-
-  });
-
-  var sizeInit = function(){
-    $('.panel').height($(window).height()).width($(window).width());
-    $('.contentsBase').css('paddingTop',$('.panel').height());
-  }
-
-  var headerBG = function(){
-    if($(window).scrollTop() > 500){
-      $('#globalHeader').css('backgroundColor','#fff');
-    }else{
-      $('#globalHeader').css('backgroundColor','none');
-    }
-  }
-
-</script>
-<script type="text/javascript" src="common/js/index.js"></script>
+<script type="text/javascript" src="common/js/base.js"></script>
 </body>
 </html>
