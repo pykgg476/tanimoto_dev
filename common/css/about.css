@@ -1162,64 +1162,11 @@ body { background: #eeeeee; }
 
 /* contentsArea */
 .contentsArea { float: right; width: 745px; }
-.contentsArea .companyDescBase .title, .companyDescBase .contentsArea .title { font-size: 36px; line-height: 1.2; color: #666; }
-
 /*============================
 unit
 ============================*/
 /* Panel */
-#panelArea { background-image: url("../../imageFile/comapny_dammy_photo.jpg"); }
-
-/* Base */
-.companyDescBase { border-top: 4px solid #0094dc; background: #fff; padding: 30px; }
-.companyDescBase + .companyDescBase { margin-top: 25px; }
-.companyDescBase .contents { margin-top: 25px; font-size: 14px; line-height: 1.75; }
-.companyDescBase .contents .copy { border: 1px solid  #e0e0e0; padding: 25px; background: #fafafa; }
-.companyDescBase .contents .descList .list { margin-top: 25px; }
-.companyDescBase .contents .descList .list + .list { margin-top: 25px; padding-top: 25px; border-top: 1px dashed #cccccc; }
-.companyDescBase .contents .regist { position: relative; margin-top: 25px; padding-top: 25px; border-top: 1px dashed #cccccc; min-height: 100px; }
-.companyDescBase .contents .regist .img { position: absolute; top: 25px; left: 0; }
-.companyDescBase .contents .regist .text { padding: 8px 0 0 125px; }
-.companyDescBase .contents .regist .text .main { font-size: 18px; }
-.companyDescBase .contents .regist .text .sub { margin-top: 8.33333px; }
-
-/* Table Style */
-#companyDescDetail .contents .descTable, #companyHistory .contents .historyTable, #companyShips .shipsTable { border: 1px solid #c4c4c4; background: #fafafa; }
-#companyDescDetail .contents .descTable .item, #companyHistory .contents .historyTable .item, #companyShips .shipsTable .item, #companyDescDetail .contents .descTable .data, #companyHistory .contents .historyTable .data, #companyShips .shipsTable .data { padding: 25px; border-bottom: 1px solid #c4c4c4; vertical-align: top; }
-#companyDescDetail .contents .descTable .item, #companyHistory .contents .historyTable .item, #companyShips .shipsTable .item { width: 25%; border: 1px solid #c4c4c4; border-right: none; background: #dddddd; }
-
-/* companyDescEnvironment */
-/* companyDescEnvironmentList */
-#companyDescEnvironmentList .descList .list:nth-child(1):before, #companyDescEnvironmentList .descList .list:nth-child(2):before, #companyDescEnvironmentList .descList .list:nth-child(3):before, #companyDescEnvironmentList .descList .list:nth-child(4):before, #companyDescEnvironmentList .descList .list:nth-child(5):before { position: absolute; left: 0; top: 20px; display: inline-block; font-size: 45px; line-height: 1; font-family: 'Source Code Pro'; font-weight: 300; color: #ccc; }
-#companyDescEnvironmentList .descList .list { position: relative; padding-left: 45px; }
-#companyDescEnvironmentList .descList .list:nth-child(1):before { content: '1'; top: -5px; }
-#companyDescEnvironmentList .descList .list:nth-child(2):before { content: '2'; }
-#companyDescEnvironmentList .descList .list:nth-child(3):before { content: '3'; }
-#companyDescEnvironmentList .descList .list:nth-child(4):before { content: '4'; top: 15px; }
-#companyDescEnvironmentList .descList .list:nth-child(5):before { content: '5'; }
-
-/* companyDescCSR */
-#companyDescCSR .contents .descList .list .listItem .item { font-size: 23px; color: #aaa; }
-
-/* companyDescDetail */
-#companyDescDetail .contents .descTable .data .tableList .list .label { display: inline-block; width: 12em; font-size: 12px; margin-right: 12.5px; }
-#companyDescDetail .contents .descTable .data .tableList .list .name + .name { margin-left: 20px; }
-#companyDescDetail .contents .descTable .data .addressList + .addressList, #companyDescDetail .contents .descTable .data .numList + .addressList, #companyDescDetail .contents .descTable .data .addressList + .numList, #companyDescDetail .contents .descTable .data .numList + .numList { margin-top: 25px; padding-top: 25px; border-top: 1px dashed #cccccc; }
-#companyDescDetail .contents .descTable .data .addressList .label, #companyDescDetail .contents .descTable .data .numList .label { font-size: 25px; color: #888; }
-#companyDescDetail .contents .descTable .data .addressList .address .num, #companyDescDetail .contents .descTable .data .numList .address .num { display: block; }
-#companyDescDetail .contents .descTable .data .addressList .map, #companyDescDetail .contents .descTable .data .numList .map { margin-top: 12.5px; }
-#companyDescDetail .contents .descTable .data .addressList .telNum .fax, #companyDescDetail .contents .descTable .data .numList .telNum .fax { margin-left: 15px; }
-#companyDescDetail .contents .descTable .data .dataSet .text:after { content: "/"; margin: 0 10px; }
-#companyDescDetail .contents .descTable .data .dataSet .text:last-child:after { display: none; }
-#companyDescDetail .contents .descTable .data .other { text-align: right; font-size: 12px; }
-#companyDescDetail .contents .descTable .data .numList .label { font-size: 18px; }
-
-/* #companyHistory */
-/* #companyShips */
-#companyShips .explain { margin: 25px 0; }
-#companyShips .shipsTable { margin-top: 25px; }
-#companyShips .shipsTable .item, #companyShips .shipsTable .data { border: 1px solid #c4c4c4; }
-#companyShips .shipsTable .name { width: 1%; white-space: nowrap; }
+.contentsArea { width: 980px; }
 
 /*============================
 parts
