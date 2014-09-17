@@ -9,35 +9,10 @@
 parts
 ============================*/
 
-%recruitUnit{
-  margin-top: $width_base_margin*2;
-  .title{
-    font-size: 26px;
-    font-weight: bold;
-    padding-bottom: $width_base_margin/2;
-    border-bottom: 3px solid $color_blue;
-  }
-  .recruitTable{
-    margin-top: $width_base_margin;
-    border-top: 1px solid  #ddd;
-    .item,.data{
-      padding: $width_base_margin/2;
-      border-bottom: 1px solid  #ddd;
-      vertical-align: top;
-    }
-    .item{
-        width: 22%;
-        font-weight: bold;
-        border-right: 1px solid  #eee;
-        background: #f6f6f6;
-    }
-    .data{
-    }
-  }
+/* Panel */
+#panelArea{
+  background-image: url("../../imageFile/recruit_dammy_photo.jpg");
 }
-
-
-
 
 /*============================
 unit
@@ -45,11 +20,10 @@ unit
 
 /* recruitCopy */
 .recruitCopy{
-  background: #f6f6f6;
-  // border: 5px solid $color_blue;
-  padding: $width_base_margin*1.5;
+  padding: $width_base_margin*2;
   font-size: 14px;
   line-height: 1.5;
+  background: #fff;
   p{
     & + p{
       margin-top: $width_base_margin/1.5;
@@ -58,17 +32,68 @@ unit
 }
 
 /* recruitUnit */
-#recruitDesc,#recruitAbout{
-  @extend %recruitUnit;
+#recruitDesc{
+  @extend %contentsBase;
+  margin-top: $width_base_margin;
+  .title{
+    @extend %contentsAreaTitle;
+  }
+  .contents{
+    .recruitTable{
+      @extend %descTable;
+      margin-top: $width_base_margin;
+    }
+  }
 }
 
 /* recruitAbout */
 #recruitAbout{
+  @extend #recruitDesc;
   .hint{
     margin: $width_base_margin/2 0 0 5px;
   }
 }
 
+/* Ask */
+#recruitAsk{
+  margin-top: $width_base_margin;
+  background: #fff;
+  padding: $width_base_margin;
+  display: table;
+  %tableBase{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .title{
+    @extend %tableBase;
+    width: 1%;
+    white-space: nowrap;
+    font-size: 22px;
+    color: #666;
+    padding-right: $width_base_margin;
+    border-right: 1px solid  #ddd;
+    text-align: center;
+  }
+  .contents{
+    @extend %tableBase;
+    padding: $width_base_margin;
+    .copy{
+      strong{
+        margin: 0 2px;
+        font-weight: bold;
+      }
+    }
+    .link{
+      a{
+        margin: 0 2px;
+        text-decoration: underline;
+        &:hover{
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
 
 
 
