@@ -1097,6 +1097,7 @@ body { background: #eeeeee; }
 #sideNaviArea .pageTitle + .pageTitle { border-top: 1px solid #eeeeee; }
 #sideNaviArea .pageTitle span, #sideNaviArea .pageTitle a { display: block; padding: 16.66667px; background: #0094dc; font-size: 15px; color: #fff; position: relative; }
 #sideNaviArea .pageTitle a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 20px; position: absolute; top: 14px; right: 10px; color: white; }
+#sideNaviArea .pageTitle .now { font-weight: bold; }
 #sideNaviArea .sideNavi .naviBase .list a { z-index: 100; display: block; position: relative; padding: 16.66667px; border-bottom: 1px solid #eeeeee; opacity: .7; }
 #sideNaviArea .sideNavi .naviBase .list a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 17px; position: absolute; top: 19px; right: 10px; color: #0094dc; }
 #sideNaviArea .sideNavi .naviBase .list a:hover { -webkit-box-shadow: #dddddd 0 1px 5px; -moz-box-shadow: #dddddd 0 1px 5px; box-shadow: #dddddd 0 1px 5px; }

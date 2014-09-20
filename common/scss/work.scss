@@ -10,6 +10,11 @@
 parts
 ============================*/
 
+/* Panel */
+#panelArea{
+  background-image: url("../../imageFile/work_photo.jpg");
+}
+
 .prjUnit{
   & + .prjUnit{
     margin-top: $width_base_margin*2;

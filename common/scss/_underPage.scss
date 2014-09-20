@@ -119,6 +119,9 @@ body{
         @include link_Arrow(14,10,#fff);
       }
     }
+    .now{
+      font-weight: bold;
+    }
   }
   .sideNavi{
     .naviBase{
