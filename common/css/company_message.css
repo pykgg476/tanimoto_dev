@@ -28,7 +28,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*============================
 Style
 ============================*/
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { word-break: break-all; word-wrap: normal; -webkit-font-smoothing: antialiased; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { word-break: normal; word-wrap: normal; -webkit-font-smoothing: antialiased; }
 
 img { border: 0; vertical-align: bottom; }
 
@@ -1105,10 +1105,6 @@ body { background: #eeeeee; }
 
 /* contentsArea */
 .contentsArea { float: right; width: 745px; /* Table Style */ }
-.contentsArea #companyDescDetail .contents .descTable, #companyDescDetail .contents .contentsArea .descTable, .contentsArea #companyHistory .contents .historyTable, #companyHistory .contents .contentsArea .historyTable, .contentsArea #companyShips .shipsTable, #companyShips .contentsArea .shipsTable { border: 1px solid #c4c4c4; background: #fafafa; }
-.contentsArea #companyDescDetail .contents .descTable .item, #companyDescDetail .contents .contentsArea .descTable .item, .contentsArea #companyHistory .contents .historyTable .item, #companyHistory .contents .contentsArea .historyTable .item, .contentsArea #companyShips .shipsTable .item, #companyShips .contentsArea .shipsTable .item, .contentsArea #companyDescDetail .contents .descTable .data, #companyDescDetail .contents .contentsArea .descTable .data, .contentsArea #companyHistory .contents .historyTable .data, #companyHistory .contents .contentsArea .historyTable .data, .contentsArea #companyShips .shipsTable .data, #companyShips .contentsArea .shipsTable .data { padding: 25px; border-bottom: 1px solid #c4c4c4; vertical-align: top; }
-.contentsArea #companyDescDetail .contents .descTable .item, #companyDescDetail .contents .contentsArea .descTable .item, .contentsArea #companyHistory .contents .historyTable .item, #companyHistory .contents .contentsArea .historyTable .item, .contentsArea #companyShips .shipsTable .item, #companyShips .contentsArea .shipsTable .item { width: 25%; border: 1px solid #c4c4c4; border-right: none; background: #dddddd; }
-
 /*============================
 unit
 ============================*/
@@ -1116,41 +1112,10 @@ unit
 #panelArea { background-image: url("../../imageFile/message_photo.jpg"); }
 
 /* Base */
-#comapanyMessage { background: #fff; padding: 25px; }
-
-/* companyDescEnvironment */
-/* companyDescEnvironmentList */
-#companyDescEnvironmentList .descList .list:nth-child(1):before, #companyDescEnvironmentList .descList .list:nth-child(2):before, #companyDescEnvironmentList .descList .list:nth-child(3):before, #companyDescEnvironmentList .descList .list:nth-child(4):before, #companyDescEnvironmentList .descList .list:nth-child(5):before { position: absolute; left: 0; top: 20px; display: inline-block; font-size: 45px; line-height: 1; font-family: 'Source Code Pro'; font-weight: 300; color: #ccc; }
-#companyDescEnvironmentList .descList .list { position: relative; padding-left: 45px; }
-#companyDescEnvironmentList .descList .list:nth-child(1):before { content: '1'; top: -5px; }
-#companyDescEnvironmentList .descList .list:nth-child(2):before { content: '2'; }
-#companyDescEnvironmentList .descList .list:nth-child(3):before { content: '3'; }
-#companyDescEnvironmentList .descList .list:nth-child(4):before { content: '4'; top: 15px; }
-#companyDescEnvironmentList .descList .list:nth-child(5):before { content: '5'; }
-
-/* companyDescCSR */
-#companyDescCSR .contents .descList .list .listItem .item { font-size: 23px; color: #aaa; }
-
-/* companyDescDetail */
-#companyDescDetail .contents .descTable .data .tableList .list .label { display: inline-block; width: 12em; font-size: 12px; margin-right: 12.5px; }
-#companyDescDetail .contents .descTable .data .tableList .list .name + .name { margin-left: 20px; }
-#companyDescDetail .contents .descTable .data .addressList + .addressList, #companyDescDetail .contents .descTable .data .numList + .addressList, #companyDescDetail .contents .descTable .data .addressList + .numList, #companyDescDetail .contents .descTable .data .numList + .numList { margin-top: 25px; padding-top: 25px; border-top: 1px dashed #cccccc; }
-#companyDescDetail .contents .descTable .data .addressList .label, #companyDescDetail .contents .descTable .data .numList .label { font-size: 25px; color: #888; }
-#companyDescDetail .contents .descTable .data .addressList .address .num, #companyDescDetail .contents .descTable .data .numList .address .num { display: block; }
-#companyDescDetail .contents .descTable .data .addressList .map, #companyDescDetail .contents .descTable .data .numList .map { margin-top: 12.5px; }
-#companyDescDetail .contents .descTable .data .addressList .telNum .fax, #companyDescDetail .contents .descTable .data .numList .telNum .fax { margin-left: 15px; }
-#companyDescDetail .contents .descTable .data .dataSet .text:after { content: "/"; margin: 0 10px; }
-#companyDescDetail .contents .descTable .data .dataSet .text:last-child:after { display: none; }
-#companyDescDetail .contents .descTable .data .other { text-align: right; font-size: 12px; }
-#companyDescDetail .contents .descTable .data .numList .label { font-size: 18px; }
-
-/* #companyHistory */
-/* #companyShips */
-#companyShips .explain { margin: 25px 0; }
-#companyShips .shipsTable { margin-top: 25px; }
-#companyShips .shipsTable .item, #companyShips .shipsTable .data { border: 1px solid #c4c4c4; }
-#companyShips .shipsTable .name { width: 1%; white-space: nowrap; }
-
-/*============================
-parts
-============================*/
+#comapanyMessage { background: #fff; padding: 37.5px; }
+#comapanyMessage .catch { margin-top: 25px; padding: 0 5px; font-size: 30px; color: #0094dc; }
+#comapanyMessage .text { margin-top: 25px; padding: 0 5px; font-size: 14px; line-height: 1.75; }
+#comapanyMessage .text p { margin-bottom: 25px; }
+#comapanyMessage .text .list { margin: 0 0 25px 12.5px; }
+#comapanyMessage .text .list li { list-style: decimal inside; }
+#comapanyMessage .text .list li + li { margin-top: 12.5px; }
