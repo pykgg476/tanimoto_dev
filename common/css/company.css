@@ -1106,7 +1106,7 @@ body { background: #eeeeee; }
 /* contentsArea */
 .contentsArea { float: right; width: 745px; }
 
-.companyDescBase .title { font-size: 29px; line-height: 1.2; color: #666; }
+.companyDescBase .title { font-size: 25px; line-height: 1.2; color: #666; }
 
 .companyDescBase { border-top: 4px solid #0094dc; background: #fff; padding: 30px; }
 
