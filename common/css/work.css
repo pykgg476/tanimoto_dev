@@ -1104,7 +1104,17 @@ body { background: #eeeeee; }
 #sideNaviArea .sideNavi .naviBase .list.now a { opacity: 1 !important; font-weight: bold; }
 
 /* contentsArea */
-.contentsArea { float: right; width: 745px; /* Table Style */ }
+.contentsArea { float: right; width: 745px; }
+
+.prjUnit .category { font-size: 29px; line-height: 1.2; color: #666; }
+
+.prjUnit { border-top: 4px solid #0094dc; background: #fff; padding: 30px; }
+
+/* Table Style */
+.prjUnit .workUnit .unitBase .dataSet .dataTable { border: 1px solid #c4c4c4; background: #fafafa; }
+.prjUnit .workUnit .unitBase .dataSet .dataTable .item, .prjUnit .workUnit .unitBase .dataSet .dataTable .data { padding: 25px; border-bottom: 1px solid #c4c4c4; vertical-align: top; }
+.prjUnit .workUnit .unitBase .dataSet .dataTable .item { width: 25%; border: 1px solid #c4c4c4; border-right: none; background: #dddddd; }
+
 /*============================
 parts
 ============================*/
@@ -1112,15 +1122,15 @@ parts
 #panelArea { background-image: url("../../imageFile/work_photo.jpg"); }
 
 .prjUnit + .prjUnit { margin-top: 50px; }
-.prjUnit .category { font-size: 26px; font-weight: bold; padding-bottom: 12.5px; border-bottom: 3px solid #0094dc; }
-.prjUnit .workUnit { display: table; margin-top: 25px; }
-.prjUnit .workUnit + .workUnit { padding-top: 25px; border-top: 1px dashed  #aaa; }
-.prjUnit .workUnit .photo, .prjUnit .workUnit .dataSet { display: table-cell; vertical-align: top; }
-.prjUnit .workUnit .photo { padding-right: 25px; }
-.prjUnit .workUnit .dataSet .dataTable { border-top: 1px solid  #eee; border-bottom: 1px solid  #eee; }
-.prjUnit .workUnit .dataSet .dataTable .item, .prjUnit .workUnit .dataSet .dataTable .data { padding: 12.5px; }
-.prjUnit .workUnit .dataSet .dataTable .item { border-bottom: 1px solid  #fff; background: #f6f6f6; white-space: nowrap; font-weight: bold; font-size: 12px; vertical-align: top; text-align: center; }
-.prjUnit .workUnit .dataSet .dataTable .data { border-bottom: 1px solid  #eee; vertical-align: top; padding-left: 12.5px; }
+.prjUnit .category { padding-bottom: 25px; }
+.prjUnit .workUnit { padding: 25px 0; border-top: 1px dashed #cccccc; }
+.prjUnit .workUnit .name { font-size: 22px; color: #0094dc; }
+.prjUnit .workUnit .unitBase { margin-top: 12.5px; display: table; }
+.prjUnit .workUnit .unitBase .photo, .prjUnit .workUnit .unitBase .dataSet { display: table-cell; vertical-align: top; }
+.prjUnit .workUnit .unitBase .dataSet { padding-left: 12.5px; }
+.prjUnit .workUnit .unitBase .dataSet .dataTable { border: none; }
+.prjUnit .workUnit .unitBase .dataSet .dataTable .item, .prjUnit .workUnit .unitBase .dataSet .dataTable .data { padding: 16.66667px; font-size: 11px; border: none; border-bottom: 1px solid #eaeaea; }
+.prjUnit .workUnit .unitBase .dataSet .dataTable tr:last-child .item, .prjUnit .workUnit .unitBase .dataSet .dataTable tr:last-child .data { border-bottom: none; }
 
 /*============================
 unit

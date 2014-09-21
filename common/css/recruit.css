@@ -1104,12 +1104,16 @@ body { background: #eeeeee; }
 #sideNaviArea .sideNavi .naviBase .list.now a { opacity: 1 !important; font-weight: bold; }
 
 /* contentsArea */
-.contentsArea { float: right; width: 745px; /* Table Style */ }
-.contentsArea #recruitDesc .title, #recruitDesc .contentsArea .title, .contentsArea #recruitAbout .title, #recruitAbout .contentsArea .title { font-size: 36px; line-height: 1.2; color: #666; }
-.contentsArea #recruitDesc, .contentsArea #recruitAbout { border-top: 4px solid #0094dc; background: #fff; padding: 30px; }
-.contentsArea #recruitDesc .contents .recruitTable, #recruitDesc .contents .contentsArea .recruitTable, .contentsArea #recruitAbout .contents .recruitTable, #recruitAbout .contents .contentsArea .recruitTable { border: 1px solid #c4c4c4; background: #fafafa; }
-.contentsArea #recruitDesc .contents .recruitTable .item, #recruitDesc .contents .contentsArea .recruitTable .item, .contentsArea #recruitAbout .contents .recruitTable .item, #recruitAbout .contents .contentsArea .recruitTable .item, .contentsArea #recruitDesc .contents .recruitTable .data, #recruitDesc .contents .contentsArea .recruitTable .data, .contentsArea #recruitAbout .contents .recruitTable .data, #recruitAbout .contents .contentsArea .recruitTable .data { padding: 25px; border-bottom: 1px solid #c4c4c4; vertical-align: top; }
-.contentsArea #recruitDesc .contents .recruitTable .item, #recruitDesc .contents .contentsArea .recruitTable .item, .contentsArea #recruitAbout .contents .recruitTable .item, #recruitAbout .contents .contentsArea .recruitTable .item { width: 25%; border: 1px solid #c4c4c4; border-right: none; background: #dddddd; }
+.contentsArea { float: right; width: 745px; }
+
+#recruitDesc .title, #recruitAbout .title { font-size: 29px; line-height: 1.2; color: #666; }
+
+#recruitDesc, #recruitAbout { border-top: 4px solid #0094dc; background: #fff; padding: 30px; }
+
+/* Table Style */
+#recruitDesc .contents .recruitTable, #recruitAbout .contents .recruitTable { border: 1px solid #c4c4c4; background: #fafafa; }
+#recruitDesc .contents .recruitTable .item, #recruitAbout .contents .recruitTable .item, #recruitDesc .contents .recruitTable .data, #recruitAbout .contents .recruitTable .data { padding: 25px; border-bottom: 1px solid #c4c4c4; vertical-align: top; }
+#recruitDesc .contents .recruitTable .item, #recruitAbout .contents .recruitTable .item { width: 25%; border: 1px solid #c4c4c4; border-right: none; background: #dddddd; }
 
 /*============================
 parts
