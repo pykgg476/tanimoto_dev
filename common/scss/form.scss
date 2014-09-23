@@ -15,48 +15,77 @@ parts
   background-image: url("../../imageFile/form_dammy_photo.jpg");
 }
 
-%formUnit{
-  & + %formUnit{
-    margin-top: $width_base_margin*2;
-  }
+.contentsArea{
+  width: 80%;
+  margin: 0 auto;
+  float: none;
+}
+
+/* Copy */
+.copyArea{
+  padding: $width_base_margin/2 0;
+}
+
+/* formUnit */
+.formUnit{
+  margin-top: $width_base_margin;
+  @extend %contentsBase;
   .title{
-    font-size: 26px;
-    font-weight: bold;
-    padding-bottom: $width_base_margin/2;
-    border-bottom: 3px solid $color_blue;
+    @extend %contentsAreaTitle;
+  }
+  .copy{
+    border: 1px solid  #e0e0e0;
+    margin-top: $width_base_margin;
+    padding: $width_base_margin;
+    background: #fafafa;
   }
   .dataSet{
-    margin-top: $width_base_margin;
-    font-size: 26px;
-    .label{
-
+    %icon{
+      @include fa-icon();
+      font-size: 35px;
+      vertical-align: middle;
+      margin-right: $width_base_margin/2;
     }
+    margin-top: $width_base_margin/2;
+    text-align: center;
     .num{
-      margin-right: $width_base_margin*1.5;
+      font-size: 30px;
     }
+    .mail{
+      &:hover{
+        opacity: .7;
+      }
+      &:before{
+        @extend %icon;
+        content: "\f003";
+      }
+    }
+    .tel{
+      &:before{
+        @extend %icon;
+        content: "\f1e4";
+      } 
+    }
+    .fax{
+      margin-left: 40px;
+      &:before{
+        @extend %icon;
+        content: "\f1ac";
+      } 
+    }
+  }
+  .time{
+    margin-top: $width_base_margin/2;
   }
 }
 
+#formTel{
+  .dataSet{
+    margin: $width_base_margin 0;
+  }
+}
 
 
 /*============================
 unit
 ============================*/
-
-.contentsArea{
-  width: $width_page - $contentsArea_padding*2;
-}
-
-#formCopyTel,#formCopyMail{
-  @extend %formUnit;
-}
-
-#formCopyTel {
-  .time{
-    margin-top: $width_base_margin/2;
-  }
-  .attention{
-    font-size: 12px;
-    color: #888;
-  }
-}

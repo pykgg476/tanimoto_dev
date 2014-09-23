@@ -56,7 +56,6 @@ Function
 
 @mixin link_Arrow($top,$right,$color,$size:20){
   @include fa-icon();
-  // content: "\f054";
   content: "\f105";
   font-size: $size+px;
   position: absolute;
