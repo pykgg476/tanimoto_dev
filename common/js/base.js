@@ -32,6 +32,10 @@ $(function(){
 	var gsubnavi = $("#globalHeader").find('.pullDownNavi').find('.navi');
 	mouseOverEffect(gsubnavi,'a',1,.6,false);
 
+	// フッターマウスオーバー
+	var footerNavi = $("#globalFooter").find('.childLink');
+	mouseOverEffect(footerNavi,'a',1,.6,false);
+
 	//外部リンクを別タブで開く	
 	$(function(){
      $("a[href^='http://']").attr("target","_blank");

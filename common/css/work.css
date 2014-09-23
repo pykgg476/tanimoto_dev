@@ -1058,7 +1058,21 @@ unit
 #globalHeader .base .globalNavi .naviBase > .navi > a span { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; height: 32px; background-image: url("../../imageFile/global/globalNavi-s56d415f372.png") !important; opacity: .5; box-shadow: none !important; }
 
 /* Global Footer */
-#globalFooter { margin-top: 75px; padding: 100px 0; background: #fff; text-align: center; color: #bbb; }
+#globalFooter { margin-top: 75px; background: #242424; }
+#globalFooter .linkArea { width: 980px; margin: 0 auto; padding: 25px 0 125px 0; overflow: hidden; }
+#globalFooter .linkArea .linkUnit { float: left; box-sizing: border-box; padding-right: 25px; }
+#globalFooter .linkArea .linkUnit.linkUnitTop { width: 19%; }
+#globalFooter .linkArea .linkUnit.linkUnitAbout { width: 23%; }
+#globalFooter .linkArea .linkUnit.linkUnitWork { width: 14%; }
+#globalFooter .linkArea .linkUnit.linkUnitCompany { width: 14%; }
+#globalFooter .linkArea .linkUnit.linkUnitRecruit { width: 14%; }
+#globalFooter .linkArea .linkUnit.linkUnitForm { width: 16%; }
+#globalFooter .linkArea .linkUnit .linkBase .pageLink a, #globalFooter .linkArea .linkUnit .linkBase .pageLink span { position: relative; color: #fff; font-weight: bold; font-size: 16px; }
+#globalFooter .linkArea .linkUnit .linkBase .pageLink a:before, #globalFooter .linkArea .linkUnit .linkBase .pageLink span:before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 17px; position: absolute; top: 0px; right: -15px; color: #0094dc; }
+#globalFooter .linkArea .linkUnit .linkBase .pageLink a:hover { text-decoration: underline; }
+#globalFooter .linkArea .linkUnit .linkBase .childLink a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; opacity: .6; margin-top: 10px; color: #ddd; font-size: 11px; line-height: 1.1; box-shadow: none !important; }
+#globalFooter .copyrightArea { background: #fff; padding: 25px 0; text-align: center; }
+#globalFooter .copyrightArea .copyright { font-size: 11px; color: #888; line-height: 1; }
 
 /*============================
 parts
@@ -1079,7 +1093,7 @@ body { background: #eeeeee; }
 #panelArea .base .copy p { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; width: 300px; color: #fff; text-align: left; font-size: 14px; line-height: 1.5; }
 
 /* pankuzu */
-#globalPankuzu { background: #000; }
+#globalPankuzu { background: #242424; }
 #globalPankuzu .pankuzuBase .pankuzu .link, #globalPankuzu .pankuzuBase .pankuzu .link a { color: #fff; font-size: 11px; }
 #globalPankuzu .pankuzuBase { width: 980px; margin: 0 auto; }
 #globalPankuzu .pankuzuBase .pankuzu { padding: 10px; }

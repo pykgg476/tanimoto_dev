@@ -170,11 +170,76 @@ unit
 
 /* Global Footer */
 #globalFooter{
+  $width_footer: $width_page;
+  $padding_footer: $width_base_margin;
   margin-top: $width_base_margin * 3;
-  padding: 100px 0;
-  background: #fff;
-  text-align: center;
-  color: #bbb;
+  background: #242424;
+  .linkArea{
+    width: $width_footer;
+    margin: 0 auto;
+    padding: $padding_footer 0 $padding_footer*5 0;
+    overflow: hidden;
+    .linkUnit{
+      float: left;
+      box-sizing: border-box;
+      padding-right: $width_base_margin;
+      &.linkUnitTop{
+        width: 19%;
+      }
+      &.linkUnitAbout{
+        width: 23%;
+      }
+      &.linkUnitWork{
+        width: 14%;
+      }
+      &.linkUnitCompany{
+        width: 14%;
+      }
+      &.linkUnitRecruit{
+        width: 14%;
+      }
+      &.linkUnitForm{
+        width: 16%;
+      }
+      .linkBase{
+        .pageLink{
+          a,span{
+            position: relative;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            &:before{
+              @include link_Arrow(0,-15,$color_blue,17);
+            }
+          }
+          a:hover{
+            text-decoration: underline;
+          }
+        }
+        .childLink{
+          a{
+            @include inline-block();
+            opacity: .6;
+            margin-top: 10px;
+            color: #ddd;
+            font-size: 11px;
+            line-height: 1.1;
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+  }
+  .copyrightArea{
+    background: #fff;
+    padding: $padding_footer 0;
+    text-align: center;
+    .copyright{
+      font-size: 11px;
+      color: #888;
+      line-height: 1;
+    }
+  }
 }
 
 /*============================
