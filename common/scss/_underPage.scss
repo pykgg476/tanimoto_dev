@@ -43,10 +43,10 @@ body{
       text-align: center;
       p{
         @include inline-block;
-        width: 280px;
+        width: 300px;
         color: #fff;
         text-align: left;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.5;
       }
     }
