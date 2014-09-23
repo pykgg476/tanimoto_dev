@@ -14,11 +14,11 @@ unit
 
 /* Panel */
 #panelArea{
-  // background-image: url("../../imageFile/comapny_dammy_photo.jpg");
+  background-image: url("../../imageFile/about/tec_photo_panel.jpg");
 }
 
 .contentsArea{
-  width: $width_page - $contentsArea_padding*2;
+  width: 100%;
 }
 
 /*============================

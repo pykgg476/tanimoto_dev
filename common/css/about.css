@@ -1111,7 +1111,9 @@ body { background: #eeeeee; }
 unit
 ============================*/
 /* Panel */
-.contentsArea { width: 920px; }
+#panelArea { background-image: url("../../imageFile/about/tec_photo_panel.jpg"); }
+
+.contentsArea { width: 100%; }
 
 /*============================
 parts
