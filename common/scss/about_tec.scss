@@ -6,6 +6,7 @@
 
 @import "core";  
 @import "underPage"; 
+@import "about"; 
 
 
 /*============================
@@ -14,24 +15,7 @@ Sytle
 
 /* Panel */
 #panelArea{
-  background-image: url("../../imageFile/about/tec_photo_panel.jpg");
-  .aboutTitleSet{
-    position: absolute;
-    top: 33%;
-    text-align: center;
-    width: $width_page;
-    %baseUnit{
-      @include inline-block();
-      vertical-align: middle;
-    }
-    .label{
-      @extend %baseUnit;
-    }
-    .title{
-      @extend %baseUnit;
-      margin-left: 30px;
-    }
-  }
+  background-image: url("../../imageFile/about/tec_panel_photo.jpg");
 }
 
 .contentsArea{

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "core";  
+@import "underPage"; 
+
+
+/*============================
+Sytle
+============================*/
+
+/* Panel */
+#panelArea{
+  .aboutTitleSet{
+    position: absolute;
+    top: 33%;
+    text-align: center;
+    width: $width_page;
+    %baseUnit{
+      @include inline-block();
+      vertical-align: middle;
+    }
+    .label{
+      @extend %baseUnit;
+    }
+    .title{
+      @extend %baseUnit;
+      margin-left: 30px;
+    }
+  }
+}
+
+.contentsArea{
+  width: 100%;
+}
+
+
+/*============================
+Function
+============================*/

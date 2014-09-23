@@ -27,22 +27,10 @@ $(function(){
 	
 	// グロナビマウスオーバー
 	var gnavi = $("#globalHeader").find('.navi').not('.now');
-	mouseOverEffect(gnavi,'span',1,false);
+	mouseOverEffect(gnavi,'span',1,.6,false);
 
 	var gsubnavi = $("#globalHeader").find('.pullDownNavi').find('.navi');
-	mouseOverEffect(gsubnavi,'a',1,false);
-
-	// サイドナビマウスオーバー
-	var snavi = $("#sideNaviArea").find('.list').not('.now');
-	mouseOverEffect(snavi,'a',1,true);
-
-	var snaviParent = $("#sideNaviArea").find('.pageTitle');
-	mouseOverEffect(snaviParent,'a',.7,true);
-
-  // サイドナビクリック
-  snavi.click(function(){
-  	$(this).siblings('.now').removeClass('now').end().addClass('now');
-  });
+	mouseOverEffect(gsubnavi,'a',1,.6,false);
 
 	//外部リンクを別タブで開く	
 	$(function(){
@@ -53,21 +41,7 @@ $(function(){
 	$('.pullDownNavi').parents('.navi').hover(function(){
 	 var naviH = $('#globalHeader').height();
 	 $(this).find('.pullDownNavi').css('top',naviH).stop(true,true).slideDown(); 
-	},function(){ $(this).find('.pullDownNavi').stop(true,true).slideUp(); });
-
-	// サイドナビ固定
-	if($('#sideNaviArea').length){
-		var cH = $('.contentsArea').offset().top;
-		var sideNavi = $('#sideNaviArea');
-		$(window).scroll(function(){
-			if($(this).scrollTop() > cH+10){
-				sideNavi.css({position: 'fixed', top:10});
-			}else{
-				sideNavi.css({position: 'relative', top:0});
-			}
-		});
-	}
-			
+	},function(){ $(this).find('.pullDownNavi').stop(true,true).slideUp(); });			
   
 });
 
@@ -76,8 +50,7 @@ $(function(){
  Function
 ----------------------------------------*/
 
-var mouseOverEffect = function(targetBase,target,op,sdw){
-	var defaultOP = targetBase.find(target).css('opacity');
+var mouseOverEffect = function(targetBase,target,op,defaultOP,sdw){
 	targetBase.hover(
 	                 function(){ 
 	                 	$(this).find(target).stop(true,true).animate({'opacity':op,boxShadow:'0 1px 5px #ddd'},'fast');

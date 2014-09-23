@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "core";  
+@import "underPage"; 
+@import "about"; 
+
+
+/*============================
+Sytle
+============================*/
+
+/* Panel */
+#panelArea{
+  background-image: url("../../imageFile/about/human_panel_photo.jpg");
+}
+
+.contentsArea{
+  width: 100%;
+}
+
+$human_padding: 25px;
+
+/* Profile */
+.humanProfile{
+  margin-top: $human_padding;
+  background: #fff;
+  .base{
+    display: table;
+    width: 100%;
+    %cell{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .profile{
+      @extend %cell;
+      text-align: center;
+    }
+    .photo{
+      @extend %cell;
+      width: 1%;
+    }
+  }
+}
+
+/* articleUnit */
+.articleUnit{
+  clear: both;
+  overflow: hidden;
+  margin-top: $human_padding;
+  padding: $human_padding*2;
+  background: #fff;
+  .unitContents{
+    margin-top: $human_padding;
+    img{
+      float: left;
+      margin-right: $human_padding;
+    }
+    p{
+      line-height: 2;
+      & + p{
+        margin-top: 20px;
+      }
+    }
+  }
+}
+.articleUnitCompany{
+  .unitContents{
+    img{
+      float: right;
+      margin-left: $human_padding;
+    }
+  }
+}
+
+/* humanLink */
+.humanLink{
+  $width_link_margin: $human_padding;
+  $width_link: ($width_page - ($width_link_margin*2)) / 3;
+  clear: both;
+  margin-top: $human_padding;
+  .linkBase{
+    overflow: hidden;
+    .link{
+      float: left;
+      width: $width_link;
+      background: #fff;
+      & + .link{
+        margin-left: $width_link_margin;
+      }
+      .photo,.text{
+        opacity: .6;
+        box-shadow: none !important;
+      }
+      .text{
+        padding: 35px 0;
+        text-align: center;
+      }
+    }    
+    .link.now{
+      .photo,.text{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+/*============================
+Function
+============================*/
