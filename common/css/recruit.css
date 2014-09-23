@@ -1131,6 +1131,8 @@ unit
 /* recruitUnit */
 #recruitDesc, #recruitAbout { margin-top: 25px; }
 #recruitDesc .contents .recruitTable, #recruitAbout .contents .recruitTable { margin-top: 25px; }
+#recruitDesc .contents .recruitTable .data p, #recruitAbout .contents .recruitTable .data p { text-indent: -6.5em; padding-left: 6.5em; }
+#recruitDesc .contents .recruitTable .data p + p, #recruitAbout .contents .recruitTable .data p + p { margin-top: 10px; }
 
 /* recruitAbout */
 #recruitAbout .hint { margin: 12.5px 0 0 5px; }

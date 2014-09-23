@@ -1121,3 +1121,5 @@ unit
 #comapanyMessage .text .list { margin: 0 0 25px 12.5px; }
 #comapanyMessage .text .list li { list-style: decimal inside; }
 #comapanyMessage .text .list li + li { margin-top: 12.5px; }
+#comapanyMessage .name { text-align: center; }
+#comapanyMessage .name img { margin-left: 10px; vertical-align: middle; }

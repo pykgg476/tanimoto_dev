@@ -42,6 +42,15 @@ unit
     .recruitTable{
       @extend %descTable;
       margin-top: $width_base_margin;
+      .data{
+        p{
+          text-indent: -6.5em;
+          padding-left: 6.5em;
+          & + p{
+            margin-top: 10px;
+          }
+        }
+      }
     }
   }
 }
