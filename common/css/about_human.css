@@ -1059,7 +1059,7 @@ unit
 
 /* Global Footer */
 #globalFooter { margin-top: 75px; background: #242424; }
-#globalFooter .linkArea { width: 980px; margin: 0 auto; padding: 25px 0 125px 0; overflow: hidden; }
+#globalFooter .linkArea { width: 980px; margin: 0 auto; padding: 25px 0 150px 0; overflow: hidden; }
 #globalFooter .linkArea .linkUnit { float: left; box-sizing: border-box; padding-right: 25px; }
 #globalFooter .linkArea .linkUnit.linkUnitTop { width: 19%; }
 #globalFooter .linkArea .linkUnit.linkUnitAbout { width: 23%; }
@@ -2181,7 +2181,7 @@ unit
 
 /* Global Footer */
 #globalFooter { margin-top: 75px; background: #242424; }
-#globalFooter .linkArea { width: 980px; margin: 0 auto; padding: 25px 0 125px 0; overflow: hidden; }
+#globalFooter .linkArea { width: 980px; margin: 0 auto; padding: 25px 0 150px 0; overflow: hidden; }
 #globalFooter .linkArea .linkUnit { float: left; box-sizing: border-box; padding-right: 25px; }
 #globalFooter .linkArea .linkUnit.linkUnitTop { width: 19%; }
 #globalFooter .linkArea .linkUnit.linkUnitAbout { width: 23%; }
