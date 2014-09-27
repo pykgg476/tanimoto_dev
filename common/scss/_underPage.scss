@@ -48,6 +48,11 @@ body{
         text-align: left;
         font-size: 14px;
         line-height: 1.5;
+        .hint{
+          display: block;
+          margin-top: 10px;
+          font-size: 11px;
+        }
       }
     }
   }

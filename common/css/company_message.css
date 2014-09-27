@@ -1091,6 +1091,7 @@ body { background: #eeeeee; }
 #panelArea .base .pageTitle { position: absolute; top: 37%; left: 0; width: 100%; text-align: center; font-size: 40px; letter-spacing: 4px; color: #fff; }
 #panelArea .base .copy { position: absolute; top: 51%; left: 0; display: block; width: 100%; margin-top: 10px; text-align: center; }
 #panelArea .base .copy p { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; width: 300px; color: #fff; text-align: left; font-size: 14px; line-height: 1.5; }
+#panelArea .base .copy p .hint { display: block; margin-top: 10px; font-size: 12px; }
 
 /* pankuzu */
 #globalPankuzu { background: #242424; }
@@ -1135,5 +1136,8 @@ unit
 #comapanyMessage .text .list { margin: 0 0 25px 12.5px; }
 #comapanyMessage .text .list li { list-style: decimal inside; }
 #comapanyMessage .text .list li + li { margin-top: 12.5px; }
-#comapanyMessage .name { text-align: center; }
-#comapanyMessage .name img { margin-left: 10px; vertical-align: middle; }
+#comapanyMessage .nameArea { text-align: center; }
+#comapanyMessage .nameArea .nameSet, #comapanyMessage .nameArea .sign { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; }
+#comapanyMessage .nameArea .nameSet { text-align: right; }
+#comapanyMessage .nameArea .nameSet .name { display: block; }
+#comapanyMessage .nameArea .sign { margin-left: 10px; }

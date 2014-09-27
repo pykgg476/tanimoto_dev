@@ -48,11 +48,20 @@ unit
       }
     }
   }
-  .name{
+  .nameArea{
     text-align: center;
-    img{
-      margin-left: 10px;
+    .nameSet,.sign{
+      @include inline-block();
       vertical-align: middle;
+    }
+    .nameSet{
+      text-align: right;
+      .name{
+        display: block;
+      }
+    }
+    .sign{
+      margin-left: 10px;
     }
   }
 }
