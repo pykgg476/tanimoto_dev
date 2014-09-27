@@ -20,7 +20,7 @@ $(function(){
 		}
 		
 		// スクロールする
-		$("html,body").animate({ scrollTop: HashOffset}, 800);
+		$("html,body").stop(true,true).animate({ scrollTop: HashOffset}, 800);
 		return false;
 	
 	});
