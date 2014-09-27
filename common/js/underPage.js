@@ -21,9 +21,10 @@ $(function(){
 	if($('#sideNaviArea').length){
 		var cH = $('.contentsArea').offset().top;
 		var sideNavi = $('#sideNaviArea');
+		var sideNaviPos = $('#globalHeader').height() + 25;
 		$(window).scroll(function(){
-			if($(this).scrollTop() > cH+10){
-				sideNavi.css({position: 'fixed', top:10});
+			if($(this).scrollTop() > cH+40){
+				sideNavi.css({position: 'fixed', top:sideNaviPos});
 			}else{
 				sideNavi.css({position: 'relative', top:0});
 			}

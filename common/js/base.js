@@ -24,7 +24,11 @@ $(function(){
 		return false;
 	
 	});
-	
+
+	// ヘッダー固定
+	headerPosition();
+	$(window).scroll(function(){ headerPosition(); });
+
 	// グロナビマウスオーバー
 	var gnavi = $("#globalHeader").find('.navi').not('.now');
 	mouseOverEffect(gnavi,'span',1,.6,false);
@@ -62,6 +66,20 @@ var mouseOverEffect = function(targetBase,target,op,defaultOP,sdw){
 	                 	$(this).find(target).stop(true,true).animate({'opacity':defaultOP,boxShadow:'none'},'fast');
                  });
 	return false;
+}
+
+
+var headerPosition = function(){
+	var head = $('#globalHeader');
+	var hp = head.offset().top;
+	var ds = $(document).scrollTop();
+
+	if(hp < ds){
+		head.addClass('fixed');
+	}else if(hp > ds){
+		head.removeClass('fixed');
+	}
+
 }
 	
 

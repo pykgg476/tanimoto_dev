@@ -72,7 +72,15 @@ unit
 /* Global Header */
 #globalHeader{
     background: #fff;
-    // border-bottom: 1px solid  #ddd;
+    top: 0;
+    width: 100%;
+    position: relative;
+    &.fixed{
+      position: fixed;
+      z-index: 1000;
+      border-bottom: 1px solid  #ddd;
+      @include box-shadow(rgba(0,0,0,.1) 1px 1px 3px);
+    }
   .base{
     $width_logo: 256px;
     $padding_gnavi: 25px;
@@ -232,7 +240,7 @@ unit
   }
   .copyrightArea{
     background: #fff;
-    padding: $padding_footer 0;
+    padding: $padding_footer/2 0;
     text-align: center;
     .copyright{
       font-size: 11px;

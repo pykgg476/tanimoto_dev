@@ -1035,7 +1035,8 @@ Function
 unit
 ============================*/
 /* Global Header */
-#globalHeader { background: #fff; }
+#globalHeader { background: #fff; top: 0; width: 100%; position: relative; }
+#globalHeader.fixed { position: fixed; z-index: 1000; border-bottom: 1px solid  #ddd; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px; box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px; }
 #globalHeader .base { position: relative; min-width: 980px; }
 #globalHeader .base .logo { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; width: 24%; text-align: center; }
 #globalHeader .base .logo a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 25px; }
@@ -1071,7 +1072,7 @@ unit
 #globalFooter .linkArea .linkUnit .linkBase .pageLink a:before, #globalFooter .linkArea .linkUnit .linkBase .pageLink span:before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 17px; position: absolute; top: 0px; right: -15px; color: #0094dc; }
 #globalFooter .linkArea .linkUnit .linkBase .pageLink a:hover { text-decoration: underline; }
 #globalFooter .linkArea .linkUnit .linkBase .childLink a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; opacity: .6; margin-top: 10px; color: #ddd; font-size: 11px; line-height: 1.1; box-shadow: none !important; }
-#globalFooter .copyrightArea { background: #fff; padding: 25px 0; text-align: center; }
+#globalFooter .copyrightArea { background: #fff; padding: 12.5px 0; text-align: center; }
 #globalFooter .copyrightArea .copyright { font-size: 11px; color: #888; line-height: 1; }
 
 /*============================
@@ -1091,7 +1092,7 @@ body { background: #eeeeee; }
 #panelArea .base .pageTitle { position: absolute; top: 37%; left: 0; width: 100%; text-align: center; font-size: 40px; letter-spacing: 4px; color: #fff; }
 #panelArea .base .copy { position: absolute; top: 51%; left: 0; display: block; width: 100%; margin-top: 10px; text-align: center; }
 #panelArea .base .copy p { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; width: 300px; color: #fff; text-align: left; font-size: 14px; line-height: 1.5; }
-#panelArea .base .copy p .hint { display: block; margin-top: 10px; font-size: 12px; }
+#panelArea .base .copy p .hint { display: block; margin-top: 10px; font-size: 11px; }
 
 /* pankuzu */
 #globalPankuzu { background: #242424; }
@@ -2158,7 +2159,8 @@ Function
 unit
 ============================*/
 /* Global Header */
-#globalHeader { background: #fff; }
+#globalHeader { background: #fff; top: 0; width: 100%; position: relative; }
+#globalHeader.fixed { position: fixed; z-index: 1000; border-bottom: 1px solid  #ddd; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px; box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px; }
 #globalHeader .base { position: relative; min-width: 980px; }
 #globalHeader .base .logo { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; width: 24%; text-align: center; }
 #globalHeader .base .logo a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 25px; }
@@ -2194,7 +2196,7 @@ unit
 #globalFooter .linkArea .linkUnit .linkBase .pageLink a:before, #globalFooter .linkArea .linkUnit .linkBase .pageLink span:before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 17px; position: absolute; top: 0px; right: -15px; color: #0094dc; }
 #globalFooter .linkArea .linkUnit .linkBase .pageLink a:hover { text-decoration: underline; }
 #globalFooter .linkArea .linkUnit .linkBase .childLink a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; opacity: .6; margin-top: 10px; color: #ddd; font-size: 11px; line-height: 1.1; box-shadow: none !important; }
-#globalFooter .copyrightArea { background: #fff; padding: 25px 0; text-align: center; }
+#globalFooter .copyrightArea { background: #fff; padding: 12.5px 0; text-align: center; }
 #globalFooter .copyrightArea .copyright { font-size: 11px; color: #888; line-height: 1; }
 
 /*============================
@@ -2214,7 +2216,7 @@ body { background: #eeeeee; }
 #panelArea .base .pageTitle { position: absolute; top: 37%; left: 0; width: 100%; text-align: center; font-size: 40px; letter-spacing: 4px; color: #fff; }
 #panelArea .base .copy { position: absolute; top: 51%; left: 0; display: block; width: 100%; margin-top: 10px; text-align: center; }
 #panelArea .base .copy p { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; width: 300px; color: #fff; text-align: left; font-size: 14px; line-height: 1.5; }
-#panelArea .base .copy p .hint { display: block; margin-top: 10px; font-size: 12px; }
+#panelArea .base .copy p .hint { display: block; margin-top: 10px; font-size: 11px; }
 
 /* pankuzu */
 #globalPankuzu { background: #242424; }
