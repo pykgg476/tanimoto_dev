@@ -1,6 +1,167 @@
-#test {
-  
-  $kome: '#ddd';
-  color: $kome;
+/*============================
+@import
+============================*/
 
+@import "core";  
+@import "underPage"; 
+
+/*============================
+parts
+============================*/
+
+@mixin btnStyle($bgColor,$textColor,$vP,$wP,$fontSize) {
+  position: relative;
+  padding: $vP $wP;
+  @include inline-block();
+  background: $bgColor;
+  color: $textColor;
+  font-size: $fontSize;
+  text-align: center;
 }
+
+%topContentsBase{
+  $title_padding: $width_base_margin*2;
+  background: #fff;
+  .contentsTitle{
+    position: relative;
+    width: $width_page;
+    padding: $title_padding 0 $title_padding/2;
+    margin: 0 auto;
+    .titleText{
+      font-size: 30px;
+      color: #888;
+    }
+    .btn{
+      @include btnStyle($color_blue,#fff,$width_base_margin/2,$width_base_margin*2,13);
+      position: absolute;
+      top: $title_padding;
+      right: 0;
+      &:after{
+        @include link_Arrow(14,10,#fff);
+      }
+    }
+  }
+}
+
+
+/*============================
+unit
+============================*/
+
+/* Panel */
+#topPanelArea{
+  $position_title: 37%;
+  position: relative;
+  background-position: center center;
+  @include background-size(cover);
+  background-repeat: no-repeat;
+  background-image: url("../../imageFile/top_panel_photo.jpg");
+  .base{
+    position: relative;
+    background: rgba(0,0,0,.2);
+    .catch{ 
+      position: absolute;
+      width: 100%;
+      top: 44%;
+      text-align: center;
+    }
+  }
+}
+
+/* Copy */
+#topCopy {
+  width: $width_page;
+  margin: 0 auto;
+  padding: $width_base_margin*5 0;
+  text-align: center;
+  .catch{
+    text-align: center;
+    font-size: 30px;
+    color: #888;
+  }
+  .text{
+    @include inline-block();
+    width: 370px;
+    margin-top: $width_base_margin;
+    text-align: left;
+  }
+}
+
+/* About */
+#topAbout{
+  @extend %topContentsBase;
+  .aboutUnitBase{
+    .aboutUnit{
+      position: relative;
+      height: 500px;
+      background-position: center center;
+      @include background-size(cover);
+      background-repeat: no-repeat;
+      text-align: center;
+      .text{
+        position: relative;
+        @include inline-block();
+        top: 120px;
+        .titleSet{
+          display: table;
+          .label,.title,.btn{
+            display: table-cell;
+            vertical-align: middle;
+          }
+          .title{
+            padding-left: $width_base_margin;
+          }
+        }          
+        .btn{
+          margin-top: $width_base_margin*1.5;
+          a{
+            @include btnStyle(#fff,$color_blue,$width_base_margin/2,$width_base_margin*2,13);
+            &:after{
+              @include link_Arrow(14,10,$color_blue);
+            }
+          }
+        }
+      }
+    }
+  }
+  .aboutUnitWork{
+    background-image: url("../../imageFile/work_photo.jpg");
+  }
+  .aboutUnitHuman{
+    background-image: url("../../imageFile/about/human_panel_photo.jpg");
+  }
+}
+
+/* Work */
+#topWork{
+  @extend %topContentsBase;
+  .contentsBase{
+    background: $color_gray;
+    padding-top: $width_base_margin*2;
+    .contents{
+      width: $width_page;
+      margin: 0 auto;
+      .workListUnit{
+        clear: both;
+        overflow: hidden;
+        & + .workListUnit{
+          margin-top: 8px;
+        }
+        .work{
+          float: left;
+          width: 239px;
+          background: #fff;
+          & + .work{
+            margin-left: 8px;
+          }
+          .workTitle{
+            font-size: 12px;
+            padding: $width_base_margin/2.5 $width_base_margin/2;
+          }
+        }
+      }
+    }
+  }
+}
+
+
