@@ -244,3 +244,37 @@ return null!==a&&0<a.length?(k.left=parseInt(a[1],10),k.top=parseInt(a[2],10),k.
 null!==a&&0<a.length&&(c+=a[0].length)}function g(){var a=/^\s*,\s*/.exec(b.substring(c));return null!==a&&0<a.length?(c+=a[0].length,!0):!1}function e(a){if(h.isPlainObject(a)){var b,e,c=0,d=[];h.isArray(a.color)&&(e=a.color,c=e.length);for(b=0;4>b;b++)b<c?d.push(e[b]):3===b?d.push(1):d.push(0)}return h.extend({left:0,top:0,blur:0,spread:0},a)}for(var p=[],c=0,n=b.length,k=e();c<n;)if(m())f();else if(d())f();else if(l())f();else if(g())p.push(e(k)),k={};else break;p.push(e(k));return p}h.extend(!0,
 h,{support:{rgba:function(){var b=h("script:first"),m=b.css("color"),d=!1;if(/^rgba/.test(m))d=!0;else try{d=m!==b.css("color","rgba(0, 0, 0, 0.5)").css("color"),b.css("color",m)}catch(l){}b.removeAttr("style");return d}()}});var s=h("html").prop("style"),n;h.each(["boxShadow","MozBoxShadow","WebkitBoxShadow"],function(b,h){if("undefined"!==typeof s[h])return n=h,!1});n&&(h.Tween.propHooks.boxShadow={get:function(b){return h(b.elem).css(n)},set:function(b){var m=b.elem.style,d=q(h(b.elem)[0].style[n]||
 h(b.elem).css(n)),l=q(b.end),f=Math.max(d.length,l.length),g;for(g=0;g<f;g++)l[g]=h.extend({},d[g],l[g]),d[g]?"color"in d[g]&&!1!==h.isArray(d[g].color)||(d[g].color=l[g].color||[0,0,0,0]):d[g]=q("0 0 0 0 rgba(0,0,0,0)")[0];b.run=function(b){b=r(d,l,b);m[n]=b}}})});
+
+
+/*!--------------------------------------------------------------------------*
+ *  
+ *  jquery.browser.sp.js 1.0.0
+ *  
+ *  MIT-style license. 
+ *  
+ *  2014 Kazuma Nishihata 
+ *  http://blog.webcreativepark.net/2014/05/19-170831.html
+ *  
+ *--------------------------------------------------------------------------*/
+;(function($){
+	
+	if(!$.browser)$.browser = {};
+	$.browser.ua = navigator.userAgent.toLowerCase();
+	$.browser.android = /android/.test($.browser.ua);
+	$.browser.iphone = /iphone/.test($.browser.ua);
+	$.browser.ipod = /ipod/.test($.browser.ua);
+	$.browser.ipad = /ipad/.test($.browser.ua);
+	$.browser.ios = /iphone|ipod|ipad/.test($.browser.ua);
+	if($.browser.android){
+	    $.browser.tablet = !/mobile/.test($.browser.ua);
+	}else{
+	    $.browser.tablet = /ipad/.test($.browser.ua);
+	}
+	if(!$.browser.version)$.browser.version = {};
+	if($.browser.android){
+	    $.browser.version = parseFloat($.browser.ua.slice($.browser.ua.indexOf("android")+8))
+	}else if($.browser.ios){
+	    $.browser.version = parseFloat($.browser.ua.slice($.browser.ua.indexOf("os ")+3,$.browser.ua.indexOf("os ")+6).replace("_","."))
+	}
+	
+})(jQuery);

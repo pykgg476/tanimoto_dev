@@ -20,9 +20,11 @@ $(function(){
   // });
 
 	// サイドナビ固定
-	if($('#sideNaviArea').length){
-		sideNaviPos();
-		$(window).scroll(function(){ sideNaviPos(); });
+	if(!$.browser.android && !$.browser.iphone){
+		if($('#sideNaviArea').length){
+			sideNaviPos();
+			$(window).scroll(function(){ sideNaviPos(); });
+		}
 	}
 
 	// サイドナビ現在地
