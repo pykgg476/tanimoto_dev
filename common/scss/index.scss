@@ -27,10 +27,6 @@ parts
     width: $width_page;
     padding: $title_padding 0 $title_padding/2;
     margin: 0 auto;
-    .titleText{
-      font-size: 30px;
-      color: #888;
-    }
     .btn{
       @include btnStyle($color_blue,#fff,$width_base_margin/2,$width_base_margin*2,13);
       position: absolute;
@@ -125,7 +121,7 @@ unit
     }
   }
   .aboutUnitWork{
-    background-image: url("../../imageFile/panelPhoto_work.jpg");
+    background-image: url("../../imageFile/about/tec_panel_photo.jpg");
   }
   .aboutUnitHuman{
     background-image: url("../../imageFile/about/human_panel_photo.jpg");

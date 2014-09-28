@@ -2253,7 +2253,7 @@ Sytle
 /* Panel */
 #panelArea .aboutTitleSet { position: absolute; top: 33%; text-align: center; width: 980px; }
 #panelArea .aboutTitleSet .label, #panelArea .aboutTitleSet .title { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; vertical-align: middle; }
-#panelArea .aboutTitleSet .title { margin-left: 30px; }
+#panelArea .aboutTitleSet .title { margin-left: 40px; }
 
 .contentsArea { width: 100%; }
 
