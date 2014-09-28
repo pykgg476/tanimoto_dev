@@ -1135,7 +1135,7 @@ body { background: #eeeeee; }
 parts
 ============================*/
 /* Panel */
-#panelArea { background-image: url("../../imageFile/work_photo.jpg"); }
+#panelArea { background-image: url("../../imageFile/panelPhoto_work.jpg"); }
 
 .prjUnit + .prjUnit { margin-top: 50px; }
 .prjUnit .category { padding-bottom: 25px; }

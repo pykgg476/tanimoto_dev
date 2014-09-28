@@ -55,7 +55,7 @@ unit
   background-position: center center;
   @include background-size(cover);
   background-repeat: no-repeat;
-  background-image: url("../../imageFile/top_panel_photo.jpg");
+  background-image: url("../../imageFile/panelPhoto_top.jpg");
   .base{
     position: relative;
     background: rgba(0,0,0,.2);
@@ -125,7 +125,7 @@ unit
     }
   }
   .aboutUnitWork{
-    background-image: url("../../imageFile/work_photo.jpg");
+    background-image: url("../../imageFile/panelPhoto_work.jpg");
   }
   .aboutUnitHuman{
     background-image: url("../../imageFile/about/human_panel_photo.jpg");

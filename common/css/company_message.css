@@ -1127,7 +1127,7 @@ body { background: #eeeeee; }
 unit
 ============================*/
 /* Panel */
-#panelArea { background-image: url("../../imageFile/message_photo.jpg"); }
+#panelArea { background-image: url("../../imageFile/panelPhoto_message.jpg"); }
 
 /* Base */
 #comapanyMessage { background: #fff; padding: 37.5px; }

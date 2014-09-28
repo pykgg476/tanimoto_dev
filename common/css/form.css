@@ -1131,7 +1131,7 @@ body { background: #eeeeee; }
 parts
 ============================*/
 /* Panel */
-#panelArea { background-image: url("../../imageFile/form_dammy_photo.jpg"); }
+#panelArea { background-image: url("../../imageFile/panelPhoto_form.jpg"); }
 
 .contentsArea { width: 80%; margin: 0 auto; float: none; }
 

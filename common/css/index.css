@@ -1136,7 +1136,7 @@ parts
 unit
 ============================*/
 /* Panel */
-#topPanelArea { position: relative; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat; background-image: url("../../imageFile/top_panel_photo.jpg"); }
+#topPanelArea { position: relative; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat; background-image: url("../../imageFile/panelPhoto_top.jpg"); }
 #topPanelArea .base { position: relative; background: rgba(0, 0, 0, 0.2); }
 #topPanelArea .base .catch { position: absolute; width: 100%; top: 44%; text-align: center; }
 
@@ -1154,7 +1154,7 @@ unit
 #topAbout .aboutUnitBase .aboutUnit .text .btn { margin-top: 37.5px; }
 #topAbout .aboutUnitBase .aboutUnit .text .btn a { position: relative; padding: 12.5px 50px; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; background: white; color: #0094dc; font-size: 13; text-align: center; }
 #topAbout .aboutUnitBase .aboutUnit .text .btn a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 20px; position: absolute; top: 14px; right: 10px; color: #0094dc; }
-#topAbout .aboutUnitWork { background-image: url("../../imageFile/work_photo.jpg"); }
+#topAbout .aboutUnitWork { background-image: url("../../imageFile/panelPhoto_work.jpg"); }
 #topAbout .aboutUnitHuman { background-image: url("../../imageFile/about/human_panel_photo.jpg"); }
 
 /* Work */

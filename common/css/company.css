@@ -1135,7 +1135,7 @@ body { background: #eeeeee; }
 unit
 ============================*/
 /* Panel */
-#panelArea { background-image: url("../../imageFile/comapny_dammy_photo.jpg"); }
+#panelArea { background-image: url("../../imageFile/panelPhoto_company.jpg"); }
 
 /* Base */
 .companyDescBase + .companyDescBase { margin-top: 25px; }
