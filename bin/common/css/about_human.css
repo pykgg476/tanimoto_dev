@@ -1097,7 +1097,7 @@ body { background: #eeeeee; }
 #panelArea .panelBase .base { height: 500px; width: 980px; margin: 0 auto; }
 #panelArea .panelBase .base .pageTitle { position: absolute; top: 37%; left: 0; width: 100%; text-align: center; font-size: 40px; letter-spacing: 4px; color: #fff; }
 #panelArea .panelBase .base .copy { position: absolute; top: 51%; left: 0; display: block; width: 100%; margin-top: 10px; text-align: center; }
-#panelArea .panelBase .base .copy p { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; width: 300px; color: #fff; text-align: left; font-size: 14px; line-height: 1.5; }
+#panelArea .panelBase .base .copy p { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; color: #fff; text-align: left; font-size: 14px; line-height: 1.5; }
 #panelArea .panelBase .base .copy p .hint { display: block; margin-top: 10px; font-size: 11px; }
 
 /* pankuzu */
@@ -2227,7 +2227,7 @@ body { background: #eeeeee; }
 #panelArea .panelBase .base { height: 500px; width: 980px; margin: 0 auto; }
 #panelArea .panelBase .base .pageTitle { position: absolute; top: 37%; left: 0; width: 100%; text-align: center; font-size: 40px; letter-spacing: 4px; color: #fff; }
 #panelArea .panelBase .base .copy { position: absolute; top: 51%; left: 0; display: block; width: 100%; margin-top: 10px; text-align: center; }
-#panelArea .panelBase .base .copy p { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; width: 300px; color: #fff; text-align: left; font-size: 14px; line-height: 1.5; }
+#panelArea .panelBase .base .copy p { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; color: #fff; text-align: left; font-size: 14px; line-height: 1.5; }
 #panelArea .panelBase .base .copy p .hint { display: block; margin-top: 10px; font-size: 11px; }
 
 /* pankuzu */
