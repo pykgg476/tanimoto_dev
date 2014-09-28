@@ -115,11 +115,13 @@ $tecArea_padding: 25px;
             @include inline-block();
             text-align: left;
             .action{
+              margin-top: 5px;
               font-size: 30px;
               color: #888;
             }
             .explain{
               margin-top: 10px;
+              font-size: 14px;
             }
           }
         }

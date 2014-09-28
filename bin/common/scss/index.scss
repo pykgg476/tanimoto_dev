@@ -117,27 +117,29 @@ body{
         .text{
           position: relative;
           @include inline-block();
+          width: 560px;
           top: 120px;
           .titleSet{
             display: table;
-            .label,.title,.btn{
+            .label,.titleBase{
               display: table-cell;
               vertical-align: middle;
+              text-align: left;
             }
-            .title{
+            .titleBase{
               padding-left: $width_base_margin*1.5;
-            }
-          }          
-          .btn{
-            margin-top: $width_base_margin*1.5;
-            a{
-              @include btnStyle(#fff,$color_blue,$width_base_margin/3,$width_base_margin*2.5,13);
-                padding-right: $width_base_margin*2.5;
-              &:after{
-                @include link_Arrow(9,10,$color_blue);
+              .btn{
+               margin-top: $width_base_margin;
+                a{
+                  @include btnStyle(#fff,$color_blue,$width_base_margin/3,$width_base_margin*2.5,13);
+                    padding-right: $width_base_margin*2.5;
+                  &:after{
+                    @include link_Arrow(8,10,$color_blue);
+                  }
+                }
               }
             }
-          }
+          }          
         }
       }
     }

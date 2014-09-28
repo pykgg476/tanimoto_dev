@@ -242,9 +242,9 @@ unit
             color: #fff;
             font-weight: bold;
             font-size: 16px;
-            &:before{
-              @include link_Arrow(0,-15,$color_blue,17);
-            }
+          }
+          a:before{
+            @include link_Arrow(0,-18,$color_blue,17);
           }
           a:hover{
             text-decoration: underline;
