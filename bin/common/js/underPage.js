@@ -36,7 +36,7 @@ $(function(){
 		var idHref;
 		for(i=0; i<id.length; i++){
 			idHref = $(id[i]).attr('href');
-			pos = $(''+idHref).offset().top - 200;
+			pos = $(idHref).offset().top - 200;
 			secPos.push(pos);
 		}
 		sideNaviNow(secPos);

@@ -21,6 +21,7 @@ body{
   background-repeat: no-repeat;
   .panelBase{
     background-color: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#55000000', endColorstr='#55000000');
     .base{
       height: 500px;
       width: $width_page;

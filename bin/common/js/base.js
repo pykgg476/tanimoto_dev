@@ -5,6 +5,17 @@
 
 $(function(){	
 
+// for IE
+if(navigator.userAgent.indexOf("MSIE") != -1) {
+    $('img').each(function() {
+        if($(this).attr('src').indexOf('.png') != -1) {
+            $(this).css({
+                'filter': 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + $(this).attr('src') + '", sizingMethod="scale");'
+            });
+        }
+      });
+    }
+
 	// 所定の位置にスクロール
 	$(document).on('click','.scrollTrigger',function(){
 		
@@ -61,7 +72,7 @@ $(function(){
 	 var naviH = $('#globalHeader').height();
 	 $(this).find('.pullDownNavi').css('top',naviH).stop(true,true).slideDown(); 
 	},function(){ $(this).find('.pullDownNavi').stop(true,true).slideUp(); });			
-  
+
 });
 
 

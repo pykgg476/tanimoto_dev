@@ -1093,7 +1093,7 @@ body { background: #eeeeee; }
 
 /* Panel */
 #panelArea { position: relative; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat; }
-#panelArea .panelBase { background-color: rgba(0, 0, 0, 0.5); }
+#panelArea .panelBase { background-color: rgba(0, 0, 0, 0.5); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#55000000', endColorstr='#55000000'); }
 #panelArea .panelBase .base { height: 500px; width: 980px; margin: 0 auto; }
 #panelArea .panelBase .base .pageTitle { position: absolute; top: 37%; left: 0; width: 100%; text-align: center; font-size: 40px; letter-spacing: 4px; color: #fff; }
 #panelArea .panelBase .base .copy { position: absolute; top: 51%; left: 0; display: block; width: 100%; margin-top: 10px; text-align: center; }
@@ -2223,7 +2223,7 @@ body { background: #eeeeee; }
 
 /* Panel */
 #panelArea { position: relative; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat; }
-#panelArea .panelBase { background-color: rgba(0, 0, 0, 0.5); }
+#panelArea .panelBase { background-color: rgba(0, 0, 0, 0.5); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#55000000', endColorstr='#55000000'); }
 #panelArea .panelBase .base { height: 500px; width: 980px; margin: 0 auto; }
 #panelArea .panelBase .base .pageTitle { position: absolute; top: 37%; left: 0; width: 100%; text-align: center; font-size: 40px; letter-spacing: 4px; color: #fff; }
 #panelArea .panelBase .base .copy { position: absolute; top: 51%; left: 0; display: block; width: 100%; margin-top: 10px; text-align: center; }

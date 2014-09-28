@@ -69,6 +69,7 @@ body{
     display: none;
     position: relative;
     background: rgba(0,0,0,.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#22000000', endColorstr='#22000000');
     .catch{ 
       display: none;
       position: absolute;
@@ -111,6 +112,7 @@ body{
       .unitBase{
         height: 500px;
         background: rgba(0,0,0,.4);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#44000000', endColorstr='#44000000');
         .text{
           position: relative;
           @include inline-block();
