@@ -26,13 +26,14 @@ parts
   .contentsTitle{
     position: relative;
     width: $width_page;
-    padding: $title_padding 0 $title_padding/2;
+    padding: $title_padding*1.5 0 $title_padding/2;
     margin: 0 auto;
     .btn{
         a{
-        @include btnStyle($color_blue,#fff,$width_base_margin/3,$width_base_margin*2,13);
+        @include btnStyle($color_blue,#fff,$width_base_margin/3,$width_base_margin*2.5,13);
+        padding-right: $width_base_margin*2.5;
         position: absolute;
-        top: $title_padding;
+        top: $title_padding*1.5;
         right: 0;
         &:after{
           @include link_Arrow(9,10,#fff);
@@ -84,7 +85,7 @@ body{
 #topCopy {
   width: $width_page;
   margin: 0 auto;
-  padding: $width_base_margin*6 0 $width_base_margin*7;
+  padding: $width_base_margin*4 0 $width_base_margin*5;
   text-align: center;
   .catch{
     text-align: center;
@@ -130,9 +131,10 @@ body{
           .btn{
             margin-top: $width_base_margin*1.5;
             a{
-              @include btnStyle(#fff,$color_blue,$width_base_margin/2,$width_base_margin*2,13);
+              @include btnStyle(#fff,$color_blue,$width_base_margin/3,$width_base_margin*2.5,13);
+                padding-right: $width_base_margin*2.5;
               &:after{
-                @include link_Arrow(14,10,$color_blue);
+                @include link_Arrow(9,10,$color_blue);
               }
             }
           }
