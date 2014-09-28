@@ -21,12 +21,12 @@ unit
 /* recruitCopy */
 .recruitCopy{
   padding: $width_base_margin*2;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
   background: #fff;
   p{
     & + p{
-      margin-top: $width_base_margin/1.5;
+      margin-top: $width_base_margin;
     }
   }
 }
