@@ -198,6 +198,7 @@ unit
     @include inline-block();
     padding: 20px;
     background: rgba(0,0,0,0.6);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66000000', endColorstr='#66000000');
     text-align: center;
   }
 }

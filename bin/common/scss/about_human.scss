@@ -57,12 +57,13 @@ $human_padding: 25px;
     margin-top: $human_padding;
     img{
       float: left;
-      margin-right: $human_padding;
+      margin: 0 $human_padding $human_padding 0;
     }
     p{
       line-height: 2;
+      font-size: 14px;
       & + p{
-        margin-top: 20px;
+        margin-top: $width_base_margin;
       }
     }
   }
@@ -71,7 +72,7 @@ $human_padding: 25px;
   .unitContents{
     img{
       float: right;
-      margin-left: $human_padding;
+      margin: 0 0 $human_padding $human_padding;
     }
   }
 }
