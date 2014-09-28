@@ -63,7 +63,7 @@ var sideNaviPos = function(){
 	var fh = f.height();
 	if(ds+snPos>ct+ch-snh){
 			sn.css({position: 'relative',top:ct+ch-snh-snh});
-		}else if(ds>ct+40){
+		}else if(ds>ct-snPos){
 			sn.css({position: 'fixed', top:snPos});
 		}else{
 			sn.css({position: 'relative', top:0});
