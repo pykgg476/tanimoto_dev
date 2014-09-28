@@ -117,19 +117,19 @@ body{
         .text{
           position: relative;
           @include inline-block();
-          width: 560px;
-          top: 120px;
+          width: 540px;
+          top: 140px;
           .titleSet{
             display: table;
             .label,.titleBase{
               display: table-cell;
-              vertical-align: middle;
+              vertical-align: top;
               text-align: left;
             }
             .titleBase{
-              padding-left: $width_base_margin*1.5;
+              padding:10px 0 0 $width_base_margin*2;
               .btn{
-               margin-top: $width_base_margin;
+               margin-top: $width_base_margin*1.75;
                 a{
                   @include btnStyle(#fff,$color_blue,$width_base_margin/3,$width_base_margin*2.5,13);
                     padding-right: $width_base_margin*2.5;
