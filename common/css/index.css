@@ -1162,6 +1162,6 @@ unit
 #topWork .contentsBase .contents { width: 980px; margin: 0 auto; }
 #topWork .contentsBase .contents .workListUnit { clear: both; overflow: hidden; }
 #topWork .contentsBase .contents .workListUnit + .workListUnit { margin-top: 8px; }
-#topWork .contentsBase .contents .workListUnit .work { float: left; width: 239px; background: #fff; }
-#topWork .contentsBase .contents .workListUnit .work + .work { margin-left: 8px; }
+#topWork .contentsBase .contents .workListUnit .work { float: left; width: 320px; background: #fff; }
+#topWork .contentsBase .contents .workListUnit .work + .work { margin-left: 10px; }
 #topWork .contentsBase .contents .workListUnit .work .workTitle { font-size: 12px; padding: 10px 12.5px; }
