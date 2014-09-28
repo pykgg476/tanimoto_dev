@@ -94,8 +94,8 @@ body{
 
 /* PageSet */
 .pageSet{
-  position: relative;
   @include clearfix;
+  position: relative;
   width: $width_page;
   margin: $width_base_margin auto 0;
 }
@@ -107,6 +107,7 @@ body{
   width: $width_side;
   margin-right: $width_base_margin;
   background: #fff;
+  z-index: 100;
   .pageTitle{
     & + .pageTitle{
       border-top: 1px solid  $color_gray;

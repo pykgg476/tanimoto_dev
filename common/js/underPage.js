@@ -3,6 +3,8 @@
  Init
 ----------------------------------------*/
 
+var id = [];
+
 $(function(){	
 
 	// サイドナビマウスオーバー
@@ -13,16 +15,32 @@ $(function(){
 	mouseOverEffect(snaviParent,'a',.7,1,true);
 
   // サイドナビクリック
-  snavi.click(function(){
-  	$(this).siblings('.now').removeClass('now').end().addClass('now');
-  });
+  // snavi.click(function(){
+  // 	$(this).siblings('.now').removeClass('now').end().addClass('now');
+  // });
 
 	// サイドナビ固定
 	if($('#sideNaviArea').length){
 		sideNaviPos();
 		$(window).scroll(function(){ sideNaviPos(); });
 	}
-			
+
+	// サイドナビ現在地
+	if($('#sideNaviArea').length){
+		$('#sideNaviArea').find('.list').each(function(){
+			id.push($(this).find('a'));
+		});
+		var secPos = [];
+		var idHref;
+		for(i=0; i<id.length; i++){
+			idHref = $(id[i]).attr('href');
+			pos = $(''+idHref).offset().top - 200;
+			secPos.push(pos);
+		}
+		sideNaviNow(secPos);
+		$(window).scroll(function(){ sideNaviNow(secPos); });
+	}
+
   
 });
 
@@ -41,11 +59,22 @@ var sideNaviPos = function(){
 	var ds = $(document).scrollTop();
 	var ft = f.offset().top;
 	var fh = f.height();
-	if(ds>ct+ch-snh){
-			sn.css({position: 'absolute',top:ct+ch-snh});
+	if(ds+snPos>ct+ch-snh){
+			sn.css({position: 'relative',top:ct+ch-snh-snh});
 		}else if(ds>ct+40){
 			sn.css({position: 'fixed', top:snPos});
 		}else{
 			sn.css({position: 'relative', top:0});
 		}
+}
+
+var sideNaviNow = function(secPos){
+	var ds = $(window).scrollTop();
+	$('#sideNaviArea').find('.now').removeClass('now');
+	for(i=secPos.length;i>-1;i--){
+		if(ds>secPos[i]){
+			id[i].parents('.list').addClass('now');
+			return false;
+		}
+	}
 }

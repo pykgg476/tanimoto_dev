@@ -68,7 +68,7 @@ unit
 #topCopy {
   width: $width_page;
   margin: 0 auto;
-  padding: $width_base_margin*5 0;
+  padding: $width_base_margin*6 0 $width_base_margin*7;
   text-align: center;
   .catch{
     text-align: center;
@@ -89,31 +89,34 @@ unit
   .aboutUnitBase{
     .aboutUnit{
       position: relative;
-      height: 500px;
       background-position: center center;
       @include background-size(cover);
       background-repeat: no-repeat;
       text-align: center;
-      .text{
-        position: relative;
-        @include inline-block();
-        top: 120px;
-        .titleSet{
-          display: table;
-          .label,.title,.btn{
-            display: table-cell;
-            vertical-align: middle;
-          }
-          .title{
-            padding-left: $width_base_margin;
-          }
-        }          
-        .btn{
-          margin-top: $width_base_margin*1.5;
-          a{
-            @include btnStyle(#fff,$color_blue,$width_base_margin/2,$width_base_margin*2,13);
-            &:after{
-              @include link_Arrow(14,10,$color_blue);
+      .unitBase{
+        height: 500px;
+        background: rgba(0,0,0,.4);
+        .text{
+          position: relative;
+          @include inline-block();
+          top: 120px;
+          .titleSet{
+            display: table;
+            .label,.title,.btn{
+              display: table-cell;
+              vertical-align: middle;
+            }
+            .title{
+              padding-left: $width_base_margin*1.5;
+            }
+          }          
+          .btn{
+            margin-top: $width_base_margin*1.5;
+            a{
+              @include btnStyle(#fff,$color_blue,$width_base_margin/2,$width_base_margin*2,13);
+              &:after{
+                @include link_Arrow(14,10,$color_blue);
+              }
             }
           }
         }

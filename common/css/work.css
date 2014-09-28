@@ -1053,7 +1053,7 @@ unit
 #globalHeader .base .globalNavi .naviBase > .navi.now { position: relative; }
 #globalHeader .base .globalNavi .naviBase > .navi.now:after { width: 100%; position: absolute; bottom: -1px; left: 0; display: block; content: ""; border-bottom: 5px solid #0094dc; }
 #globalHeader .base .globalNavi .naviBase > .navi.now a span { opacity: 1; }
-#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi { -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 3px; box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 3px; position: absolute; left: 0; width: 100%; display: none; background: #fff; }
+#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi { -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 4px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 4px; box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 4px; position: absolute; left: 0; width: 100%; display: none; background: #fff; }
 #globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi > li > a { display: block; border-top: 1px solid  #ddd; padding: 25px; opacity: .6; box-shadow: none !important; }
 #globalHeader .base .globalNavi .naviBase > .navi > a { display: block; border-right: 1px solid  #ddd; padding: 31px 3%; text-align: center; }
 #globalHeader .base .globalNavi .naviBase > .navi > a span { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; height: 32px; background-image: url("../../imageFile/global/globalNavi-s56d415f372.png") !important; opacity: .5; box-shadow: none !important; }
@@ -1112,10 +1112,10 @@ body { background: #eeeeee; }
 #globalPankuzu .pankuzuBase .pankuzu .link span { font-weight: bold; }
 
 /* PageSet */
-.pageSet { position: relative; overflow: hidden; *zoom: 1; width: 980px; margin: 25px auto 0; }
+.pageSet { overflow: hidden; *zoom: 1; position: relative; width: 980px; margin: 25px auto 0; }
 
 /* SideNavi */
-#sideNaviArea { float: left; width: 210px; margin-right: 25px; background: #fff; }
+#sideNaviArea { float: left; width: 210px; margin-right: 25px; background: #fff; z-index: 100; }
 #sideNaviArea .pageTitle + .pageTitle { border-top: 1px solid #eeeeee; }
 #sideNaviArea .pageTitle span, #sideNaviArea .pageTitle a { display: block; padding: 16.66667px; background: #0094dc; font-size: 15px; color: #fff; position: relative; }
 #sideNaviArea .pageTitle a:after { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f105"; font-size: 20px; position: absolute; top: 14px; right: 10px; color: white; }
