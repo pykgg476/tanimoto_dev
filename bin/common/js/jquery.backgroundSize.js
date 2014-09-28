@@ -37,6 +37,7 @@
  	}
 
  });
+
 (function($,window,document,Math,undefined) {
 
 var div = $( "<div>" )[0],
