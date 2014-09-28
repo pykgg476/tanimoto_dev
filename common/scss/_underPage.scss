@@ -19,39 +19,42 @@ body{
   background-position: center center;
   @include background-size(cover);
   background-repeat: no-repeat;
-  .base{
-    height: 500px;
-    width: $width_page;
-    margin: 0 auto;
-    .pageTitle{
-      position: absolute;
-      top: $position_title;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 40px;
-      letter-spacing: 4px;
-      color: #fff;
-    }
-    .copy{
-      position: absolute;
-      top: $position_title + 14;
-      left: 0;
-      display: block;
-      width: 100%;
-      margin-top: 10px;
-      text-align: center;
-      p{
-        @include inline-block;
-        width: 300px;
+  .panelBase{
+    background-color: rgba(0,0,0,0.5);
+    .base{
+      height: 500px;
+      width: $width_page;
+      margin: 0 auto;
+      .pageTitle{
+        position: absolute;
+        top: $position_title;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        letter-spacing: 4px;
         color: #fff;
-        text-align: left;
-        font-size: 14px;
-        line-height: 1.5;
-        .hint{
-          display: block;
-          margin-top: 10px;
-          font-size: 11px;
+      }
+      .copy{
+        position: absolute;
+        top: $position_title + 14;
+        left: 0;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        p{
+          @include inline-block;
+          width: 300px;
+          color: #fff;
+          text-align: left;
+          font-size: 14px;
+          line-height: 1.5;
+          .hint{
+            display: block;
+            margin-top: 10px;
+            font-size: 11px;
+          }
         }
       }
     }
@@ -91,6 +94,7 @@ body{
 
 /* PageSet */
 .pageSet{
+  position: relative;
   @include clearfix;
   width: $width_page;
   margin: $width_base_margin auto 0;

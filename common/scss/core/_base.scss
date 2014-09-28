@@ -143,6 +143,7 @@ unit
             }
           }
           .pullDownNavi{
+            @include box-shadow(rgba(0,0,0,.1) 2px 2px 4px);
             position: absolute;
             left: 0;
             width: 100%;
