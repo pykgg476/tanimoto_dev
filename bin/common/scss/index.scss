@@ -33,7 +33,7 @@ parts
         @include btnStyle($color_blue,#fff,$width_base_margin/3,$width_base_margin*2.5,13);
         padding-right: $width_base_margin*2.5;
         position: absolute;
-        top: $title_padding*1.5;
+        top: $title_padding*1.4;
         right: 0;
         &:after{
           @include link_Arrow(9,10,#fff);
