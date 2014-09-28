@@ -1061,7 +1061,7 @@ unit
 /* to PageTop */
 .toPageTop { opacity: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; position: fixed; bottom: 0; right: 20px; text-align: right; }
 .toPageTop.fixed { display: block; position: relative; width: 100%; bottom: -75px; }
-.toPageTop a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 20px; background: rgba(0, 0, 0, 0.6); text-align: center; }
+.toPageTop a { opacity: .6; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 20px; background: rgba(0, 0, 0, 0.6); text-align: center; }
 
 /* Global Footer */
 #globalFooter { margin-top: 75px; background: #242424; }
@@ -2191,7 +2191,7 @@ unit
 /* to PageTop */
 .toPageTop { opacity: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; position: fixed; bottom: 0; right: 20px; text-align: right; }
 .toPageTop.fixed { display: block; position: relative; width: 100%; bottom: -75px; }
-.toPageTop a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 20px; background: rgba(0, 0, 0, 0.6); text-align: center; }
+.toPageTop a { opacity: .6; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 20px; background: rgba(0, 0, 0, 0.6); text-align: center; }
 
 /* Global Footer */
 #globalFooter { margin-top: 75px; background: #242424; }

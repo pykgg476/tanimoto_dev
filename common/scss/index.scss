@@ -17,6 +17,7 @@ parts
   color: $textColor;
   font-size: $fontSize;
   text-align: center;
+  opacity: .6;
 }
 
 %topContentsBase{
@@ -28,12 +29,14 @@ parts
     padding: $title_padding 0 $title_padding/2;
     margin: 0 auto;
     .btn{
-      @include btnStyle($color_blue,#fff,$width_base_margin/2,$width_base_margin*2,13);
-      position: absolute;
-      top: $title_padding;
-      right: 0;
-      &:after{
-        @include link_Arrow(14,10,#fff);
+        a{
+        @include btnStyle($color_blue,#fff,$width_base_margin/3,$width_base_margin*2,13);
+        position: absolute;
+        top: $title_padding;
+        right: 0;
+        &:after{
+          @include link_Arrow(9,10,#fff);
+        }
       }
     }
   }
@@ -44,6 +47,16 @@ parts
 unit
 ============================*/
 
+.hideOverlay{
+  background: $color_gray;
+  position: fixed;
+  z-index: 1000000;
+}
+
+body{
+  display: none;
+}
+
 /* Panel */
 #topPanelArea{
   $position_title: 37%;
@@ -53,12 +66,14 @@ unit
   background-repeat: no-repeat;
   background-image: url("../../imageFile/panelPhoto_top.jpg");
   .base{
+    display: none;
     position: relative;
     background: rgba(0,0,0,.2);
     .catch{ 
+      display: none;
       position: absolute;
       width: 100%;
-      top: 44%;
+      top: 48%;
       text-align: center;
     }
   }
@@ -153,9 +168,21 @@ unit
           & + .work{
             margin-left: 10px;
           }
-          .workTitle{
-            font-size: 12px;
-            padding: $width_base_margin/2.5 $width_base_margin/2;
+          a{
+            @include inline-block();
+            .photo{
+              width: 320px;
+              height: 240px;
+              overflow: hidden;
+              img{
+                position: relative;
+                height: auto;
+              }
+            }
+            .workTitle{
+              font-size: 12px;
+              padding: $width_base_margin/2.5 $width_base_margin/2;
+            }
           }
         }
       }

@@ -43,6 +43,10 @@ $(function(){
 	pageTopPosition();
   $(window).scroll(function(){ pageTopPosition(); });
 
+	// ページトップマウスオーバー
+	var pageTop = $(".toPageTop");
+	mouseOverEffect(pageTop,'a',1,.6,false);
+
 	// フッターマウスオーバー
 	var footerNavi = $("#globalFooter").find('.childLink');
 	mouseOverEffect(footerNavi,'a',1,.6,false);
@@ -66,14 +70,25 @@ $(function(){
 ----------------------------------------*/
 
 var mouseOverEffect = function(targetBase,target,op,defaultOP,sdw){
+
+	if(sdw){
 	targetBase.hover(
 	                 function(){ 
 	                 	$(this).find(target).stop(true,true).animate({'opacity':op,boxShadow:'0 1px 5px #ddd'},'fast');
 	                 },function(){
 	                 	$(this).find(target).stop(true,true).animate({'opacity':defaultOP,boxShadow:'none'},'fast');
                  });
+}else{
+	targetBase.hover(
+	                 function(){ 
+	                 	$(this).find(target).stop(true,true).animate({'opacity':op},'fast');
+	                 },function(){
+	                 	$(this).find(target).stop(true,true).animate({'opacity':defaultOP},'fast');
+                 });
+}
 	return false;
 }
+
 
 
 var headerPosition = function(hp){

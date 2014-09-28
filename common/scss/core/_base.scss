@@ -194,6 +194,7 @@ unit
     bottom: -$footer_margin_top;
   }
   a{
+    opacity: .6;
     @include inline-block();
     padding: 20px;
     background: rgba(0,0,0,0.6);
