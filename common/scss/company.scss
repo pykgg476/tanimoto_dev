@@ -179,6 +179,9 @@ unit
           }
         }
         .dataSet{
+          .text{
+            @include inline-block();
+          }
           .text:after{
             content: "/";
             margin: 0 10px;

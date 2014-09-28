@@ -9,6 +9,7 @@ $(function(){
 	$(document).on('click','.scrollTrigger',function(){
 		
 		var attr = $(this).attr('name');
+		var hH = $('#globalHeader').height();
 		if($(this).attr('href') == '#toTop'){ // toTopならばページの先頭へ
 			var HashOffset= 0;
 		}else if(typeof attr !== 'undefined' && attr !== false){ // idを振っていないところへ飛びたい場合は、name属性に飛び先のクラスを入れる
@@ -20,14 +21,16 @@ $(function(){
 		}
 		
 		// スクロールする
-		$("html,body").stop(true,true).animate({ scrollTop: HashOffset}, 800);
+		$("html,body").stop(true,true).animate({ scrollTop: HashOffset-hH-25}, 800);
 		return false;
 	
 	});
 
 	// ヘッダー固定
-	headerPosition();
-	$(window).scroll(function(){ headerPosition(); });
+	var head = $('#globalHeader');
+	var hp = head.offset().top + head.height();
+  headerPosition(hp);
+  $(window).scroll(function(){ headerPosition(hp); });
 
 	// グロナビマウスオーバー
 	var gnavi = $("#globalHeader").find('.navi').not('.now');
@@ -35,6 +38,10 @@ $(function(){
 
 	var gsubnavi = $("#globalHeader").find('.pullDownNavi').find('.navi');
 	mouseOverEffect(gsubnavi,'a',1,.6,false);
+
+	// ページトップの挙動
+	pageTopPosition();
+  $(window).scroll(function(){ pageTopPosition(); });
 
 	// フッターマウスオーバー
 	var footerNavi = $("#globalFooter").find('.childLink');
@@ -69,17 +76,39 @@ var mouseOverEffect = function(targetBase,target,op,defaultOP,sdw){
 }
 
 
-var headerPosition = function(){
+var headerPosition = function(hp){
 	var head = $('#globalHeader');
-	var hp = head.offset().top;
 	var ds = $(document).scrollTop();
-
+	if($('#topPanelArea').length){
+		var ph = $('#topPanelArea').height();
+		ds = ds - ph + hp;
+	}
 	if(hp < ds){
 		head.addClass('fixed');
 	}else if(hp > ds){
 		head.removeClass('fixed');
 	}
+}
 
+var pageTopPosition = function(){
+	var pt = $('.toPageTop');
+	var fp = $('#globalFooter').offset().top;
+	var ds = $(document).scrollTop();
+	var ws = $(window).height();
+	
+	// 1画面分スクロールしたら出てくる
+	if(ds > ws){
+		pt.stop(true,true).animate({opacity:1});
+	}else{
+		pt.stop(true,true).animate({opacity:0});
+	}
+
+	// フッター上で止まる
+	if(ds+ws+pt.height()>fp){
+		pt.addClass('fixed');
+	}else{
+		pt.removeClass('fixed');
+	}
 }
 	
 

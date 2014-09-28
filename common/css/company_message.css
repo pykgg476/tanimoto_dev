@@ -1058,6 +1058,11 @@ unit
 #globalHeader .base .globalNavi .naviBase > .navi > a { display: block; border-right: 1px solid  #ddd; padding: 31px 3%; text-align: center; }
 #globalHeader .base .globalNavi .naviBase > .navi > a span { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; height: 32px; background-image: url("../../imageFile/global/globalNavi-s56d415f372.png") !important; opacity: .5; box-shadow: none !important; }
 
+/* to PageTop */
+.toPageTop { opacity: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; position: fixed; bottom: 0; right: 20px; text-align: right; }
+.toPageTop.fixed { display: block; position: relative; width: 100%; bottom: -75px; }
+.toPageTop a { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; padding: 20px; background: rgba(0, 0, 0, 0.6); text-align: center; }
+
 /* Global Footer */
 #globalFooter { margin-top: 75px; background: #242424; }
 #globalFooter .linkArea { width: 980px; margin: 0 auto; padding: 25px 0 150px 0; overflow: hidden; }

@@ -26,6 +26,9 @@ $color_font_link_hover: adjust-lightness($color_font_link, 30%);
 
 $color_line_dashed: #ccc;
 
+$footer_margin_top: $width_base_margin * 3;
+
+
 
 /* Font */
 body{
@@ -175,12 +178,33 @@ unit
   }
 }
 
+/* to PageTop */
+.toPageTop{
+  opacity: 0;
+  @include inline-block();
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  text-align: right;
+  &.fixed{
+    display: block;
+    position: relative;
+    width: 100%;
+    bottom: -$footer_margin_top;
+  }
+  a{
+    @include inline-block();
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+  }
+}
 
 /* Global Footer */
 #globalFooter{
   $width_footer: $width_page;
   $padding_footer: $width_base_margin;
-  margin-top: $width_base_margin * 3;
+  margin-top: $footer_margin_top;
   background: #242424;
   .linkArea{
     width: $width_footer;

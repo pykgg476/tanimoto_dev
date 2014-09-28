@@ -7,7 +7,9 @@ $(function(){
 
 	// パネルのサイズ
 	panelSize();
-	$(window).resize(function(){ panelSize(); });
+	$(window).resize(function(){ hp = $('#topPanelArea').height(); panelSize(); });
+
+
 
 });
 	
@@ -22,6 +24,7 @@ var panelSize = function(){
 	$('#topPanelArea').width(ww).height(wh);
 	$('#topPanelArea').find('.base').width(ww).height(wh);
 }
+
 
 /*----------------------------------------
  Library 
