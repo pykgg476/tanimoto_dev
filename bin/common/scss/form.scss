@@ -40,38 +40,24 @@ parts
     background: #fafafa;
   }
   .dataSet{
-    %icon{
-      @include fa-icon();
-      font-size: 35px;
-      vertical-align: middle;
-      margin-right: $width_base_margin/2;
-    }
     margin-top: $width_base_margin/2;
     text-align: center;
     .num{
       font-size: 30px;
+      padding-left: 45px;
     }
     .mail{
+      background: url('../../imageFile/icon_mail.png') left center no-repeat;
       &:hover{
         opacity: .7;
       }
-      &:before{
-        @extend %icon;
-        content: "\f003";
-      }
     }
     .tel{
-      &:before{
-        @extend %icon;
-        content: "\f1e4";
-      } 
+      background: url('../../imageFile/icon_tel.png') left center no-repeat;
     }
     .fax{
       margin-left: 40px;
-      &:before{
-        @extend %icon;
-        content: "\f1ac";
-      } 
+      background: url('../../imageFile/icon_fax.png') left center no-repeat;
     }
   }
   .time{

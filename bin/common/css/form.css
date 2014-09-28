@@ -1,4 +1,4 @@
-@charset "US-ASCII";
+@charset "UTF-8";
 /*============================
 @import
 ============================*/
@@ -1148,13 +1148,11 @@ parts
 .formUnit { margin-top: 25px; }
 .formUnit .copy { border: 1px solid  #e0e0e0; margin-top: 25px; padding: 25px; background: #fafafa; }
 .formUnit .dataSet { margin-top: 12.5px; text-align: center; }
-.formUnit .dataSet .mail:before, .formUnit .dataSet .tel:before, .formUnit .dataSet .fax:before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 35px; vertical-align: middle; margin-right: 12.5px; }
-.formUnit .dataSet .num { font-size: 30px; }
+.formUnit .dataSet .num { font-size: 30px; padding-left: 45px; }
+.formUnit .dataSet .mail { background: url("../../imageFile/icon_mail.png") left center no-repeat; }
 .formUnit .dataSet .mail:hover { opacity: .7; }
-.formUnit .dataSet .mail:before { content: "\f003"; }
-.formUnit .dataSet .tel:before { content: "\f1e4"; }
-.formUnit .dataSet .fax { margin-left: 40px; }
-.formUnit .dataSet .fax:before { content: "\f1ac"; }
+.formUnit .dataSet .tel { background: url("../../imageFile/icon_tel.png") left center no-repeat; }
+.formUnit .dataSet .fax { margin-left: 40px; background: url("../../imageFile/icon_fax.png") left center no-repeat; }
 .formUnit .time { margin-top: 12.5px; }
 
 #formTel .dataSet { margin: 25px 0; }
