@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "core";  
+@import "underPage"; 
+@import "about"; 
+
+/*============================
+Global
+============================*/
+
+$work_padding: 25px;
+
+/*============================
+Sytle
+============================*/
+
+/* Panel */
+#panelArea{
+  background-image: url("../../imageFile/about/work_panel_photo.jpg");
+}
+
+/* articleUnit */
+.articleUnit{
+  clear: both;
+  overflow: hidden;
+  margin-top: $work_padding;
+  padding: $work_padding*2;
+  background: #fff;
+  .unitContents{
+    margin-top: $work_padding*1.5;
+    img{
+      margin-bottom: $work_padding;
+    }
+    p{
+      line-height: 2;
+      font-size: 14px;
+      & + p{
+        margin-top: $work_padding;
+      }
+    }
+    .textSet{
+      clear: both;
+      overflow: hidden;
+      & + .textSet{
+        margin-top: $work_padding;
+      }
+      &.sideA{
+        img{
+          float: left;
+          margin-right: $work_padding;
+        }
+      }
+      &.sideB{
+        img{
+          float: right;
+          margin-left: $work_padding;
+        }
+      }
+    }
+  }
+}
+
+/*============================
+Function
+============================*/

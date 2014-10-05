@@ -39,7 +39,12 @@ $('img').each(function() {
 
 	// ヘッダー固定
 	var head = $('#globalHeader');
+
+	if($('#topPanelArea').length){
 	var hp = head.offset().top + head.height();
+	}else{
+	var hp = head.offset().top;
+	}
   headerPosition(hp);
   $(window).scroll(function(){ headerPosition(hp); });
 
