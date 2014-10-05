@@ -32,8 +32,14 @@ Sytle
   background: #fff;
   .unitContents{
     margin-top: $work_padding*1.5;
-    img{
+    .photo{
       margin-bottom: $work_padding;
+      span{
+        display: block;
+        & + span{
+          margin-top: $work_padding;
+        }
+      }
     }
     p{
       line-height: 2;
@@ -49,13 +55,13 @@ Sytle
         margin-top: $work_padding;
       }
       &.sideA{
-        img{
+        .photo{
           float: left;
           margin-right: $work_padding;
         }
       }
       &.sideB{
-        img{
+        .photo{
           float: right;
           margin-left: $work_padding;
         }

@@ -116,7 +116,7 @@ var headerPosition = function(hp){
 	}
 	if(hp < ds){
 		head.addClass('fixed');
-	}else if(hp > ds){
+	}else if(hp >= ds){
 		head.removeClass('fixed');
 	}
 }
