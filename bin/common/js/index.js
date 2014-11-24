@@ -12,11 +12,14 @@ $(function(){
       $('.hideOverlay').fadeOut(1000,function(){ $(this).remove(); });
     },500);
     setTimeout(function(){
-      $('#topPanelArea').find('.base').fadeIn(1000);
+      $('#topPanelArea').find('.base').fadeIn(800);
     },1500);
     setTimeout(function(){
-      $('#topPanelArea').find('.catch').fadeIn(1000);
+      $('#topPanelArea').find('.catch').fadeIn(800);
     },2000);
+    setTimeout(function(){
+      $('#topPanelArea').find('.logo').fadeIn(800);
+    },2700);
   });
 
   // パネルのサイズ

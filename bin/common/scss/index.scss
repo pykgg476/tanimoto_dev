@@ -71,12 +71,23 @@ body{
     position: relative;
     background: rgba(0,0,0,.3);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#33000000', endColorstr='#33000000');
-    .catch{ 
+    %contents{ 
       display: none;
       position: absolute;
       width: 100%;
-      top: 48%;
       text-align: center;
+    }
+    .catch{
+      @extend %contents;
+      top: 38%;
+      img{
+        position: relative;
+        left: 12px;
+      }
+    }
+    .logo{
+      @extend %contents;
+      top: 46%;
     }
   }
 }
