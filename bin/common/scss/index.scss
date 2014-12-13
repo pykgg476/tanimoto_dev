@@ -77,17 +77,14 @@ body{
       width: 100%;
       text-align: center;
     }
-    .catch{
+    .symbolSet{
       @extend %contents;
-      top: 38%;
-      img{
-        position: relative;
-        left: 12px;
+      top: 36%;
+      .symbol{
       }
-    }
-    .logo{
-      @extend %contents;
-      top: 46%;
+      .catch{
+        margin-top: 45px;
+      }
     }
   }
 }

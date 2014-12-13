@@ -104,6 +104,9 @@ unit
           width: 100%;
           height: auto;
           max-width: $width_logo;
+          &.is_disable{
+            display: none;
+          }
         }
       }
     }
