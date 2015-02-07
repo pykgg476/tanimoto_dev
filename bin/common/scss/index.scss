@@ -52,6 +52,19 @@ unit
   background: $color_gray;
   position: fixed;
   z-index: 1000000;
+  .symbolSet{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 36%;
+    .symbol{
+      display: none;
+    }
+    .catch{
+      display: none;
+      margin-top: 45px;
+    }
+  }
 }
 
 body{
@@ -66,27 +79,6 @@ body{
   @include background-size(cover);
   background-repeat: no-repeat;
   background-image: url("../../imageFile/panelPhoto_top.jpg");
-  .base{
-    display: none;
-    position: relative;
-    background: rgba(0,0,0,.3);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#33000000', endColorstr='#33000000');
-    %contents{ 
-      display: none;
-      position: absolute;
-      width: 100%;
-      text-align: center;
-    }
-    .symbolSet{
-      @extend %contents;
-      top: 36%;
-      .symbol{
-      }
-      .catch{
-        margin-top: 45px;
-      }
-    }
-  }
 }
 
 /* Copy */

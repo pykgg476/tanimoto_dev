@@ -7,16 +7,13 @@ $(function(){
 
   $('.hideOverlay').width($(document).width()).height($(document).height()).parents('body').fadeIn(function(){
     panelSize();
+    var symbolSet = $('.hideOverlay').find('.symbolSet');
+    setTimeout(function(){ symbolSet.find('.symbol').fadeIn(3000); },200);
+    setTimeout(function(){ symbolSet.find('.catch').fadeIn(3000); },800);
     // パネルがふわっと出てくる
     setTimeout(function(){
-      $('.hideOverlay').fadeOut(1000,function(){ $(this).remove(); });
-    },500);
-    setTimeout(function(){
-      $('#topPanelArea').find('.base').fadeIn(800);
-    },1500);
-    setTimeout(function(){
-      $('#topPanelArea').find('.symbolSet').fadeIn(800);
-    },2000);
+      $('.hideOverlay').fadeOut(2500,function(){ $(this).remove(); });
+    },2800);
   });
 
   // パネルのサイズ
@@ -34,11 +31,6 @@ $(function(){
   function(){
     $(this).find('img').stop(true,true).animate({width: '-=20px',left: '+=10px', top: '+=10px'});
   });
-  
-  // ヘッダーロゴ差し替え
-  var thp = $('#globalHeader').offset().top + $('#globalHeader').height();
-  headerLogo(thp);
-  $(window).scroll(function(){ headerLogo(thp); });
 
 });
 	
