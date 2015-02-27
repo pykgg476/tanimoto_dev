@@ -19,6 +19,7 @@ $contentsArea_padding: 0;
 
 $color_blue: #00a7c9;
 $color_gray: #eee;
+$color_red: #f90000;
 $color_font_base: #666;
 $spacing_font: 1px;
 $color_font_link: $color_blue;
@@ -141,8 +142,26 @@ unit
               content: "";
               border-bottom: 5px solid $color_blue;
             }
-            a span {
+            .gmenu span {
               opacity: 1;
+            }
+          }
+          // 新卒採用コメント
+          .gmenu .globalNavi-menu_4{
+            position: relative;
+            overflow: visible;
+            &:before{
+              @include inline-block();
+              content:"\32\30\31\36\5e74\5ea6\65b0\5352\52df\96c6\4e2d";
+              white-space: nowrap;
+              position: absolute;
+              text-indent: 0;
+              bottom: -2em;
+              left: -45%;
+              z-index: 100;
+              font-size: 10px;
+              font-weight: bold;
+              color: $color_red;
             }
           }
           .pullDownNavi{

@@ -10,6 +10,8 @@ $(function(){
 	// サイドナビマウスオーバー
 	var snavi = $("#sideNaviArea").find('.list').not('.now');
 	mouseOverEffect(snavi,'a',1,.5,true);
+	var snaviBnr = $("#sideNaviArea").find('.bnr');
+	mouseOverEffect(snaviBnr,'a',1,.8,true);
 
 	var snaviParent = $("#sideNaviArea").find('.pageTitle');
 	mouseOverEffect(snaviParent,'a',.7,1,true);

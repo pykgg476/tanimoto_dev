@@ -107,7 +107,6 @@ body{
   float: left;
   width: $width_side;
   margin-right: $width_base_margin;
-  background: #fff;
   z-index: 100;
   .pageTitle{
     & + .pageTitle{
@@ -135,6 +134,7 @@ body{
     }
   }
   .sideNavi{
+    background: #fff;
     .naviBase{
       .list{
         a{
@@ -156,6 +156,13 @@ body{
           font-weight: bold;
         }
       }
+    }
+  }
+  .bnr{
+    margin-top: 25px;
+    a{
+      display: block;
+      opacity: .8;
     }
   }
 }
