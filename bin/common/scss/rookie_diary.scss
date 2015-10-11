@@ -12,6 +12,26 @@
 Sytle
 ============================*/
 
+// PageSet
+.pageSet {
+  background: url("../../imageFile/rookie_diary/bg_dot.png") left top repeat;
+}
+
+// Tab
+.tabRookie {
+  .tabSet {
+    .tab {
+        @include inline-block();
+      a,span {
+        @include inline-block();
+        width: 134px;
+        height: 145px;
+        background-image: url("../../imageFile/rookie_diary/tab.png");
+      }
+    }
+  }
+}
+
 
 /*============================
 Function
