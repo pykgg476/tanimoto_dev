@@ -78,13 +78,21 @@ $human_padding: 25px;
 }
 
 /* humanLink */
-.humanLink{
+.humanLinkSet {
   $width_link_margin: $human_padding;
   $width_link: ($width_page - ($width_link_margin*2)) / 3;
   clear: both;
   margin-top: $human_padding;
+  .title {
+    padding: 20px;
+    background: $color_blue;
+  }
+  & + .humanLinkSet {
+    margin-top: $human_padding*2;
+  }
   .linkBase{
     overflow: hidden;
+    margin-top: $human_padding;
     .link{
       float: left;
       width: $width_link;
@@ -104,6 +112,26 @@ $human_padding: 25px;
     .link.now{
       .photo,.text{
         opacity: 1;
+      }
+    }
+  }
+}
+
+.rookieLink {
+  .link {
+    position: relative;
+    img {
+    }
+    .linkArea {
+    width: 310px;
+    height: 248px;
+    @include inline-block();
+    position: absolute;
+    border: 4px solid  $color_blue;
+    @include transition(border-width .25s $easeInOutQuad);
+    @include box-sizing(border-box);
+      &:hover {
+        border-width: 8px;
       }
     }
   }

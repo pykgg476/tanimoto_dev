@@ -152,6 +152,18 @@ body{
   }
   .aboutUnitHuman{
     background-image: url("../../imageFile/about/human_panel_photo.jpg");
+    .btn {
+      a:after{
+        top: 17px !important;
+      }
+      .rookie {
+        display: block;
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: $color_red;
+      }
+    }
   }
 }
 
