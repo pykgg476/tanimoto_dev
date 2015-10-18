@@ -36,7 +36,7 @@ body {
   }
   .base {
    position: relative;
-   width: 1200px;
+   width: 1500px;
    height: 420px;
    margin: 0 auto;
    background: url('../../imageFile/rookie_diary/illust.png') top center no-repeat;
@@ -46,12 +46,12 @@ body {
     .title {
       @extend %panelC;
       top: 105px;
-      left: 220px;
+      left: 360px;
     }
     .txt {
       @extend %panelC;
       top: 70px;
-      right: 90px;
+      right: 210px;
     }
   }
 }
