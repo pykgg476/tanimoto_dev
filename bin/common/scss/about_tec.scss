@@ -31,7 +31,7 @@ Sytle
     .anchor{
       display: table-cell;
       vertical-align: middle;
-      width: 50%;
+      width: 33.33%;
       & + .anchor{
         border-left: 1px solid  #ddd;
       }
@@ -76,7 +76,7 @@ $tecArea_padding: 25px;
     }
     .title{
       @extend %titleBase;
-      width: 1%;
+      width: 20%;
       background: $color_blue;
       padding: 45px 50px;
     }
