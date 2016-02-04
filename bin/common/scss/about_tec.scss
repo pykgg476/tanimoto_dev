@@ -73,10 +73,11 @@ $tecArea_padding: 25px;
     %titleBase{
       display: table-cell;
       vertical-align: middle;
+      text-align: center;
     }
     .title{
       @extend %titleBase;
-      width: 20%;
+      width: 30%;
       background: $color_blue;
       padding: 45px 50px;
     }
