@@ -52,6 +52,24 @@ body {
       @extend %panelC;
       top: 70px;
       right: 210px;
+      .link {
+        position: absolute;
+        right: 30px;
+        top: -30px;
+        color: #fff;
+        &:before {
+          content: ">";
+          display: inline-block;
+          padding-right: 5px;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .txt02 {
+      top: 50px;
+      right: 190px;
     }
   }
 }
@@ -72,16 +90,19 @@ body {
         &.tab_03 a { background-position: -268px -165px; }
         &.tab_04 a { background-position: -402px -165px; }
         &.tab_05 a { background-position: -536px -165px; }
+        &.tab_06 a { background-position: -670px -165px; }
         &.tab_01 a:hover { background-position: 0 top; }
         &.tab_02 a:hover { background-position: -134px top; }
         &.tab_03 a:hover { background-position: -268px top; }
         &.tab_04 a:hover { background-position: -402px top; }
         &.tab_05 a:hover { background-position: -536px top; }
+        &.tab_06 a:hover { background-position: -670px top; }
         &.tab_01 span { background-position: 0 0; }
         &.tab_02 span { background-position: -134px 0; }
         &.tab_03 span { background-position: -268px 0; }
         &.tab_04 span { background-position: -402px 0; }
         &.tab_05 span { background-position: -536px 0; }
+        &.tab_06 span { background-position: -670px 0; }
       a,span {
         @include inline-block();
         width: 134px;
@@ -90,6 +111,13 @@ body {
         text-indent: -9999px;
         background-repeat: no-repeat;
         @include transition(background-position .25s $easeOutQuad);
+      }
+    }
+  }
+  .tabset02 {
+    .tab {
+      a,span {
+        background-image: url("../../imageFile/rookie_diary/tab_num.png");
       }
     }
   }
@@ -103,16 +131,19 @@ body {
       &.tab_03 a { background-position: -268px -145px; }
       &.tab_04 a { background-position: -402px -145px; }
       &.tab_05 a { background-position: -536px -145px; }
+      &.tab_06 a { background-position: -670px -145px; }
       &.tab_01 a:hover { background-position: 0 bottom; }
       &.tab_02 a:hover { background-position: -134px bottom; }
       &.tab_03 a:hover { background-position: -268px bottom; }
       &.tab_04 a:hover { background-position: -402px bottom; }
       &.tab_05 a:hover { background-position: -536px bottom; }
+      &.tab_06 a:hover { background-position: -670px bottom; }
       &.tab_01 span { background-position: 0 -310px; }
       &.tab_02 span { background-position: -134px -310px; }
       &.tab_03 span { background-position: -268px -310px; }
       &.tab_04 span { background-position: -402px -310px; }
       &.tab_05 span { background-position: -536px -310px; }
+      &.tab_06 span { background-position: -670px -310px; }
       a,span {
         vertical-align: bottom;
       }
@@ -159,6 +190,10 @@ body {
         }
       }
     }
+    .onlyTxt {
+      padding: 0;
+      text-align: center;
+    }
   }
   .articleUnit.articleUnitEnd {
     margin: 80px 0 20px;
@@ -169,8 +204,54 @@ body {
     .txtArea {
       display: block;
       margin-top: 30px;
+      .txtImg {
+        text-align: left;
+        &:before {
+          content: "";
+          height: 96px;
+          width: 96px;
+          display: table-cell;
+          vertical-align: middle;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        p {
+          padding-left: 20px;
+          display: table-cell;
+          vertical-align: middle;
+        }
+        & + .txtImg {
+          margin-top: 40px;
+        }
+      }
+      .yukimaru {
+        &:before {
+          background-image: url("../../imageFile/rookie_diary/time_end_yukimaru.png");
+        }
+      }
+      .kurosaki {
+        &:before {
+          background-image: url("../../imageFile/rookie_diary/time_end_kurosaki.png");
+        }
+      }
+      .photo {
+        margin-top: 40px;
+        img {
+        border: 1px solid #DDDDDD;
+        box-shadow: 12px 12px 0px 0px #ddd;
+        }
+      }
     }
   }
+  // .articleUnit.articleUnitKenshu {
+  //   & + .articleUnitKenshu {
+  //     margin-top: 100px;
+  //   }
+  //   .txtArea {
+  //     vertical-align: top;
+  //     padding-top: 20px;
+  //   }
+  // }
   .afterTitle {
     text-align: center;
     background: url("../../imageFile/rookie_diary/divider.png") top center no-repeat;
