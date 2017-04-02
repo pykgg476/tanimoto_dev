@@ -20,13 +20,6 @@ var mapOptions2 = {
   scaleControl: true, 
   scrollwheel: false
 };
-var mapOptions3 = {
-  center: new google.maps.LatLng(38.2651073,140.8796244),
-  zoom: 14,
-  mapTypeId: google.maps.MapTypeId.ROADMAP,
-  scaleControl: true, 
-  scrollwheel: false
-};
 var mapOptions4 = {
   center: new google.maps.LatLng(35.2939486,139.64059810000003),
   zoom: 14,
@@ -36,7 +29,6 @@ var mapOptions4 = {
 };
 var map1 = new google.maps.Map(document.getElementById("map_canvas1"),mapOptions1);
 var map2 = new google.maps.Map(document.getElementById("map_canvas2"),mapOptions2);
-var map3 = new google.maps.Map(document.getElementById("map_canvas3"),mapOptions3);
 var map4 = new google.maps.Map(document.getElementById("map_canvas4"),mapOptions4);
 
 var marker1 = new google.maps.Marker({
@@ -49,12 +41,6 @@ var marker2 = new google.maps.Marker({
     position: new google.maps.LatLng(35.5740098,139.7639585),
     map: map2, 
     title: '東京支店'
-});
-
-var marker3 = new google.maps.Marker({
-    position: new google.maps.LatLng(38.2651073,140.8796244),
-    map: map3, 
-    title: '東北支店'
 });
 
 var marker4 = new google.maps.Marker({
@@ -74,12 +60,6 @@ var infowindow2 = new google.maps.InfoWindow({
     size: new google.maps.Size(100, 100)
 });
 infowindow2.open(map2,marker2);
-
-var infowindow3 = new google.maps.InfoWindow({
-    content: '<div style="font-size: 15px; font-weight: bold;">東北支店</div><a style="font-size: 12px;" target="_blank" href="https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC,+%E3%80%92980-0014+%E5%AE%AE%E5%9F%8E%E7%9C%8C%E4%BB%99%E5%8F%B0%E5%B8%82%E9%9D%92%E8%91%89%E5%8C%BA%E6%9C%AC%E7%94%BA%EF%BC%91%E4%B8%81%E7%9B%AE%EF%BC%95%E2%88%92%EF%BC%92%EF%BC%98+%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%BC%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9%E4%BB%99%E5%8F%B0%E9%A7%85%E5%89%8D%E9%80%9A/@38.265074,140.879663,16z/data=!4m2!3m1!1s0x5f8a2826b746cd79:0x176530842a5c3b1d?hl=ja">大きな地図で見る</a>',
-    size: new google.maps.Size(100, 100)
-});
-infowindow3.open(map3,marker3);
 
 var infowindow4 = new google.maps.InfoWindow({
     content: '<div style="font-size: 15px; font-weight: bold;">横須賀営業所</div><a style="font-size: 12px;" target="_blank" href="https://www.google.com/maps/place/%E7%9B%B8%E6%A8%A1%E9%81%8B%E8%BC%B8%E5%80%89%E5%BA%AB%EF%BC%88%E6%A0%AA%EF%BC%89+%E6%9C%AC%E7%A4%BE%E5%80%89%E5%BA%AB%E8%AA%B2/@35.294021,139.637215,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x4b811aedb22f0fe8?hl=ja">大きな地図で見る</a>',
