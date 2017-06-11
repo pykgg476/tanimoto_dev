@@ -45,6 +45,12 @@ $(function(){
 		$(window).scroll(function(){ sideNaviNow(secPos); });
 	}
 
+	// 動画モーダル
+	$('.prjUnit').find('.workUnit').find('.photo').find('.movieLink').find('a').magnificPopup({
+		type:'iframe',
+	  midClick: true,
+	  mainClass: 'mfp-fade'
+	 });
   
 });
 
