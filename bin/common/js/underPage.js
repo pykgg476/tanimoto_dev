@@ -49,7 +49,16 @@ $(function(){
 	$('.prjUnit').find('.workUnit').find('.photo').find('.movieLink').find('a').magnificPopup({
 		type:'iframe',
 	  midClick: true,
-	  mainClass: 'mfp-fade'
+	  mainClass: 'mfp-fade',
+	  iframe: {
+		  patterns: {
+		    youtube: {
+		      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+		      id: 'v=', // String that splits URL in a two parts, second part should be %id%
+		      src: '//www.youtube.com/embed/RFck7-CWNfg?rel=0&showinfo=0' // URL that will be set as a source for iframe.
+		    }
+		  }
+		}
 	 });
   
 });
