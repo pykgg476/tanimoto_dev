@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "Gruntfile.js",
   "dependencies": {
+    "compass": "^0.1.1",
     "grunt": "^0.4.5"
   },
   "devDependencies": {

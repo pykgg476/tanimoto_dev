@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "core";  
+@import "about"; 
+@import "recruit"; 
+
+/*============================
+Global
+============================*/
+
+body {
+  background: #F9F9F9;
+}
+
+.pageSet {
+  max-width: 1200px;
+  min-width: 800px;
+  width: 100%;
+  overflow: visible;
+}
+
+/*============================
+Sytle
+============================*/
+
+#panelArea {
+  background: $color_blue;
+  padding: 40px;
+  .img {
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: 1360px;
+      height: auto;
+    }
+  }
+}
+
+#memberArea {
+  max-width: 924px;
+  width: 100%;
+  margin: 0 auto;
+  .memberList {
+    text-align: center;
+    display: flex;
+    .member {
+      position: relative;
+      margin-top: 70px;
+      font-size: 14px;
+      & + .member {
+        margin-left: 20px;
+      }
+      &:before {
+        content: "";
+        width: 30px;
+        height: 88px;
+        background: url("../../imageFile/zadankai/arrow_panel.png") top left no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: -101px;
+        left: calc(50% - 15px);
+      }
+      .name {
+        img {
+          max-width: 216px;
+          height: auto;
+        }
+      }
+      .years {
+        font-weight: bold;
+        margin-top: 5px;
+        font-size: 14px;
+        color: #555;
+      }
+      .comment {
+        margin-top: 10px;
+        color: #777;
+      }
+    }
+  }
+}
+
+.textArea {
+  .textset {
+    position: relative;
+    margin-top: 100px;
+    &:after {
+      content:" ";
+      display:block;
+      clear:both;
+    }
+    .q {
+      z-index: 100;
+      position: relative;
+    }
+    .img {
+      position: relative;
+    }
+    .textUnit {
+      z-index: 100;
+      position: relative;
+      background: #fff;
+      padding: 50px 10px 50px 0;
+      box-sizing: border-box;
+      width: 708px;
+      .text {
+        position: relative;
+        left: -40px;
+        font-size: 15px;
+        line-height: 2;  
+        min-height: 101px;
+        & + .text {
+          margin-top: 40px;
+        }    
+        &:before {
+          content: "";
+          display: table-cell;
+          vertical-align: middle;
+          width: 78px;
+          height: 101px;
+          background-position: left center;
+          background-repeat: no-repeat;
+          background-size: 78px;
+        }
+        p {
+          padding-left: 30px;
+          display: table-cell;
+          vertical-align: middle;
+        }
+        em {
+          color: $color-blue;
+        }
+      }
+      .text_yokoyama:before {
+        background-image: url("../../imageFile/zadankai/icon_yokoyama.png");
+      }
+      .text_okada:before {
+        background-image: url("../../imageFile/zadankai/icon_okada.png");
+      }
+      .text_hanekawa:before {
+        background-image: url("../../imageFile/zadankai/icon_hanekawa.png");
+      }
+      .text_goto:before {
+        background-image: url("../../imageFile/zadankai/icon_goto.png");
+      }
+    }
+    &.textSet_01_1 {
+      .q {
+      }
+      .img {
+        text-align: right;
+        margin-top: -60px;
+      }
+      .textUnit {
+        margin-top: -142px;
+        left: 160px;
+      }
+    }
+    &.textSet_01_2 {
+      .q {
+        text-align: right;
+      }
+      .img {
+        margin-top: -80px;
+      }
+      .textUnit {
+        margin-top: -142px;
+        float: right;
+      }
+    }
+    &.textSet_02_1 {
+      .q {
+      }
+      .img {
+        text-align: center;
+        margin-top: -40px;
+      }
+      .textUnit {
+        margin-top: -122px;
+        float: right;
+      }
+    }
+    &.textSet_02_2 {
+      .q {
+      }
+      .img {
+        position: absolute;
+        right: -20px;
+        top: 60px;
+        width: 600px;
+        img {
+          margin-bottom: 20px;
+        }
+      }
+      .textUnit {
+        margin-top: 52px;
+        left: 40px;
+      }
+    }
+    &.textSet_03_1 {
+      .q {
+        width: 708px;
+        float: right;
+        img {
+          position: relative;
+          left: -40px;
+        }
+      }
+      .img {
+        position: absolute;
+        left: -20px;
+        top: 60px;
+        width: 600px;
+        img {
+          margin-bottom: 20px;
+        }
+      }
+      .textUnit {
+        margin-top: 30px;
+        float: right;
+      }
+    }
+    &.textSet_04_1 {
+      margin-top: 180px;
+      .q {
+      }
+      .img {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .textUnit {
+        margin-top: -160px;
+      }
+    }
+  }
+}
+
+.recruitArea {
+  margin-top: 100px;
+  padding: 100px 0;
+  background: $color_blue;
+  width: 100%;
+  font-size: 16px;
+  #recruitAsk {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+#globalFooter {
+  margin-top: 0;
+}
+
+.toPageTop {
+  margin-top: -75px;
+}
