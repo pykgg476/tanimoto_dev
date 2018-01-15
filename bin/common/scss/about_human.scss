@@ -109,6 +109,11 @@ $human_padding: 25px;
         padding: 35px 0;
         text-align: center;
       }
+      &.zadankai {
+        .text {
+          padding-top: 65px;
+        }
+      }
     }    
     .link.now{
       .photo,.text{

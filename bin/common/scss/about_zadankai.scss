@@ -13,11 +13,12 @@ Global
 ============================*/
 
 body {
-  background: #F9F9F9;
+  background: #f0f0f0;
 }
 
 .pageSet {
   max-width: 1200px;
+  padding: 0 20px;
   min-width: 800px;
   width: 100%;
   overflow: visible;
@@ -31,10 +32,15 @@ Sytle
   background: $color_blue;
   padding: 40px;
   .img {
+    margin: 0 auto;
     text-align: center;
+    min-width: 800px;
+    padding: 0 20px;
+    border: 33px solid  #fff;
     img {
       width: 100%;
-      max-width: 1360px;
+      max-width: 982px;
+      vertical-align: bottom;
       height: auto;
     }
   }
@@ -42,12 +48,15 @@ Sytle
 
 #memberArea {
   max-width: 924px;
+  padding: 0 53px;
   width: 100%;
   margin: 0 auto;
   .memberList {
     text-align: center;
     display: flex;
+    width: 100%;
     .member {
+      width: 25%;
       position: relative;
       margin-top: 70px;
       font-size: 14px;
@@ -67,6 +76,8 @@ Sytle
       .name {
         img {
           max-width: 216px;
+          min-width: 150px;
+          width: 100%;
           height: auto;
         }
       }
@@ -106,7 +117,7 @@ Sytle
       background: #fff;
       padding: 50px 10px 50px 0;
       box-sizing: border-box;
-      width: 708px;
+      width: 700px;
       .text {
         position: relative;
         left: -40px;
@@ -177,7 +188,7 @@ Sytle
       }
       .img {
         text-align: center;
-        margin-top: -40px;
+        margin-top: -55px;
       }
       .textUnit {
         margin-top: -122px;
@@ -197,6 +208,7 @@ Sytle
         }
       }
       .textUnit {
+        width: 600px;
         margin-top: 52px;
         left: 40px;
       }
@@ -220,6 +232,7 @@ Sytle
         }
       }
       .textUnit {
+        width: 600px;
         margin-top: 30px;
         float: right;
       }
@@ -234,6 +247,7 @@ Sytle
       }
       .textUnit {
         margin-top: -160px;
+        left: 30px;
       }
     }
   }

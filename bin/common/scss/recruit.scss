@@ -19,21 +19,13 @@ unit
 ============================*/
 
 #sideNaviArea {
-  .bnrRookie {
-    position: relative;
-    img {
+  .bnr {
+    transition: all .35s ease-in-out;
+    &:hover {
+      opacity: .6;
     }
     a {
-    width: 210px;
-    height: 168px;
-    @include inline-block();
-    position: absolute;
-    border: 4px solid  $color_blue;
-    @include transition(border-width .25s $easeInOutQuad);
-    @include box-sizing(border-box);
-      &:hover {
-        border-width: 8px;
-      }
+      opacity: 1;
     }
   }
 }
