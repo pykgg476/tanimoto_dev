@@ -84,7 +84,7 @@ var infowindow5 = new google.maps.InfoWindow({
   content: '<div style="font-size: 15px; font-weight: bold;">沖縄営業所</div><a style="font-size: 12px;" target="_blank" href="https://goo.gl/maps/tCNCpcGzMrKeS8XP9">大きな地図で見る</a>',
   size: new google.maps.Size(100, 100)
 });
-infowindow4.open(map5, marker5);
+infowindow5.open(map5, marker5);
   
 });
 
