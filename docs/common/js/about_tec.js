@@ -1,0 +1,1 @@
+$(function(){var c=$(".tecAnchor").find(".anchor");mouseOverEffect(c,"a",1,.6,!1)});

@@ -7,7 +7,7 @@ grunt.initConfig({
     pkg: pkg,
     dir: {
             bin:'bin',
-            release:'release',
+            release:'docs',
             js: 'common/js',
             css: 'common/css',
             img:'imageFile',
@@ -61,6 +61,6 @@ for(taskName in pkg.devDependencies) {
 }
 
 grunt.registerTask("default", ['clean','copy','uglify']);
-grunt.registerTask("build", ['clean','copy','uglify','image']);
+// grunt.registerTask("build", ['clean','copy','uglify','image']);
 
 };
