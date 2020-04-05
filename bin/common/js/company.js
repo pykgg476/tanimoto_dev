@@ -27,9 +27,17 @@ var mapOptions4 = {
   scaleControl: true, 
   scrollwheel: false
 };
+  var mapOptions5 = {
+    center: new google.maps.LatLng(26.601888, 127.998921),
+    zoom: 14,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scaleControl: true,
+    scrollwheel: false
+  };
 var map1 = new google.maps.Map(document.getElementById("map_canvas1"),mapOptions1);
 var map2 = new google.maps.Map(document.getElementById("map_canvas2"),mapOptions2);
 var map4 = new google.maps.Map(document.getElementById("map_canvas4"),mapOptions4);
+var map5 = new google.maps.Map(document.getElementById("map_canvas5"), mapOptions5);
 
 var marker1 = new google.maps.Marker({
     position: new google.maps.LatLng(35.443513,139.633498),
@@ -47,6 +55,11 @@ var marker4 = new google.maps.Marker({
     position: new google.maps.LatLng(35.2939486,139.64059810000003),
     map: map4, 
     title: '横須賀営業所'
+});
+var marker5 = new google.maps.Marker({
+  position: new google.maps.LatLng(26.601888, 127.998921),
+  map: map5,
+  title: '沖縄営業所'
 });
 var infowindow1 = new google.maps.InfoWindow({
     content: '<div style="font-size: 15px; font-weight: bold;">本社</div><a style="font-size: 12px;" target="_blank" href="https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC,+%E3%80%92231-0045+%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E4%B8%AD%E5%8C%BA%E7%BE%BD%E8%A1%A3%E7%94%BA%EF%BC%92%E4%B8%81%E7%9B%AE+%E9%96%A2%E5%86%85%E9%A7%85%E5%89%8D%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%93%E3%83%AB/@35.443513,139.633498,16z/data=!4m2!3m1!1s0x60185cf39472bff9:0x84de34976fddc08d?hl=ja">大きな地図で見る</a>',
@@ -66,6 +79,12 @@ var infowindow4 = new google.maps.InfoWindow({
     size: new google.maps.Size(100, 100)
 });
 infowindow4.open(map4,marker4);
+
+var infowindow5 = new google.maps.InfoWindow({
+  content: '<div style="font-size: 15px; font-weight: bold;">沖縄営業所</div><a style="font-size: 12px;" target="_blank" href="https://goo.gl/maps/tCNCpcGzMrKeS8XP9">大きな地図で見る</a>',
+  size: new google.maps.Size(100, 100)
+});
+infowindow5.open(map5, marker5);
   
 });
 

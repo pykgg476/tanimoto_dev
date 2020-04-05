@@ -60,6 +60,7 @@ for(taskName in pkg.devDependencies) {
     }
 }
 
-grunt.registerTask("default", ['clean','copy','uglify','image']);
+grunt.registerTask("default", ['clean','copy','uglify']);
+grunt.registerTask("build", ['clean','copy','uglify','image']);
 
 };
