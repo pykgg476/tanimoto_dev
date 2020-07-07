@@ -4,12 +4,29 @@
   "main": "Gruntfile.js",
   "dependencies": {
     "compass": "^0.1.1",
-    "grunt": "^1.1.0"
+    "grunt": "^1.2.0"
   },
   "devDependencies": {
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-image": "^6.1.0"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pykgg476/tanimoto_dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pykgg476/tanimoto_dev/issues"
+  },
+  "homepage": "https://github.com/pykgg476/tanimoto_dev#readme",
+  "description": ""
 }
