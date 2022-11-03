@@ -107,7 +107,7 @@ body{
 
 /* SideNavi */
 #sideNaviArea{
-  $sideNavi_padding: $width_base_margin/1.5;
+  $sideNavi_padding: calc($width_base_margin / 1.5);
   float: left;
   width: $width_side;
   margin-right: $width_base_margin;

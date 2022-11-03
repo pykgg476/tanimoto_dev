@@ -295,7 +295,7 @@ unit
   }
   .copyrightArea{
     background: #fff;
-    padding: $padding_footer/2 0;
+    padding: calc($padding_footer / 2) 0;
     text-align: center;
     .copyright{
       font-size: 11px;

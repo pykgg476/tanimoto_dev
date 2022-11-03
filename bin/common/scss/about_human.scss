@@ -131,7 +131,7 @@ $human_padding: 25px;
     .linkArea {
     width: 310px;
     height: 248px;
-    @include inline-block();
+    display: inline-block;;
     position: absolute;
     border: 4px solid  $color_blue;
     @include transition(border-width .25s $easeInOutQuad);

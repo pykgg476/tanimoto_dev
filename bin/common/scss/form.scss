@@ -23,7 +23,7 @@ parts
 
 /* Copy */
 .copyArea{
-  padding: $width_base_margin/2 0;
+  padding: calc($width_base_margin / 2) 0;
 }
 
 /* formUnit */
@@ -40,7 +40,7 @@ parts
     background: #fafafa;
   }
   .dataSet{
-    margin-top: $width_base_margin/2;
+    margin-top: calc($width_base_margin / 2);
     text-align: center;
     .num{
       font-size: 30px;
@@ -61,7 +61,7 @@ parts
     }
   }
   .time{
-    margin-top: $width_base_margin/2;
+    margin-top: calc($width_base_margin / 2);
   }
 }
 

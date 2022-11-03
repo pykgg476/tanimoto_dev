@@ -58,7 +58,7 @@ unit
           font-size: 18px;
         }
         .sub{
-          margin-top: $width_base_margin/3;
+          margin-top: calc($width_base_margin / 3);
         }
       }
     }
@@ -157,7 +157,7 @@ unit
               display: inline-block;
               width: 12em;
               font-size: 12px;
-              margin-right: $width_base_margin/2;
+              margin-right: calc($width_base_margin / 2);
             }
             .name{
               & + .name{
@@ -182,7 +182,7 @@ unit
           }
           }
           .map{
-          margin-top: $width_base_margin/2;
+          margin-top: calc($width_base_margin / 2);
           }
           .telNum{
             .fax{

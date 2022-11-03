@@ -39,11 +39,11 @@ unit
       margin-bottom: $width_base_margin;
     }
     .list{
-      margin: 0 0 $width_base_margin $width_base_margin/2;
+      margin: 0 0 $width_base_margin calc($width_base_margin / 2);
       li{
         list-style: decimal inside;
         & + li{
-        margin-top: $width_base_margin/2;
+        margin-top: calc($width_base_margin / 2);
         }
       }
     }
@@ -51,7 +51,7 @@ unit
   .nameArea{
     text-align: center;
     .nameSet,.sign{
-      @include inline-block();
+      display: inline-block;;
       vertical-align: middle;
     }
     .nameSet{

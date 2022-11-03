@@ -12,7 +12,7 @@ parts
 @mixin btnStyle($bgColor,$textColor,$vP,$wP,$fontSize) {
   position: relative;
   padding: $vP $wP;
-  @include inline-block();
+  display: inline-block;;
   background: $bgColor;
   color: $textColor;
   font-size: $fontSize;
@@ -93,7 +93,7 @@ body{
     color: #888;
   }
   .text{
-    @include inline-block();
+    display: inline-block;;
     width: 370px;
     margin-top: $width_base_margin;
     text-align: left;
@@ -116,7 +116,7 @@ body{
         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#44000000', endColorstr='#44000000');
         .text{
           position: relative;
-          @include inline-block();
+          display: inline-block;;
           width: 540px;
           top: 140px;
           .titleSet{
@@ -190,7 +190,7 @@ body{
             margin-left: 10px;
           }
           a{
-            @include inline-block();
+            display: inline-block;;
             .photo{
               width: 320px;
               height: 240px;
@@ -202,7 +202,7 @@ body{
             }
             .workTitle{
               font-size: 12px;
-              padding: $width_base_margin/2.5 $width_base_margin/2;
+              padding: calc($width_base_margin / 2).5 calc($width_base_margin / 2);
             }
           }
         }
