@@ -42,10 +42,6 @@ ol, ul, menu {
 }
 
 /* For images to not be able to exceed their container */
-img {
-  max-width: 100%;
-}
-
 /* removes spacing between cells in tables */
 table {
   border-collapse: collapse;
@@ -2598,28 +2594,21 @@ unit
   border-top: 1px dashed #ccc;
 }
 .companyDescBase .contents .regist {
-  position: relative;
+  display: flex;
+  align-items: center;
   margin-top: 25px;
   padding-top: 25px;
   border-top: 1px dashed #ccc;
   min-height: 141px;
 }
-.companyDescBase .contents .regist .img {
-  position: absolute;
-  top: 25px;
-  left: 0;
-}
 .companyDescBase .contents .regist .text {
-  padding: 8px 0 0 125px;
+  padding-left: 20px;
 }
 .companyDescBase .contents .regist .text .main {
   font-size: 18px;
 }
 .companyDescBase .contents .regist .text .sub {
   margin-top: 8.3333333333px;
-}
-.companyDescBase .contents .registThumWide .text {
-  padding-left: 225px;
 }
 
 /* companyDescEnvironmentList */
@@ -2663,6 +2652,17 @@ unit
 }
 
 /* companyDescSDGs */
+#companyDescSDGs .contents .descTable {
+  margin-top: 20px;
+}
+#companyDescSDGs .contents .descTable .data {
+  border-right: 1px dashed #c4c4c4;
+}
+#companyDescSDGs .contents .descTable .three {
+  width: 1%;
+  white-space: nowrap;
+}
+
 /* companyDescDetail */
 #companyDescDetail .contents .descTable .data .tableList .list .label {
   display: inline-block;

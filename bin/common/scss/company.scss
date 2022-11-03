@@ -46,29 +46,20 @@ unit
       }
     }
     .regist{
-      position: relative;
+      display: flex;
+      align-items: center;
       margin-top: $width_base_margin;
       padding-top: $width_base_margin;
       border-top: 1px dashed $color_line_dashed;
       min-height: 141px;
-      .img{
-        position: absolute;
-        top: $width_base_margin;
-        left: 0;
-      }
       .text{
-        padding: 8px 0 0 125px;
+        padding-left: 20px;
         .main{
           font-size: 18px;
         }
         .sub{
           margin-top: $width_base_margin/3;
         }
-      }
-    }
-    .registThumWide{
-      .text{
-        padding-left: 225px;
       }
     }
   }
@@ -138,7 +129,15 @@ unit
 #companyDescSDGs{
   .contents{
     .descTable{
+      margin-top: 20px;
       @extend %descTable;
+      .data {
+        border-right: 1px dashed $color_border;
+      }
+      .three {
+        width: 1%;
+        white-space: nowrap;
+      }
     }
   }
 }
