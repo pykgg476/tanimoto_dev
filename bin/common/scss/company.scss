@@ -134,6 +134,15 @@ unit
   }
 }
 
+/* companyDescSDGs */
+#companyDescSDGs{
+  .contents{
+    .descTable{
+      @extend %descTable;
+    }
+  }
+}
+
 /* companyDescDetail */
 #companyDescDetail{
   .contents{
