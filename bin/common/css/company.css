@@ -42,6 +42,10 @@ ol, ul, menu {
 }
 
 /* For images to not be able to exceed their container */
+img {
+  vertical-align: top;
+}
+
 /* removes spacing between cells in tables */
 table {
   border-collapse: collapse;
@@ -2199,7 +2203,7 @@ unit
 }
 #globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1:before,
 #globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4:before {
-  display: inline-block();
+  display: inline-block;
   white-space: nowrap;
   position: absolute;
   text-indent: 0;
@@ -2251,7 +2255,7 @@ unit
 /* to PageTop */
 .toPageTop {
   opacity: 0;
-  display: inline-block();
+  display: inline-block;
   position: fixed;
   bottom: 0;
   right: 20px;
@@ -2265,7 +2269,7 @@ unit
 }
 .toPageTop a {
   opacity: 0.6;
-  display: inline-block();
+  display: inline-block;
   padding: 20px;
   background: rgba(0, 0, 0, 0.6);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#66000000", endColorstr="#66000000");
@@ -2330,7 +2334,7 @@ unit
   text-decoration: underline;
 }
 #globalFooter .linkArea .linkUnit .linkBase .childLink a {
-  display: inline-block();
+  display: inline-block;
   opacity: 0.6;
   margin-top: 10px;
   color: #ddd;
@@ -2652,8 +2656,11 @@ unit
 }
 
 /* companyDescSDGs */
+#companyDescSDGs .SDGs {
+  padding-top: 30px;
+}
 #companyDescSDGs .contents .descTable {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 #companyDescSDGs .contents .descTable .data {
   border-right: 1px dashed #c4c4c4;

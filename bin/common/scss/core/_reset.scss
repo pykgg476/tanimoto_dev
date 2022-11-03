@@ -41,6 +41,7 @@ ol, ul, menu {
 /* For images to not be able to exceed their container */
 img {
   // max-width: 100%;
+  vertical-align: top;
 }
 
 /* removes spacing between cells in tables */

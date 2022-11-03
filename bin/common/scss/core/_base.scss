@@ -151,7 +151,7 @@ unit
             position: relative;
             overflow: visible;
             &:before{
-              display: inline-block();
+              display: inline-block;
               white-space: nowrap;
               position: absolute;
               text-indent: 0;
@@ -210,7 +210,7 @@ unit
 /* to PageTop */
 .toPageTop{
   opacity: 0;
-  display: inline-block();
+  display: inline-block;
   position: fixed;
   bottom: 0;
   right: 20px;
@@ -223,7 +223,7 @@ unit
   }
   a{
     opacity: .6;
-    display: inline-block();
+    display: inline-block;
     padding: 20px;
     background: rgba(0,0,0,0.6);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66000000', endColorstr='#66000000');
@@ -281,7 +281,7 @@ unit
         }
         .childLink{
           a{
-            display: inline-block();
+            display: inline-block;
             opacity: .6;
             margin-top: 10px;
             color: #ddd;

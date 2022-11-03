@@ -127,9 +127,12 @@ unit
 
 /* companyDescSDGs */
 #companyDescSDGs{
+  .SDGs{
+    padding-top: 30px;
+  }
   .contents{
     .descTable{
-      margin-top: 20px;
+      margin-top: 25px;
       @extend %descTable;
       .data {
         border-right: 1px dashed $color_border;
