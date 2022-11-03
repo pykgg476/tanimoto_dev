@@ -190,7 +190,7 @@ unit
         }
         .dataSet{
           .text{
-            @include inline-block();
+            display: inline-block;
           }
           .text:after{
             content: "/";

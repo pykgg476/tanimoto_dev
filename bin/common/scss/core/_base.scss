@@ -4,8 +4,7 @@
 @import
 ============================*/
 
-@import "compass";
-@import "../font/font-awesome.scss";
+@import "../../font/font-awesome.scss";
 
 
 /*============================
@@ -83,7 +82,7 @@ unit
       position: fixed;
       z-index: 1000;
       border-bottom: 1px solid  #ddd;
-      @include box-shadow(rgba(0,0,0,.1) 1px 1px 3px);
+      box-shadow: rgba(0,0,0,.1) 1px 1px 3px;
     }
   .base{
     $width_logo: 256px;
@@ -94,12 +93,12 @@ unit
     // margin: 0 auto;
     min-width: $width_page;
     .logo{
-      @include inline-block;
+      display: inline-block;
       vertical-align: middle;
       width: $width_logo_per - 1;
       text-align: center;
       a{
-        @include inline-block;
+        display: inline-block;
         padding: $padding_gnavi;
         img{
           width: 100%;
@@ -112,7 +111,7 @@ unit
       }
     }
     .globalNavi{
-      @include inline-block;
+      display: inline-block;
       vertical-align: middle;
       width: 100 - $width_logo_per;
       min-width: $width_page - $width_logo;
@@ -121,11 +120,11 @@ unit
         > .navi{
           z-index: 100;
           $naviPadding: 3%;
-          // @include inline-block;
+          // display: inline-block;
           float: left;
           position: relative;
-          @import "global/globalNavi/*.png";
-          @include all-globalNavi-sprites($dimensions:true);
+          // @import "global/globalNavi/*.png";
+          // @include all-globalNavi-sprites($dimensions:true);
           width: 20%;
           &:last-child a{
             border-right: none;
@@ -152,7 +151,7 @@ unit
             position: relative;
             overflow: visible;
             &:before{
-              @include inline-block();
+              display: inline-block();
               white-space: nowrap;
               position: absolute;
               text-indent: 0;
@@ -172,7 +171,7 @@ unit
             }
           }
           .pullDownNavi{
-            @include box-shadow(rgba(0,0,0,.1) 2px 2px 4px);
+            box-shadow: rgba(0,0,0,.1) 2px 2px 4px;
             position: absolute;
             left: 0;
             width: 100%;
@@ -194,8 +193,8 @@ unit
           padding: $padding_gnavi+6 $naviPadding;
           text-align: center;
           span{
-            @include inline-block;
-            @include hide-text;
+            display: inline-block;
+            // @include hide-text;
             height: 32px;
             background-image: url('../../imageFile/global/globalNavi-s11fcbfa923.png') !important;
             opacity: .5;
@@ -211,7 +210,7 @@ unit
 /* to PageTop */
 .toPageTop{
   opacity: 0;
-  @include inline-block();
+  display: inline-block();
   position: fixed;
   bottom: 0;
   right: 20px;
@@ -224,7 +223,7 @@ unit
   }
   a{
     opacity: .6;
-    @include inline-block();
+    display: inline-block();
     padding: 20px;
     background: rgba(0,0,0,0.6);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66000000', endColorstr='#66000000');
@@ -282,7 +281,7 @@ unit
         }
         .childLink{
           a{
-            @include inline-block();
+            display: inline-block();
             opacity: .6;
             margin-top: 10px;
             color: #ddd;
