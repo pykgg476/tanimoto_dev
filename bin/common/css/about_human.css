@@ -2143,14 +2143,9 @@ unit
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px;
 }
 #globalHeader .base {
-  position: relative;
-  min-width: 980px;
-}
-#globalHeader .base .logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 24%;
-  text-align: center;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
 }
 #globalHeader .base .logo a {
   display: inline-block;
@@ -2165,26 +2160,21 @@ unit
   display: none;
 }
 #globalHeader .base .globalNavi {
-  display: inline-block;
-  vertical-align: middle;
-  width: 75%;
-  min-width: 724px;
+  flex-grow: 1;
   border-left: 1px solid #ddd;
+  display: flex;
 }
-#globalHeader .base .globalNavi .naviBase > .navi {
+#globalHeader .base .globalNavi > .navi {
+  flex-grow: 1;
   z-index: 100;
-  float: left;
+  border-right: 1px solid #ddd;
   position: relative;
-  width: 20%;
 }
-#globalHeader .base .globalNavi .naviBase > .navi:last-child a {
+#globalHeader .base .globalNavi > .navi:last-child {
   border-right: none;
   padding-right: 0;
 }
-#globalHeader .base .globalNavi .naviBase > .navi.now {
-  position: relative;
-}
-#globalHeader .base .globalNavi .naviBase > .navi.now:after {
+#globalHeader .base .globalNavi > .navi.now:after {
   width: 100%;
   position: absolute;
   bottom: -1px;
@@ -2193,37 +2183,38 @@ unit
   content: "";
   border-bottom: 5px solid #00a7c9;
 }
-#globalHeader .base .globalNavi .naviBase > .navi.now .gmenu span {
+#globalHeader .base .globalNavi > .navi.now .gmenu {
   opacity: 1;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1,
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4 {
-  position: relative;
-  overflow: visible;
+#globalHeader .base .globalNavi > .navi > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #242424;
+  opacity: 0.5;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1:before,
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4:before {
-  display: inline-block;
-  white-space: nowrap;
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_1:after,
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_4:after {
+  display: block;
   position: absolute;
-  text-indent: 0;
-  bottom: -2em;
+  bottom: 1em;
   z-index: 100;
   font-size: 10px;
   font-weight: bold;
   color: #f90000;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1.globalNavi-menu_1:before,
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4.globalNavi-menu_1:before {
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_1.globalNavi-menu_1:after,
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_4.globalNavi-menu_1:after {
   content: "たにもと座談会掲載中！";
-  left: -22%;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1.globalNavi-menu_4:before,
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4.globalNavi-menu_4:before {
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_1.globalNavi-menu_4:after,
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_4.globalNavi-menu_4:after {
   content: "中途採用募集中";
-  left: -18%;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi {
+#globalHeader .base .globalNavi > .navi .pullDownNavi {
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 4px;
   position: absolute;
   left: 0;
@@ -2231,24 +2222,11 @@ unit
   display: none;
   background: #fff;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi > li > a {
+#globalHeader .base .globalNavi > .navi .pullDownNavi > li > a {
   display: block;
   border-top: 1px solid #ddd;
   padding: 25px;
   opacity: 0.6;
-  box-shadow: none !important;
-}
-#globalHeader .base .globalNavi .naviBase > .navi > a {
-  display: block;
-  border-right: 1px solid #ddd;
-  padding: 31px 3%;
-  text-align: center;
-}
-#globalHeader .base .globalNavi .naviBase > .navi > a span {
-  display: inline-block;
-  height: 32px;
-  background-image: url("../../imageFile/global/globalNavi-s11fcbfa923.png") !important;
-  opacity: 0.5;
   box-shadow: none !important;
 }
 
@@ -4683,14 +4661,9 @@ unit
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px;
 }
 #globalHeader .base {
-  position: relative;
-  min-width: 980px;
-}
-#globalHeader .base .logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 24%;
-  text-align: center;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
 }
 #globalHeader .base .logo a {
   display: inline-block;
@@ -4705,26 +4678,21 @@ unit
   display: none;
 }
 #globalHeader .base .globalNavi {
-  display: inline-block;
-  vertical-align: middle;
-  width: 75%;
-  min-width: 724px;
+  flex-grow: 1;
   border-left: 1px solid #ddd;
+  display: flex;
 }
-#globalHeader .base .globalNavi .naviBase > .navi {
+#globalHeader .base .globalNavi > .navi {
+  flex-grow: 1;
   z-index: 100;
-  float: left;
+  border-right: 1px solid #ddd;
   position: relative;
-  width: 20%;
 }
-#globalHeader .base .globalNavi .naviBase > .navi:last-child a {
+#globalHeader .base .globalNavi > .navi:last-child {
   border-right: none;
   padding-right: 0;
 }
-#globalHeader .base .globalNavi .naviBase > .navi.now {
-  position: relative;
-}
-#globalHeader .base .globalNavi .naviBase > .navi.now:after {
+#globalHeader .base .globalNavi > .navi.now:after {
   width: 100%;
   position: absolute;
   bottom: -1px;
@@ -4733,37 +4701,38 @@ unit
   content: "";
   border-bottom: 5px solid #00a7c9;
 }
-#globalHeader .base .globalNavi .naviBase > .navi.now .gmenu span {
+#globalHeader .base .globalNavi > .navi.now .gmenu {
   opacity: 1;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1,
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4 {
-  position: relative;
-  overflow: visible;
+#globalHeader .base .globalNavi > .navi > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #242424;
+  opacity: 0.5;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1:before,
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4:before {
-  display: inline-block;
-  white-space: nowrap;
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_1:after,
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_4:after {
+  display: block;
   position: absolute;
-  text-indent: 0;
-  bottom: -2em;
+  bottom: 1em;
   z-index: 100;
   font-size: 10px;
   font-weight: bold;
   color: #f90000;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1.globalNavi-menu_1:before,
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4.globalNavi-menu_1:before {
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_1.globalNavi-menu_1:after,
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_4.globalNavi-menu_1:after {
   content: "たにもと座談会掲載中！";
-  left: -22%;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_1.globalNavi-menu_4:before,
-#globalHeader .base .globalNavi .naviBase > .navi .gmenu .globalNavi-menu_4.globalNavi-menu_4:before {
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_1.globalNavi-menu_4:after,
+#globalHeader .base .globalNavi > .navi .globalNavi-menu_4.globalNavi-menu_4:after {
   content: "中途採用募集中";
-  left: -18%;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi {
+#globalHeader .base .globalNavi > .navi .pullDownNavi {
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 4px;
   position: absolute;
   left: 0;
@@ -4771,24 +4740,11 @@ unit
   display: none;
   background: #fff;
 }
-#globalHeader .base .globalNavi .naviBase > .navi .pullDownNavi > li > a {
+#globalHeader .base .globalNavi > .navi .pullDownNavi > li > a {
   display: block;
   border-top: 1px solid #ddd;
   padding: 25px;
   opacity: 0.6;
-  box-shadow: none !important;
-}
-#globalHeader .base .globalNavi .naviBase > .navi > a {
-  display: block;
-  border-right: 1px solid #ddd;
-  padding: 31px 3%;
-  text-align: center;
-}
-#globalHeader .base .globalNavi .naviBase > .navi > a span {
-  display: inline-block;
-  height: 32px;
-  background-image: url("../../imageFile/global/globalNavi-s11fcbfa923.png") !important;
-  opacity: 0.5;
   box-shadow: none !important;
 }
 
