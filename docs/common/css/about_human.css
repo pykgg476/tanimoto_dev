@@ -94,6 +94,12 @@ meter {
   -webkit-user-drag: element;
 }
 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  word-break: normal;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
 /*============================
 @import
 ============================*/
@@ -2612,6 +2618,12 @@ meter {
   -webkit-user-drag: element;
 }
 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  word-break: normal;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
 /*============================
 @import
 ============================*/
@@ -5123,7 +5135,6 @@ Sytle
 
 /* humanLink */
 .humanLinkSet {
-  clear: both;
   margin-top: 25px;
 }
 .humanLinkSet .title {
@@ -5134,12 +5145,10 @@ Sytle
   margin-top: 50px;
 }
 .humanLinkSet .linkBase {
-  overflow: hidden;
   margin-top: 25px;
+  display: flex;
 }
 .humanLinkSet .linkBase .link {
-  float: left;
-  width: 963.3333333333px;
   background: #fff;
 }
 .humanLinkSet .linkBase .link + .link {

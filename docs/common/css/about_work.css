@@ -94,6 +94,12 @@ meter {
   -webkit-user-drag: element;
 }
 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  word-break: normal;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
 /*============================
 @import
 ============================*/
@@ -2610,6 +2616,12 @@ meter {
 /* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable=true]) {
   -webkit-user-drag: element;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  word-break: normal;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*============================
