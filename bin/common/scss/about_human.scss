@@ -52,7 +52,7 @@ $human_padding: 25px;
   clear: both;
   overflow: hidden;
   margin-top: $human_padding;
-  padding: $human_padding*2;
+  padding: calc($human_padding * 2);
   background: #fff;
   .unitContents{
     margin-top: $human_padding;
@@ -81,7 +81,7 @@ $human_padding: 25px;
 /* humanLink */
 .humanLinkSet {
   $width_link_margin: $human_padding;
-  $width_link: calc($width_page - ($width_link_margin * 2) / 3);
+  $width_link: calc($width_page - calc($width_link_margin * 2) / 3);
   clear: both;
   margin-top: $human_padding;
   .title {
@@ -94,8 +94,8 @@ $human_padding: 25px;
   .linkBase{
     overflow: hidden;
     margin-top: $human_padding;
+    display: flex;
     .link{
-      float: left;
       width: $width_link;
       background: #fff;
       & + .link{

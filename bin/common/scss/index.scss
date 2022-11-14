@@ -175,7 +175,7 @@ body{
   @extend %topContentsBase;
   .contentsBase{
     background: $color_gray;
-    padding-top: $width_base_margin*2;
+    padding-top: calc($width_base_margin*2);
     .contents{
       width: $width_page;
       margin: 0 auto;
@@ -205,7 +205,7 @@ body{
             }
             .workTitle{
               font-size: 12px;
-              padding: calc($width_base_margin / 2).5 calc($width_base_margin / 2);
+              padding: calc($width_base_margin / 2) calc($width_base_margin / 2);
             }
           }
         }
