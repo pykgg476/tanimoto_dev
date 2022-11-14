@@ -81,8 +81,6 @@ $human_padding: 25px;
 /* humanLink */
 .humanLinkSet {
   $width_link_margin: $human_padding;
-  $width_link: calc($width_page - calc($width_link_margin * 2) / 3);
-  clear: both;
   margin-top: $human_padding;
   .title {
     padding: 20px;
@@ -92,11 +90,9 @@ $human_padding: 25px;
     margin-top: $human_padding*2;
   }
   .linkBase{
-    overflow: hidden;
     margin-top: $human_padding;
     display: flex;
     .link{
-      width: $width_link;
       background: #fff;
       & + .link{
         margin-left: $width_link_margin;

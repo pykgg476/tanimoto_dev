@@ -5135,7 +5135,6 @@ Sytle
 
 /* humanLink */
 .humanLinkSet {
-  clear: both;
   margin-top: 25px;
 }
 .humanLinkSet .title {
@@ -5146,12 +5145,10 @@ Sytle
   margin-top: 50px;
 }
 .humanLinkSet .linkBase {
-  overflow: hidden;
   margin-top: 25px;
   display: flex;
 }
 .humanLinkSet .linkBase .link {
-  width: 963.3333333333px;
   background: #fff;
 }
 .humanLinkSet .linkBase .link + .link {
