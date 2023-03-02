@@ -80,7 +80,7 @@ body {
   .tabSet {
     text-align: center;
     .tab {
-        @include inline-block();
+        display: inline-block;;
         margin-right: 20px;
         &:last-child {
           margin-right: 0;
@@ -104,13 +104,13 @@ body {
         &.tab_05 span { background-position: -536px 0; }
         &.tab_06 span { background-position: -670px 0; }
       a,span {
-        @include inline-block();
+        display: inline-block;;
         width: 134px;
         height: 155px;
         background-image: url("../../imageFile/rookie_diary/tab.png");
         text-indent: -9999px;
         background-repeat: no-repeat;
-        @include transition(background-position .25s $easeOutQuad);
+        transition: background-position .25s $easeOutQuad;
       }
     }
   }

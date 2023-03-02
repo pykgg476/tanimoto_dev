@@ -52,7 +52,7 @@ $human_padding: 25px;
   clear: both;
   overflow: hidden;
   margin-top: $human_padding;
-  padding: $human_padding*2;
+  padding: calc($human_padding * 2);
   background: #fff;
   .unitContents{
     margin-top: $human_padding;
@@ -81,8 +81,6 @@ $human_padding: 25px;
 /* humanLink */
 .humanLinkSet {
   $width_link_margin: $human_padding;
-  $width_link: ($width_page - ($width_link_margin*2)) / 3;
-  clear: both;
   margin-top: $human_padding;
   .title {
     padding: 20px;
@@ -92,11 +90,9 @@ $human_padding: 25px;
     margin-top: $human_padding*2;
   }
   .linkBase{
-    overflow: hidden;
     margin-top: $human_padding;
+    display: flex;
     .link{
-      float: left;
-      width: $width_link;
       background: #fff;
       & + .link{
         margin-left: $width_link_margin;
@@ -131,11 +127,11 @@ $human_padding: 25px;
     .linkArea {
     width: 310px;
     height: 248px;
-    @include inline-block();
+    display: inline-block;;
     position: absolute;
     border: 4px solid  $color_blue;
-    @include transition(border-width .25s $easeInOutQuad);
-    @include box-sizing(border-box);
+    transition: border-width .25s $easeInOutQuad;
+    box-sizing: border-box;
       &:hover {
         border-width: 8px;
       }

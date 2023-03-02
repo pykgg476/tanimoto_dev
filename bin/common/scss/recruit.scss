@@ -71,7 +71,7 @@ unit
 #recruitAbout{
   @extend #recruitDesc;
   .hint{
-    margin: $width_base_margin/2 0 0 5px;
+    margin: calc($width_base_margin / 2) 0 0 5px;
   }
 }
 

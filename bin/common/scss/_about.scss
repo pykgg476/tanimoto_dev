@@ -20,7 +20,7 @@ Sytle
     text-align: center;
     width: $width_page;
     %baseUnit{
-      @include inline-block();
+      display: inline-block;;
       vertical-align: middle;
     }
     .label{

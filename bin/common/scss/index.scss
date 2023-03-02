@@ -12,7 +12,7 @@ parts
 @mixin btnStyle($bgColor,$textColor,$vP,$wP,$fontSize) {
   position: relative;
   padding: $vP $wP;
-  @include inline-block();
+  display: inline-block;;
   background: $bgColor;
   color: $textColor;
   font-size: $fontSize;
@@ -26,11 +26,11 @@ parts
   .contentsTitle{
     position: relative;
     width: $width_page;
-    padding: $title_padding*1.5 0 $title_padding/2;
+    padding: calc($title_padding * 1.5) 0 calc($title_padding / 2);
     margin: 0 auto;
     .btn{
         a{
-        @include btnStyle($color_blue,#fff,$width_base_margin/3,$width_base_margin*2.5,13);
+        @include btnStyle($color_blue,#fff,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
         padding-right: $width_base_margin*2.5;
         position: absolute;
         top: $title_padding*1.4;
@@ -76,7 +76,7 @@ body{
   $position_title: 37%;
   position: relative;
   background-position: center center;
-  @include background-size(cover);
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../../imageFile/panelPhoto_top.jpg");
 }
@@ -85,7 +85,7 @@ body{
 #topCopy {
   width: $width_page;
   margin: 0 auto;
-  padding: $width_base_margin*5 0 $width_base_margin*6;
+  padding: $width_base_margin*5 0;
   text-align: center;
   .catch{
     text-align: center;
@@ -93,10 +93,13 @@ body{
     color: #888;
   }
   .text{
-    @include inline-block();
+    display: inline-block;;
     width: 370px;
     margin-top: $width_base_margin;
     text-align: left;
+  }
+  .add{
+    margin-top: 30px;
   }
 }
 
@@ -107,7 +110,7 @@ body{
     .aboutUnit{
       position: relative;
       background-position: center center;
-      @include background-size(cover);
+      background-size: cover;
       background-repeat: no-repeat;
       text-align: center;
       .unitBase{
@@ -116,7 +119,7 @@ body{
         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#44000000', endColorstr='#44000000');
         .text{
           position: relative;
-          @include inline-block();
+          display: inline-block;;
           width: 540px;
           top: 140px;
           .titleSet{
@@ -131,7 +134,7 @@ body{
               .btn{
                margin-top: $width_base_margin*1.75;
                 a{
-                  @include btnStyle(#fff,$color_blue,$width_base_margin/3,$width_base_margin*2.5,13);
+                  @include btnStyle(#fff,$color_blue,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
                     padding-right: $width_base_margin*2.5;
                   &:after{
                     @include link_Arrow(8,10,$color_blue);
@@ -172,7 +175,7 @@ body{
   @extend %topContentsBase;
   .contentsBase{
     background: $color_gray;
-    padding-top: $width_base_margin*2;
+    padding-top: calc($width_base_margin*2);
     .contents{
       width: $width_page;
       margin: 0 auto;
@@ -190,7 +193,7 @@ body{
             margin-left: 10px;
           }
           a{
-            @include inline-block();
+            display: inline-block;;
             .photo{
               width: 320px;
               height: 240px;
@@ -202,7 +205,7 @@ body{
             }
             .workTitle{
               font-size: 12px;
-              padding: $width_base_margin/2.5 $width_base_margin/2;
+              padding: calc($width_base_margin / 2) calc($width_base_margin / 2);
             }
           }
         }

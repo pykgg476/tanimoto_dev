@@ -32,7 +32,7 @@ parts
       color: $color_blue;
     }
     .unitBase{
-      margin-top: $width_base_margin/2;
+      margin-top: calc($width_base_margin / 2);
       display: table;
       %tableCell{
         display: table-cell;
@@ -56,12 +56,12 @@ parts
       }
       .dataSet{
         @extend %tableCell;
-        padding-left: $width_base_margin/2;
+        padding-left: calc($width_base_margin / 2);
         .dataTable{
           @extend %descTable;
           border: none;
           .item,.data{
-            padding: $width_base_margin/1.5;
+            padding: calc($width_base_margin / 1.5);
             font-size: 11px;
             border: none;
             border-bottom: 1px solid  lighten($color_border, 15%);

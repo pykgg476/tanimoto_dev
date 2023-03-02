@@ -4,8 +4,7 @@
 @import
 ============================*/
 
-@import "compass";
-@import "../font/font-awesome.scss";
+@import "../../font/font-awesome.scss";
 
 
 /*============================
@@ -83,23 +82,27 @@ unit
       position: fixed;
       z-index: 1000;
       border-bottom: 1px solid  #ddd;
-      @include box-shadow(rgba(0,0,0,.1) 1px 1px 3px);
+      box-shadow: rgba(0,0,0,.1) 1px 1px 3px;
     }
   .base{
+    display: flex;
+    align-items: stretch;
     $width_logo: 256px;
     $padding_gnavi: 25px;
     $width_logo_per: 25%;
-    position: relative;
+    width: 100%;
+    // position: relative;
     // width: $width_page;
     // margin: 0 auto;
-    min-width: $width_page;
+    // min-width: $width_page;
     .logo{
-      @include inline-block;
-      vertical-align: middle;
-      width: $width_logo_per - 1;
-      text-align: center;
+      
+      // display: inline-block;
+      // vertical-align: middle;
+      // width: $width_logo_per - 1;
+      // text-align: center;
       a{
-        @include inline-block;
+        display: inline-block;
         padding: $padding_gnavi;
         img{
           width: 100%;
@@ -112,27 +115,24 @@ unit
       }
     }
     .globalNavi{
-      @include inline-block;
-      vertical-align: middle;
-      width: 100 - $width_logo_per;
-      min-width: $width_page - $width_logo;
+      flex-grow: 1;
+      // display: inline-block;
+      // vertical-align: middle;
+      // width: 100 - $width_logo_per;
+      // min-width: $width_page - $width_logo;
       border-left: 1px solid  #ddd;
-      .naviBase{
+      display: flex;
         > .navi{
+          flex-grow: 1;
           z-index: 100;
-          $naviPadding: 3%;
-          // @include inline-block;
-          float: left;
+          border-right: 1px solid  #ddd;
+          // text-align: center;
           position: relative;
-          @import "global/globalNavi/*.png";
-          @include all-globalNavi-sprites($dimensions:true);
-          width: 20%;
-          &:last-child a{
+          &:last-child {
             border-right: none;
             padding-right: 0;
           }
           &.now {
-            position: relative;
             &:after{
               width: 100%;
               position: absolute;
@@ -142,37 +142,44 @@ unit
               content: "";
               border-bottom: 5px solid $color_blue;
             }
-            .gmenu span {
+            .gmenu {
               opacity: 1;
             }
           }
+          > a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: $color_black;
+            opacity: .5;
+          }
           // 新卒採用コメント
-          .gmenu .globalNavi-menu_1,
-          .gmenu .globalNavi-menu_4{
-            position: relative;
-            overflow: visible;
-            &:before{
-              @include inline-block();
-              white-space: nowrap;
+          .globalNavi-menu_1,
+          .globalNavi-menu_4{
+            &:after{
+              display: block;
               position: absolute;
-              text-indent: 0;
-              bottom: -2em;
+              // text-indent: 0;
+              bottom: 1em;
               z-index: 100;
               font-size: 10px;
               font-weight: bold;
               color: $color_red;
             }
-            &.globalNavi-menu_1:before {
+            &.globalNavi-menu_1:after {
               content:"たにもと座談会掲載中！";
-              left: -22%;
+              // left: -22%;
             }
-            &.globalNavi-menu_4:before {
+            &.globalNavi-menu_4:after {
               content:"中途採用募集中";
-              left: -18%;
+              // left: -18%;
             }
           }
           .pullDownNavi{
-            @include box-shadow(rgba(0,0,0,.1) 2px 2px 4px);
+            box-shadow: rgba(0,0,0,.1) 2px 2px 4px;
             position: absolute;
             left: 0;
             width: 100%;
@@ -188,22 +195,7 @@ unit
               }
             }
           }
-        > a{
-          display: block;
-          border-right: 1px solid  #ddd;
-          padding: $padding_gnavi+6 $naviPadding;
-          text-align: center;
-          span{
-            @include inline-block;
-            @include hide-text;
-            height: 32px;
-            background-image: url('../../imageFile/global/globalNavi-s11fcbfa923.png') !important;
-            opacity: .5;
-            box-shadow: none !important;
-          }
         }
-        }
-      }
     }
   }
 }
@@ -211,7 +203,7 @@ unit
 /* to PageTop */
 .toPageTop{
   opacity: 0;
-  @include inline-block();
+  display: inline-block;
   position: fixed;
   bottom: 0;
   right: 20px;
@@ -224,7 +216,7 @@ unit
   }
   a{
     opacity: .6;
-    @include inline-block();
+    display: inline-block;
     padding: 20px;
     background: rgba(0,0,0,0.6);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66000000', endColorstr='#66000000');
@@ -282,7 +274,7 @@ unit
         }
         .childLink{
           a{
-            @include inline-block();
+            display: inline-block;
             opacity: .6;
             margin-top: 10px;
             color: #ddd;
@@ -296,7 +288,7 @@ unit
   }
   .copyrightArea{
     background: #fff;
-    padding: $padding_footer/2 0;
+    padding: calc($padding_footer / 2) 0;
     text-align: center;
     .copyright{
       font-size: 11px;
