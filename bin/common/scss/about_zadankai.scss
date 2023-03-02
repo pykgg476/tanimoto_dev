@@ -103,10 +103,17 @@ Sytle
   }
 }
 
+/* Date */
+.articleDate{
+  text-align: right;
+  margin-top: 60px;
+  font-size: 12px;
+}
+
 .textArea {
   .textset {
     position: relative;
-    margin-top: 100px;
+    margin-top: 20px;
     &:after {
       content:" ";
       display:block;
