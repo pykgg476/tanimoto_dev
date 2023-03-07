@@ -4,7 +4,7 @@
   "main": "Gruntfile.js",
   "dependencies": {
     "compass": "^0.1.1",
-    "grunt": "^1.2.0"
+    "grunt": "^1.6.1"
   },
   "devDependencies": {
     "grunt-contrib-clean": "^2.0.1",
