@@ -2589,6 +2589,9 @@ unit
   border-top: 1px dashed #ccc;
   min-height: 141px;
 }
+.companyDescBase .contents .regist .img {
+  display: flex;
+}
 .companyDescBase .contents .regist .text {
   padding-left: 20px;
 }

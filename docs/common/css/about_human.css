@@ -5105,6 +5105,13 @@ Sytle
   width: 1%;
 }
 
+/* Date */
+.articleDate {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
 /* articleUnit */
 .articleUnit {
   clear: both;

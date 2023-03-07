@@ -42,14 +42,14 @@ grunt.initConfig({
     },
     // 画像の圧縮
     image: {
-    　dynamic: {
-    　　files: [{
-    　　　expand: true,
-    　　　cwd: '<%= dir.release %>/<%= dir.img %>/',
-    　　　src: ['**/*.{png,jpg,gif}'],
-    　　　dest: '<%= dir.release %>/<%= dir.img %>/'
-    　　}]
-    　}
+    dynamic: {
+    files: [{
+    expand: true,
+    cwd: '<%= dir.release %>/<%= dir.img %>/',
+    src: ['**/*.{png,jpg,gif}'],
+    dest: '<%= dir.release %>/<%= dir.img %>/'
+    }]
+    }
     }
 });
 

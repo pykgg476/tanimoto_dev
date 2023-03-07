@@ -47,6 +47,14 @@ $human_padding: 25px;
   }
 }
 
+/* Date */
+.articleDate{
+  text-align: right;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+
 /* articleUnit */
 .articleUnit{
   clear: both;
@@ -122,8 +130,6 @@ $human_padding: 25px;
 .rookieLink {
   .link {
     position: relative;
-    img {
-    }
     .linkArea {
     width: 310px;
     height: 248px;

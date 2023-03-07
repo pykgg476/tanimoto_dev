@@ -103,10 +103,17 @@ Sytle
   }
 }
 
+/* Date */
+.articleDate{
+  text-align: right;
+  margin-top: 60px;
+  font-size: 12px;
+}
+
 .textArea {
   .textset {
     position: relative;
-    margin-top: 100px;
+    margin-top: 20px;
     &:after {
       content:" ";
       display:block;
@@ -168,8 +175,6 @@ Sytle
       }
     }
     &.textSet_01_1 {
-      .q {
-      }
       .img {
         text-align: right;
         margin-top: -60px;
@@ -192,8 +197,6 @@ Sytle
       }
     }
     &.textSet_02_1 {
-      .q {
-      }
       .img {
         text-align: center;
         margin-top: -55px;
@@ -204,8 +207,6 @@ Sytle
       }
     }
     &.textSet_02_2 {
-      .q {
-      }
       .img {
         position: absolute;
         right: -20px;
@@ -247,8 +248,6 @@ Sytle
     }
     &.textSet_04_1 {
       margin-top: 180px;
-      .q {
-      }
       .img {
         margin-top: 20px;
         text-align: center;

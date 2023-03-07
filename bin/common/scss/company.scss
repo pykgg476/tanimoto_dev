@@ -52,6 +52,9 @@ unit
       padding-top: $width_base_margin;
       border-top: 1px dashed $color_line_dashed;
       min-height: 141px;
+      .img {
+        display: flex;
+      }
       .text{
         padding-left: 20px;
         .main{
