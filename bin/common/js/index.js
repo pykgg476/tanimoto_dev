@@ -13,7 +13,7 @@ $(function(){
     // パネルがふわっと出てくる
     setTimeout(function(){
       $('.hideOverlay').fadeOut(2500,function(){ $(this).remove(); });
-    },2800);
+    },1800);
   });
 
   // パネルのサイズ
