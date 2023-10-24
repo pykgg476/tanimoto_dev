@@ -21,7 +21,7 @@ $(function(){
 
   // ボタンマウスオーバー
   var btn = $('.js_btn');
-  mouseOverEffect(btn,'a',1,.7,false);
+  mouseOverEffect(btn,'a',.7,1,false);
 
   // 実績マウスオーバー
   var work = $('#topWork').find('.work').find('a');

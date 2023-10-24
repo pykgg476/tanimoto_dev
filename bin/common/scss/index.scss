@@ -9,40 +9,6 @@
 parts
 ============================*/
 
-@mixin btnStyle($bgColor,$textColor,$vP,$wP,$fontSize) {
-  position: relative;
-  padding: $vP $wP;
-  display: inline-block;;
-  background: $bgColor;
-  color: $textColor;
-  font-size: $fontSize;
-  text-align: center;
-  opacity: .6;
-}
-
-%topContentsBase{
-  $title_padding: $width_base_margin*2;
-  background: #fff;
-  .contentsTitle{
-    position: relative;
-    width: $width_page;
-    padding: calc($title_padding * 1.5) 0 calc($title_padding / 2);
-    margin: 0 auto;
-    .btn{
-        a{
-        @include btnStyle($color_blue,#fff,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
-        padding-right: $width_base_margin*2.5;
-        position: absolute;
-        top: $title_padding*1.4;
-        right: 0;
-        &:after{
-          @include link_Arrow(9,10,#fff);
-        }
-      }
-    }
-  }
-}
-
 
 /*============================
 unit
