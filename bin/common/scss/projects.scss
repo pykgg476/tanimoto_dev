@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "core";  
+@import "underPage"; 
+
+
+/*============================
+Sytle
+============================*/
+
+
+// Panel
+#panelArea {
+  .titleSet {
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+// パネル画像
+#highschoolIntern #panelArea{
+  background-image: url("../../imageFile/projects/highschoolIntern/panel.jpg");
+  background-position: top center;
+}
+
+
+/*============================
+Function
+============================*/
