@@ -45,6 +45,10 @@ Sytle
   background-image: url("../../imageFile/projects/highschoolIntern/panel.jpg");
   background-position: top center;
 }
+#bathroom #panelArea{
+  background-image: url("../../imageFile/projects/bathroom/panel.jpg");
+  background-position: top bottom;
+}
 
 /* articleUnit */
 .articleUnit{
@@ -56,9 +60,9 @@ Sytle
     color: $color_blue;
     font-size: 32px;
     line-height: 110%; /* 35.2px */
+    margin-bottom: 38px;
   }
   .unitContents{
-    margin-top: 38px;
     display: flex;
     align-items: flex-start;
     gap: 32px;
