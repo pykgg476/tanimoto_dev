@@ -24,7 +24,7 @@ $(function(){
   mouseOverEffect(btn,'a',.7,1,false);
 
   // 取り組みマウスオーバー
-  var about = $('#topAbout').find('.project').find('a');
+  var about = $('#topProject').find('.project').find('a');
   about.hover(function(){
     $(this).find('img').stop(true,true).animate({width: '+=20px',left: '-=10px', top: '-=10px'});
   },

@@ -69,12 +69,51 @@ body{
   }
 }
 
-/* About */
+/* topAbout */
 #topAbout{
+  padding: 125px 0;
+  .aboutBase {
+    width: $width_page;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+    .copyBase{
+      color: $color_font_base;
+      .catch{
+        font-size: 30px;
+        line-height: 130%; /* 39px */
+      }
+      .copy{
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 2.0;
+        p + p{
+          margin-top: 20px;
+        }
+      }
+      .btn{
+        margin-top: 40px;
+        a{
+          @include btnStyle($color_blue,#fff,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
+            padding-right: $width_base_margin*2.5;
+          &:after{
+            @include link_Arrow(8,10,#fff);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Project */
+#topProject{
   @extend %topContentsBase;
   .contentsBase{
     background: $color_gray;
-    padding-top: calc($width_base_margin*2);
+    padding: calc($width_base_margin*2) 0;
     .contents{
       width: $width_page;
       margin: 0 auto;
