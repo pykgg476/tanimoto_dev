@@ -242,6 +242,12 @@ unit
     position: relative;
     width: $width_page;
     padding: calc($title_padding * 1.5) 0 calc($title_padding / 2);
+    .titleText {
+      color: $color_font_base;
+      font-size: 30px;
+      line-height: 100%; /* 30px */
+      letter-spacing: 1px;
+    }
     margin: 0 auto;
     .btn{
         a{
