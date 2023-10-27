@@ -47,16 +47,21 @@ Sytle
 }
 #bathroom #panelArea{
   background-image: url("../../imageFile/projects/bathroom/panel.jpg");
-  background-position: top bottom;
+  background-position: center bottom;
 }
 #golf2022 #panelArea{
   background-image: url("../../imageFile/projects/golf2022/panel.jpg");
-  background-position: top bottom;
+  background-position: center bottom;
 }
 
 #intern2023 #panelArea{
   background-image: url("../../imageFile/projects/intern2023/panel.jpg");
-  background-position: top bottom;
+  background-position: center bottom;
+}
+
+#common #panelArea{
+  background-image: url("../../imageFile/projects/common/panel.jpg");
+  background-position: center middle;
 }
 
 
