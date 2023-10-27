@@ -42,35 +42,35 @@ Sytle
 
 // パネル画像
 #highschoolIntern #panelArea{
-  background-image: url("../../imageFile/projects/highschoolIntern/panel.jpg");
+  background-image: url("../../imageFile/projects/highschoolIntern/panel@2x.jpg");
   background-position: top center;
 }
 #bathroom #panelArea{
-  background-image: url("../../imageFile/projects/bathroom/panel.jpg");
+  background-image: url("../../imageFile/projects/bathroom/panel@2x.jpg");
   background-position: center bottom;
 }
 #golf2022 #panelArea{
-  background-image: url("../../imageFile/projects/golf2022/panel.jpg");
+  background-image: url("../../imageFile/projects/golf2022/panel@2x.jpg");
   background-position: center bottom;
 }
 
 #intern2023 #panelArea{
-  background-image: url("../../imageFile/projects/intern2023/panel.jpg");
+  background-image: url("../../imageFile/projects/intern2023/panel@2x.jpg");
   background-position: center bottom;
 }
 
 #common #panelArea{
-  background-image: url("../../imageFile/projects/common/panel.jpg");
+  background-image: url("../../imageFile/projects/common/panel@2x.jpg");
   background-position: center middle;
 }
 
 #porepore #panelArea{
-  background-image: url("../../imageFile/projects/porepore/panel.jpg");
+  background-image: url("../../imageFile/projects/porepore/panel@2x.jpg");
   background-position: center middle;
 }
 
 #wfp #panelArea{
-  background-image: url("../../imageFile/projects/wfp/panel.jpg");
+  background-image: url("../../imageFile/projects/wfp/panel@2x.jpg");
   background-position: center top;
 }
 
@@ -93,9 +93,6 @@ Sytle
     gap: 32px;
     align-self: stretch;
     .photo{
-      img{
-        width: 400px;
-      }
       .caption{
         margin-top: 10px;
         display: block;
