@@ -105,6 +105,20 @@ Sytle
   }
 }
 
+.returnBtn{
+  margin-top: 50px;
+  text-align: center;
+  .btn{
+    a{
+      @include btnStyle($color_blue,#fff,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
+        padding-right: $width_base_margin*2.5;
+      &:after{
+        @include link_Arrow(8,10,#fff);
+      }
+    }
+  }
+}
+
 
 
 /*============================
