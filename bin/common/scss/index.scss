@@ -9,40 +9,6 @@
 parts
 ============================*/
 
-@mixin btnStyle($bgColor,$textColor,$vP,$wP,$fontSize) {
-  position: relative;
-  padding: $vP $wP;
-  display: inline-block;;
-  background: $bgColor;
-  color: $textColor;
-  font-size: $fontSize;
-  text-align: center;
-  opacity: .6;
-}
-
-%topContentsBase{
-  $title_padding: $width_base_margin*2;
-  background: #fff;
-  .contentsTitle{
-    position: relative;
-    width: $width_page;
-    padding: calc($title_padding * 1.5) 0 calc($title_padding / 2);
-    margin: 0 auto;
-    .btn{
-        a{
-        @include btnStyle($color_blue,#fff,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
-        padding-right: $width_base_margin*2.5;
-        position: absolute;
-        top: $title_padding*1.4;
-        right: 0;
-        &:after{
-          @include link_Arrow(9,10,#fff);
-        }
-      }
-    }
-  }
-}
-
 
 /*============================
 unit
@@ -103,68 +69,84 @@ body{
   }
 }
 
-/* About */
+/* topAbout */
 #topAbout{
-  @extend %topContentsBase;
-  .aboutUnitBase{
-    .aboutUnit{
-      position: relative;
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      text-align: center;
-      .unitBase{
-        height: 500px;
-        background: rgba(0,0,0,.4);
-        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#44000000', endColorstr='#44000000');
-        .text{
-          position: relative;
-          display: inline-block;;
-          width: 540px;
-          top: 140px;
-          .titleSet{
-            display: table;
-            .label,.titleBase{
-              display: table-cell;
-              vertical-align: top;
-              text-align: left;
-            }
-            .titleBase{
-              padding:10px 0 0 $width_base_margin*2;
-              .btn{
-               margin-top: $width_base_margin*1.75;
-                a{
-                  @include btnStyle(#fff,$color_blue,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
-                    padding-right: $width_base_margin*2.5;
-                  &:after{
-                    @include link_Arrow(8,10,$color_blue);
-                  }
-                }
-              }
-            }
-          }          
+  padding: 125px 0;
+  .aboutBase {
+    width: $width_page;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+    .copyBase{
+      color: $color_font_base;
+      .catch{
+        font-size: 30px;
+        line-height: 130%; /* 39px */
+      }
+      .copy{
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 2.0;
+        p + p{
+          margin-top: 20px;
+        }
+      }
+      .btn{
+        margin-top: 40px;
+        a{
+          @include btnStyle($color_blue,#fff,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
+            padding-right: $width_base_margin*2.5;
+          &:after{
+            @include link_Arrow(8,10,#fff);
+          }
         }
       }
     }
   }
-  .aboutUnitWork{
-    background-image: url("../../imageFile/about/work_panel_photo.jpg");
-  }
-  .aboutUnitTec{
-    background-image: url("../../imageFile/about/tec_panel_photo.jpg");
-  }
-  .aboutUnitHuman{
-    background-image: url("../../imageFile/about/human_panel_photo.jpg");
-    .btn {
-      a:after{
-        top: 17px !important;
-      }
-      .rookie {
-        display: block;
-        text-align: center;
-        font-size: 10px;
-        font-weight: bold;
-        color: $color_red;
+}
+
+/* Project */
+#topProject{
+  @extend %topContentsBase;
+  .contentsBase{
+    background: $color_gray;
+    padding: calc($width_base_margin*2) 0;
+    .contents{
+      width: $width_page;
+      margin: 0 auto;
+      .projectListUnit{
+        clear: both;
+        overflow: hidden;
+        & + .projectListUnit{
+          margin-top: 8px;
+        }
+        .project{
+          float: left;
+          width: 320px;
+          background: #fff;
+          & + .project{
+            margin-left: 10px;
+          }
+          a{
+            display: inline-block;;
+            .photo{
+              width: 320px;
+              height: 240px;
+              overflow: hidden;
+              img{
+                position: relative;
+                height: auto;
+              }
+            }
+            .projectTitle{
+              font-size: 12px;
+              padding: calc($width_base_margin / 2) calc($width_base_margin / 2);
+            }
+          }
+        }
       }
     }
   }

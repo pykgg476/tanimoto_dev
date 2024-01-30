@@ -81,7 +81,7 @@ unit
     &.fixed{
       position: fixed;
       z-index: 1000;
-      border-bottom: 1px solid  #ddd;
+      border-bottom: 1px solid #ddd;
       box-shadow: rgba(0,0,0,.1) 1px 1px 3px;
     }
   .base{
@@ -154,7 +154,7 @@ unit
             width: 100%;
             height: 100%;
             color: $color_black;
-            opacity: .5;
+            opacity: 1;
           }
           // 新卒採用コメント
           .globalNavi-menu_1,
@@ -190,7 +190,7 @@ unit
                 display: block;
                 border-top: 1px solid  #ddd;
                 padding: $width_base_margin;
-                opacity: .6;
+                opacity: 1;
                 box-shadow: none !important;
               }
             }
@@ -221,6 +221,46 @@ unit
     background: rgba(0,0,0,0.6);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66000000', endColorstr='#66000000');
     text-align: center;
+  }
+}
+
+@mixin btnStyle($bgColor,$textColor,$vP,$wP,$fontSize) {
+  position: relative;
+  padding: $vP $wP;
+  display: inline-block;;
+  background: $bgColor;
+  color: $textColor;
+  font-size: $fontSize;
+  text-align: center;
+  opacity: 1;
+}
+
+%topContentsBase{
+  $title_padding: $width_base_margin*2;
+  background: #fff;
+  .contentsTitle{
+    position: relative;
+    width: $width_page;
+    padding: calc($title_padding * 1.5) 0 calc($title_padding / 2);
+    .titleText {
+      color: $color_font_base;
+      font-size: 30px;
+      line-height: 100%; /* 30px */
+      letter-spacing: 1px;
+    }
+    margin: 0 auto;
+    .btn{
+        a{
+        @include btnStyle($color_blue,#fff,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
+        padding-right: $width_base_margin*2.5;
+        position: absolute;
+        top: $title_padding*1.4;
+        right: 0;
+        &:after{
+          @include link_Arrow(9,10,#fff);
+        }
+      }
+    }
   }
 }
 

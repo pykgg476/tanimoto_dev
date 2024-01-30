@@ -50,10 +50,10 @@ $('img').each(function() {
 
 	// グロナビマウスオーバー
 	var gnavi = $("#globalHeader").find('.navi').not('.now');
-	mouseOverEffect(gnavi,'span',1,.6,false);
+	mouseOverEffect(gnavi,'a',.6,1,false);
 
 	var gsubnavi = $("#globalHeader").find('.pullDownNavi').find('.navi');
-	mouseOverEffect(gsubnavi,'a',1,.6,false);
+	mouseOverEffect(gsubnavi,'a',.6,1,false);
 
 	// ページトップの挙動
 	pageTopPosition();

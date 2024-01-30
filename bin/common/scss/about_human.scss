@@ -106,7 +106,7 @@ $human_padding: 25px;
         margin-left: $width_link_margin;
       }
       .photo,.text{
-        opacity: .6;
+        opacity: 1;
         box-shadow: none !important;
       }
       .text{
@@ -121,7 +121,7 @@ $human_padding: 25px;
     }    
     .link.now{
       .photo,.text{
-        opacity: 1;
+        opacity: .7;
       }
     }
   }

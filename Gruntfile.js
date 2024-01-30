@@ -25,7 +25,7 @@ grunt.initConfig({
             files: [{
                 expand: true, 
                 cwd: '<%= dir.bin %>', 
-                src: ['imageFile/**','common/js/**','common/font/fonts/**','common/css/**','**.html','rookie_diary/**'],
+                src: ['imageFile/**','common/js/**','common/font/fonts/**','common/css/**','**.html','rookie_diary/**','projects/**'],
                 dest: '<%= dir.release %>',
                 dot: false
             }]

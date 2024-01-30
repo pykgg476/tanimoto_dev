@@ -30,6 +30,13 @@ Sytle
   margin-top: $work_padding;
   padding: $work_padding*2;
   background: #fff;
+  .unitTitle{
+    // font-family: 'Shippori Mincho', serif;
+    color: $color_blue;
+    font-size: 32px;
+    line-height: 110%; /* 35.2px */
+    margin-bottom: 38px;
+  }
   .unitContents{
     margin-top: $work_padding*1.5;
     .photo{
