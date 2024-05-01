@@ -95,7 +95,7 @@ module.exports = function(grunt){
     
     grunt.registerTask("default", ['clean','copy','replace','uglify']);
     grunt.registerTask("dev", ['clean','copy','replace','uglify','image']);
-    grunt.registerTask("build", ['clean','copy','uglify','image']);
+    grunt.registerTask("deploy", ['clean','copy','uglify','image']);
     
     };
     
