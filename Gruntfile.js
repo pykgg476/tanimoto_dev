@@ -75,7 +75,7 @@ module.exports = function(grunt){
                     patterns: [
                         {
                             match: /url\("\/(.*?)"\)/g,
-                            replacement: 'src="/tanimoto_dev/$1"'
+                            replacement: 'url("/tanimoto_dev/$1")'
                         }
                     ]
                 },
