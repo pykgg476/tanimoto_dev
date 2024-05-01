@@ -169,10 +169,10 @@ unit
               font-weight: bold;
               color: $color_red;
             }
-            &.globalNavi-menu_1:after {
-              content:"たにもと座談会掲載中！";
+            // &.globalNavi-menu_1:after {
+              // content:"たにもと座談会掲載中！";
               // left: -22%;
-            }
+            // }
             &.globalNavi-menu_4:after {
               content:"中途採用募集中";
               // left: -18%;
