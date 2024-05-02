@@ -23,54 +23,6 @@ body{
   background-image: url("../../imageFile/panelPhoto_about@2x.jpg");
 }
 
-/* topAbout */
-#topAbout{
-  .aboutLink{
-    width: $width_page;
-    margin: 100px auto 0;
-    display: flex;
-    padding: 0px 150px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    .linkUnit{
-      display: flex;
-      flex-direction: column;
-      align-self: stretch;
-      background: $color_blue;
-      .contents{
-        padding: 20px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-self: stretch;
-        gap: 10px;
-        color: #FFF;
-        .title{
-          font-size: 18px;
-        }
-        .copy{
-          font-size: 13px;
-          line-height: 1.5; 
-          opacity: 0.8;
-        }
-      }
-      .link{
-        padding: 0 20px 20px;
-        a{
-          display: block;
-          width: 100%;
-          @include btnStyle(#fff,$color_blue,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
-            padding-right: $width_base_margin*2.5;
-          &:after{
-            @include link_Arrow(8,10,$color_blue);
-          }
-        }
-      }
-    }
-  }
-}
 
 
 
