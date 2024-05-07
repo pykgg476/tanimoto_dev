@@ -93,8 +93,11 @@ module.exports = function(grunt){
         }
     }
     
+    //画像圧縮を伴わないビルド
     grunt.registerTask("default", ['clean','copy','replace','uglify']);
+    //開発サーバーのためのビルド
     grunt.registerTask("dev", ['clean','copy','replace','uglify','image']);
+    //本番サーバーのためのビルド
     grunt.registerTask("deploy", ['clean','copy','uglify','image']);
     
     };
