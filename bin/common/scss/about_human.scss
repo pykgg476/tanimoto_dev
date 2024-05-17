@@ -93,6 +93,9 @@ $human_padding: 25px;
   .title {
     padding: 20px;
     background: $color_blue;
+    color: #FFF;
+    text-align: left;
+    font-size: 22px;
   }
   & + .humanLinkSet {
     margin-top: $human_padding*2;

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "base";
+
+
+// パネル画像
+#uniformRenew #panelArea{
+  background-image: url("/imageFile/projects/2024/uniformRenew/panel@2x.jpg");
+  background-position: center top;
+}
+#yuryosyo #panelArea{
+  background-image: url("/imageFile/projects/2024/yuryosyo/panel@2x.jpg");
+  background-position: center middle;
+}
+#golf2023 #panelArea{
+  background-image: url("/imageFile/projects/2024/golf2023/panel@2x.jpg");
+  background-position: center middle;
+}
+#minatotakumi #panelArea{
+  background-image: url("/imageFile/projects/2024/minatotakumi/panel@2x.jpg");
+  background-position: center middle;
+}
+#porepore #panelArea{
+  background-image: url("/imageFile/projects/2024/porepore/panel@2x.jpg");
+  background-position: center middle;
+}
+#intern2024 #panelArea{
+  background-image: url("/imageFile/projects/2024/intern2024/panel@2x.jpg");
+  background-position: center middle;
+}
+#notogien #panelArea{
+  background-image: url("/imageFile/projects/2024/notogien/panel@2x.jpg");
+  background-position: center middle;
+}
+#kouken10 #panelArea{
+  background-image: url("/imageFile/projects/2024/kouken10/panel@2x.jpg");
+  background-position: center middle;
+}
+
+
+
+
+/*============================
+Function
+============================*/

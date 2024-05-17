@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "../core";  
+@import "../underPage"; 
+@import "../about";
+
+/*============================
+Global
+============================*/
+
+$work_padding: 25px;
+@font-face {
+  font-family: 'Shippori Mincho';
+  src: url('../font/fonts/ShipporiMincho-Medium.ttf') format('truetype');
+}
+
+
+/*============================
+Sytle
+============================*/
+
+// 共通画像
+#common #panelArea{
+  background-image: url("/imageFile/projects/common/panel@2x.jpg");
+  background-position: center middle;
+}
+
+// Panel
+#panelArea {
+  .titleSet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .title{
+      color: #FFF;
+      text-align: center;
+      font-size: 40px;
+    }
+  }
+}
+/* articleUnit */
+.articleUnit{
+  margin-top: $work_padding;
+  padding: $work_padding*2;
+  background: #fff;
+  .unitTitle{
+    // font-family: 'Shippori Mincho', serif;
+    color: $color_blue;
+    font-size: 32px;
+    line-height: 110%; /* 35.2px */
+    margin-bottom: 38px;
+  }
+  .unitContents{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    & + .unitContents{
+      margin-top: 40px;
+    }
+    .photo{
+      .caption{
+        margin-top: 10px;
+        display: block;
+        font-size: 12px;
+        color: #888;
+        text-align: center;
+        & + img{
+          margin-top: $work_padding;
+        }
+      }
+    }
+    .textSet{
+      p{
+        line-height: 2;
+        font-size: 14px;
+        & + p{
+          margin-top: $work_padding;
+        }
+      }
+      & + .textSet{
+        margin-top: $work_padding;
+      }
+      &.sideA{
+        .photo{
+          float: left;
+          margin-right: $work_padding;
+        }
+      }
+      &.sideB{
+        .photo{
+          float: right;
+          margin-left: $work_padding;
+        }
+      }
+    }
+  }
+}
+
+.returnBtn{
+  margin-top: 50px;
+  text-align: center;
+  .btn{
+    a{
+      @include btnStyle($color_blue,#fff,calc($width_base_margin / 3),calc($width_base_margin * 2.5),13);
+        padding-right: $width_base_margin*2.5;
+      &:after{
+        @include link_Arrow(8,10,#fff);
+      }
+    }
+  }
+}
+
+
+
+/*============================
+Function
+============================*/

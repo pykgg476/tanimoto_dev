@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "base";
+
+
+// パネル画像
+#highschoolIntern #panelArea{
+  background-image: url("/imageFile/projects/2023/highschoolIntern/panel@2x.jpg");
+  background-position: top center;
+}
+#bathroom #panelArea{
+  background-image: url("/imageFile/projects/2023/bathroom/panel@2x.jpg");
+  background-position: center middle;
+}
+#golf2022 #panelArea{
+  background-image: url("/imageFile/projects/2023/golf2022/panel@2x.jpg");
+  background-position: center middle;
+}
+
+#intern2023 #panelArea{
+  background-image: url("/imageFile/projects/2023/intern2023/panel@2x.jpg");
+  background-position: center middle;
+}
+
+#porepore #panelArea{
+  background-image: url("/imageFile/projects/2023/porepore/panel@2x.jpg");
+  background-position: center middle;
+}
+
+#wfp #panelArea{
+  background-image: url("/imageFile/projects/2023/wfp/panel@2x.jpg");
+  background-position: center top;
+}
+
+#minatoSDGs #panelArea{
+  background-image: url("/imageFile/projects/2023/minatoSDGs/panel@2x.jpg");
+  background-position: center middle;
+}
+
+
+
+
+/*============================
+Function
+============================*/
