@@ -1,3 +1,6 @@
+// 開発メモ
+// 作業する時はbinをルートフォルダにして開くとプレビューが正しくできる。
+
 module.exports = function(grunt){
     'use strict';
     var pkg, taskName;
