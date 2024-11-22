@@ -208,3 +208,10 @@ $color_border: darken($color_th, 10%);
   }
 }
 
+
+.pdfDownload {
+  display: inline-block;
+  margin-top: 4px;
+  background: url('/imageFile/global/icon_pdf.png') no-repeat left center; // 画像を背景に設定
+  padding-left: 28px;
+}
