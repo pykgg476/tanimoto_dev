@@ -50,19 +50,19 @@ unit
   }
   .nameArea{
     margin-top: 50px;
-    text-align: right;
-    .nameSet,.sign{
-      display: inline-block;;
-      vertical-align: middle;
-    }
+    display: flex;
+    justify-content: flex-end;
     .nameSet{
-      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       .name{
         display: block;
+        line-height: 1;
+        &:nth-child(1) { font-weight: bold; }
+        &:nth-child(2) { margin-top: 10px; }
+        &:nth-child(3) { font-size: 28px; margin-top: 10px; }
       }
-    }
-    .sign{
-      margin-left: 10px;
     }
   }
 }
