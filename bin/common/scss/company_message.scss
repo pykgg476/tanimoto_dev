@@ -21,7 +21,6 @@ unit
 #comapanyMessage{
   background: #fff;
   padding: $width_base_margin*1.5;
-  }
   .catch{
     margin-top: $width_base_margin;
     padding: 0 5px;
@@ -41,7 +40,7 @@ unit
       li{
         list-style: decimal inside;
         & + li{
-        margin-top: calc($width_base_margin / 2);
+          margin-top: calc($width_base_margin / 2);
         }
       }
     }
@@ -49,7 +48,8 @@ unit
   .nameArea{
     text-align: right;
     img {
-      width: 50%;
+      margin: 20px 0 10px;
+      width: 250px;
     }
   }
 }
