@@ -21,9 +21,6 @@ unit
 #comapanyMessage{
   background: #fff;
   padding: $width_base_margin*1.5;
-  .photo{
-
-  }
   .catch{
     margin-top: $width_base_margin;
     padding: 0 5px;
@@ -43,25 +40,16 @@ unit
       li{
         list-style: decimal inside;
         & + li{
-        margin-top: calc($width_base_margin / 2);
+          margin-top: calc($width_base_margin / 2);
         }
       }
     }
   }
   .nameArea{
-    text-align: center;
-    .nameSet,.sign{
-      display: inline-block;;
-      vertical-align: middle;
-    }
-    .nameSet{
-      text-align: right;
-      .name{
-        display: block;
-      }
-    }
-    .sign{
-      margin-left: 10px;
+    text-align: right;
+    img {
+      margin: 20px 0 10px;
+      width: 250px;
     }
   }
 }
