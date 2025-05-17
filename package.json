@@ -1,24 +1,23 @@
 {
   "name": "tanimoto",
   "version": "1.0.0",
-  "main": "Gruntfile.js",
-  "dependencies": {
-    "compass": "^0.1.1",
-    "grunt": "^1.6.1"
-  },
+  "main": "gulpfile.js",
+  "dependencies": {},
   "devDependencies": {
-    "grunt-contrib-clean": "^2.0.1",
-    "grunt-contrib-concat": "^2.1.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-uglify": "^4.0.1",
-    "grunt-image": "^6.4.0",
-    "grunt-replace": "^2.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "sass": "^1.62.0"
   },
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",

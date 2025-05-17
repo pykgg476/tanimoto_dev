@@ -24,26 +24,14 @@
 # https://nodejs.org/
 ```
 
-2. Gruntのグローバルインストール
-```bash
-npm install -g grunt-cli
-```
-
-3. プロジェクトの依存パッケージをインストール
+2. 依存パッケージをインストール
 ```bash
 npm install
 ```
-
-4. 開発サーバーの起動
+3. 開発サーバーの起動
 ```bash
-# 開発用ビルド（画像圧縮あり）
-grunt dev
-
-# 本番用ビルド（画像圧縮あり）
-grunt deploy
-
-# 通常ビルド（画像圧縮なし）
-grunt
+# ファイル監視付き開発ビルド
+npm start
 ```
 
 ## ディレクトリ構成
@@ -59,20 +47,18 @@ grunt
 ```
 
 ## ビルドタスク
-- `grunt dev`: 開発サーバー用のビルド（画像圧縮あり）
-- `grunt deploy`: 本番サーバー用のビルド（画像圧縮あり）
-- `grunt`: 通常ビルド（画像圧縮なし）
+- `npm start`: 変更を監視しながら `docs/` へ出力
+- `npm run build`: 一度だけビルドを実行
 
 ## ビルド内容
-- 不要なファイルの削除（clean）
-- ファイルのコピー（copy）
-- JavaScriptの圧縮（uglify）
-- 画像の圧縮（image）
-- パスの置換（replace）
+- SCSS のコンパイル（sass + autoprefixer）
+- JavaScript の圧縮（uglify）
+- 画像の圧縮（imagemin）
+- HTML や静的ファイルのコピー
 
 ## 注意事項
 - 作業時は`bin`をルートフォルダとして開くとプレビューが正しく表示されます
-- 本番環境へのデプロイ時は`grunt deploy`を使用してください
+- 本番環境へのデプロイ時は`npm run build`を使用してください
 - 初回セットアップ時は、必ず`npm install`を実行してください
 
 ## ブラウザ対応
