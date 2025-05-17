@@ -81,6 +81,6 @@ grunt
 - Safari（最新版）
 - Microsoft Edge（最新版）
 - Internet Explorer 11
-
+詳細な環境の仕組みは[ENVIRONMENT.md](ENVIRONMENT.md)を参照してください。
 ## ライセンス
 Copyright © Tanimoto Construction Co., Ltd. All Rights Reserved. 
