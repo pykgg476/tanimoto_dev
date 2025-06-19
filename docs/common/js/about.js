@@ -1,1 +1,0 @@
-$(function(){var e=$(".js_btn");mouseOverEffect(e,"a",.7,1,!1)});

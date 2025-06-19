@@ -1,1 +1,0 @@
-$(function(){var n=$(".humanLink").find(".link").not(".now");mouseOverEffect(n,".text",.6,1,!1),mouseOverEffect(n,".photo",.6,1,!1)});

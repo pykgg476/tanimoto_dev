@@ -3,52 +3,99 @@ const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+
 const path = {
-  bin: 'bin',
-  release: 'docs',
+  src: '.',
+  dist: 'dist',
   js: 'common/js',
   css: 'common/css',
   scss: 'common/scss',
   img: 'imageFile'
 };
 
+// SCSSをCSSに変換・圧縮
 function styles() {
-  return src(`${path.bin}/${path.scss}/**/*.scss`)
+  return src(`${path.scss}/**/*.scss`)
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(dest(`${path.bin}/${path.css}`));
+    .pipe(dest(`${path.css}`))
+    .pipe(dest(`${path.dist}/${path.css}`));
 }
 
+// JavaScript圧縮
 function scripts() {
-  return src(`${path.bin}/${path.js}/**/*.js`)
+  return src([
+    `${path.js}/**/*.js`,
+    `!${path.js}/**/*.min.js`
+  ])
     .pipe(uglify())
-    .pipe(dest(`${path.release}/${path.js}`));
+    .pipe(dest(`${path.dist}/${path.js}`));
 }
 
+// 既に圧縮されているJSファイルをコピー
+function copyMinScripts() {
+  return src(`${path.js}/**/*.min.js`)
+    .pipe(dest(`${path.dist}/${path.js}`));
+}
+
+// 画像圧縮
 function images() {
-  return src(`${path.bin}/${path.img}/**/*`)
-    .pipe(imagemin())
-    .pipe(dest(`${path.release}/${path.img}`));
+  return src(`${path.img}/**/*`)
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+        plugins: [{removeViewBox: true}, {cleanupIDs: false}]
+      })
+    ]))
+    .pipe(dest(`${path.dist}/${path.img}`));
 }
 
+// HTMLファイルコピー
 function copyHtml() {
   return src([
-    `${path.bin}/**/*.html`,
-    `${path.bin}/${path.css}/**/*`,
-    `${path.bin}/${path.js}/**/*`,
-    `${path.bin}/common/font/**`,
-    `${path.bin}/rookie_diary/**/*`,
-    `${path.bin}/projects/**/*`
-  ], { base: path.bin })
-    .pipe(dest(path.release));
+    '**/*.html',
+    '!node_modules/**',
+    '!dist/**',
+    '!bin/**',
+    '!docs/**'
+  ])
+    .pipe(dest(path.dist));
 }
 
+// その他のファイルコピー
+function copyOthers() {
+  return src([
+    'favicon.png',
+    'common/font/**',
+    'rookie_diary/**/*',
+    'projects/**/*',
+    '!**/*.scss'
+  ], { base: '.' })
+    .pipe(dest(path.dist));
+}
+
+// 開発用ウォッチャー
 function watcher() {
-  watch(`${path.bin}/**/*`, series(styles, parallel(copyHtml, scripts, images)));
+  watch(`${path.scss}/**/*.scss`, styles);
+  watch(`${path.js}/**/*.js`, parallel(scripts, copyMinScripts));
+  watch('**/*.html', copyHtml);
 }
 
-const build = series(styles, parallel(copyHtml, scripts, images));
+// クリーンビルド
+const build = series(
+  styles,
+  parallel(
+    scripts,
+    copyMinScripts,
+    images,
+    copyHtml,
+    copyOthers
+  )
+);
 
+exports.styles = styles;
 exports.build = build;
-exports.default = series(build, watcher);
-
+exports.watch = series(styles, watcher);
+exports.default = build;

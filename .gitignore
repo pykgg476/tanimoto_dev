@@ -3,5 +3,9 @@
 node_modules/
 .vscode/
 .sass-cache/
-docs/
+dist/
 package-lock.json
+*.log
+npm-debug.log*
+.env
+.env.local
