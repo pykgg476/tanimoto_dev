@@ -14,13 +14,16 @@ const path = {
   img: 'imageFile'
 };
 
+// GitHub Pages用のベースパス
+const basePath = process.env.GITHUB_PAGES ? '/tanimoto_dev' : '';
+
 // SCSSをCSSに変換・圧縮
 function styles() {
   return src(`${path.scss}/**/*.scss`)
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(replace(/url\("\/imageFile\//g, 'url("../../imageFile/'))
-    .pipe(replace(/url\(\/imageFile\//g, 'url(../../imageFile/'))
+    .pipe(replace(/url\("\/imageFile\//g, process.env.GITHUB_PAGES ? `url("${basePath}/imageFile/` : 'url("../../imageFile/'))
+    .pipe(replace(/url\(\/imageFile\//g, process.env.GITHUB_PAGES ? `url(${basePath}/imageFile/` : 'url(../../imageFile/'))
     .pipe(dest(`${path.dist}/${path.css}`));
 }
 
@@ -73,15 +76,23 @@ function copyHtml() {
         let content = file.contents.toString();
         
         // Replace all absolute paths with relative paths
-        // Using a comprehensive regex pattern that captures href and src attributes
-        content = content.replace(/(href|src)="\/([^"]+)"/g, function(match, attr, path) {
-          return `${attr}="${prefix}${path}"`;
-        });
-        
-        // Also handle links without quotes (shouldn't exist, but just in case)
-        content = content.replace(/(href|src)=\/([^\s>]+)/g, function(match, attr, path) {
-          return `${attr}="${prefix}${path}"`;
-        });
+        // For GitHub Pages deployment, use absolute paths with base path
+        if (process.env.GITHUB_PAGES) {
+          content = content.replace(/(href|src)="\/((?!http)[^"]+)"/g, function(match, attr, path) {
+            return `${attr}="${basePath}/${path}"`;
+          });
+          content = content.replace(/(href|src)="\./g, function(match, attr) {
+            return `${attr}="${basePath}`;
+          });
+        } else {
+          // For local development, use relative paths
+          content = content.replace(/(href|src)="\/([^"]+)"/g, function(match, attr, path) {
+            return `${attr}="${prefix}${path}"`;
+          });
+          content = content.replace(/(href|src)=\/([^\s>]+)/g, function(match, attr, path) {
+            return `${attr}="${prefix}${path}"`;
+          });
+        }
         
         file.contents = Buffer.from(content);
       }
