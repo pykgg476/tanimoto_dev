@@ -2,6 +2,7 @@
 
 ## 概要
 たにもと建設株式会社の公式ウェブサイトのソースコードです。
+GitHub Actions による自動ビルド・デプロイ環境で運用されています。
 
 ## 会社概要
 - 社名：たにもと建設株式会社
@@ -11,55 +12,153 @@
 - 所在地：神奈川県横浜市中区羽衣町2-7-10 関内駅前マークビル6F
 
 ## 技術スタック
-- HTML5
-- CSS3
-- JavaScript
-- jQuery
-- Google Maps API
+- **フロントエンド**: HTML5, CSS3 (SCSS), JavaScript (ES6), jQuery
+- **ビルドツール**: Gulp 4.x
+- **CI/CD**: GitHub Actions
+- **デプロイ**: GitHub Pages
+- **API**: Google Maps API
 
 ## 開発環境のセットアップ
-1. Node.jsのインストール
-```bash
-# Node.jsがインストールされていない場合は、公式サイトからダウンロードしてインストール
-# https://nodejs.org/
-```
 
-2. 依存パッケージをインストール
+### 1. 前提条件
+- Node.js 18.x 以上
+- npm または yarn
+
+### 2. 依存パッケージのインストール
 ```bash
 npm install
 ```
-3. 開発サーバーの起動
+
+### 3. 開発用ビルド
 ```bash
-# ファイル監視付き開発ビルド
-npm start
+# ワンタイムビルド
+npm run build
+
+# ファイル監視付き開発モード
+npm run watch
 ```
 
-## ディレクトリ構成
+## ディレクトリ構成（更新済み）
 ```
 .
-├── bin/                # メインのHTMLファイル
-├── common/            # 共通のCSS、JavaScript、画像ファイル
-│   ├── css/          # スタイルシート
-│   ├── js/           # JavaScriptファイル
-│   └── imageFile/    # 画像ファイル
-├── docs/             # ビルド後のファイル（リリース用）
-└── imageFile/        # ページ固有の画像ファイル
+├── index.html           # トップページ
+├── about_index.html     # 取り組み一覧ページ
+├── common/             # 共通アセット
+│   ├── scss/          # Sassソースファイル
+│   ├── css/           # コンパイル済みCSS
+│   ├── js/            # JavaScriptファイル
+│   └── font/          # Webフォント
+├── imageFile/          # 画像ファイル
+│   ├── global/        # 共通画像
+│   ├── projects/      # プロジェクト別画像
+│   └── works/         # 施工実績画像
+├── projects/           # プロジェクトページ
+│   ├── 2023/
+│   ├── 2024/
+│   └── 2025/          # 新年度プロジェクト
+├── rookie_diary/       # 新人日記
+├── dist/              # ビルド出力（自動生成）
+├── .github/workflows/ # GitHub Actions設定
+└── gulpfile.js        # ビルド設定
 ```
 
-## ビルドタスク
-- `npm start`: 変更を監視しながら `docs/` へ出力
-- `npm run build`: 一度だけビルドを実行
+## ビルドシステム
 
-## ビルド内容
-- SCSS のコンパイル（sass + autoprefixer）
-- JavaScript の圧縮（uglify）
-- 画像の圧縮（imagemin）
-- HTML や静的ファイルのコピー
+### 利用可能なコマンド
+```bash
+# 本番用ビルド（圧縮・最適化）
+npm run build
+
+# 開発用ビルド（ファイル監視付き）
+npm run watch
+
+# SCSSコンパイルのみ
+npx gulp styles
+```
+
+### ビルド処理内容
+1. **SCSS → CSS**: Sassコンパイル + Autoprefixer + 圧縮
+2. **JavaScript圧縮**: UglifyJS による minify
+3. **画像最適化**: ImageMin による画像圧縮（JPEG, PNG, SVG対応）
+4. **ファイルコピー**: HTML, フォント, その他アセットをdistフォルダに出力
+
+### 最適化効果
+- **JavaScript**: 最大80%サイズ削減
+- **画像ファイル**: 最大89%サイズ削減
+- **CSS**: SCSS変換 + 圧縮 + ベンダープレフィックス自動付与
+
+## GitHub Actions 自動デプロイ
+
+### 概要
+- **トリガー**: `main` または `master` ブランチへのpush
+- **処理内容**: 
+  1. 依存関係のインストール
+  2. ビルド実行
+  3. GitHub Pages への自動デプロイ
+- **出力**: `dist/` フォルダの内容が `gh-pages` ブランチに自動配信
+
+### デプロイフロー
+```mermaid
+graph LR
+    A[ローカル開発] --> B[Git Push]
+    B --> C[GitHub Actions]
+    C --> D[ビルド実行]
+    D --> E[GitHub Pages]
+    E --> F[本番サイト更新]
+```
+
+## 開発ワークフロー
+
+### 1. 新機能開発
+```bash
+# 1. 最新のmainブランチをpull
+git checkout main
+git pull origin main
+
+# 2. 機能ブランチを作成
+git checkout -b feature/新機能名
+
+# 3. 開発（ファイル監視モードで作業）
+npm run watch
+
+# 4. ビルドテスト
+npm run build
+
+# 5. コミット・プッシュ
+git add .
+git commit -m "追加: 新機能の実装"
+git push origin feature/新機能名
+```
+
+### 2. プレビュー確認
+- **ローカル**: `npm run build` 後に `dist/index.html` をブラウザで開く
+- **ステージング**: 機能ブランチをpushすると自動でプレビュー環境構築（PR作成時）
+- **本番**: mainブランチマージ後、自動でGitHub Pagesに反映
 
 ## 注意事項
-- 作業時は`bin`をルートフォルダとして開くとプレビューが正しく表示されます
-- 本番環境へのデプロイ時は`npm run build`を使用してください
-- 初回セットアップ時は、必ず`npm install`を実行してください
+
+### 開発時
+- **ソースファイル**: ルートディレクトリの `.html`, `common/scss/`, `imageFile/` を編集
+- **ビルド前確認**: 必ず `npm run build` でエラーがないことを確認
+- **SCSS編集**: `common/scss/` 内のファイルを編集（`common/css/` は自動生成）
+
+### デプロイ時
+- **自動デプロイ**: mainブランチへのマージで自動実行
+- **手動デプロイ**: 緊急時は GitHub Actions の手動実行も可能
+- **ロールバック**: 前のコミットに戻す場合は該当コミットをrevertしてpush
+
+### トラブルシューティング
+```bash
+# 依存関係の問題
+npm ci  # package-lock.jsonを元に再インストール
+
+# ビルドエラー
+npm run build 2>&1 | tee build.log  # エラーログを保存
+
+# キャッシュクリア
+rm -rf node_modules package-lock.json
+npm install
+```
 
 ## ブラウザ対応
 - Google Chrome（最新版）
