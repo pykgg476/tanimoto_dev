@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const through2 = require('through2');
 
 const path = {
   src: '.',
@@ -63,11 +64,29 @@ function copyHtml() {
     '!dist/**',
     '!bin/**',
     '!docs/**'
-  ], { encoding: false })
-    .pipe(replace(/href="\/favicon\.png"/g, 'href="./favicon.png"'))
-    .pipe(replace(/src="\/imageFile\//g, 'src="./imageFile/'))
-    .pipe(replace(/href="\/common\//g, 'href="./common/'))
-    .pipe(replace(/src="\/common\//g, 'src="./common/'))
+  ])
+    .pipe(through2.obj(function(file, enc, cb) {
+      if (file.isBuffer()) {
+        const depth = file.relative.split('/').length - 1;
+        const prefix = depth > 0 ? '../'.repeat(depth) : './';
+        
+        let content = file.contents.toString();
+        
+        // Replace all absolute paths with relative paths
+        // Using a comprehensive regex pattern that captures href and src attributes
+        content = content.replace(/(href|src)="\/([^"]+)"/g, function(match, attr, path) {
+          return `${attr}="${prefix}${path}"`;
+        });
+        
+        // Also handle links without quotes (shouldn't exist, but just in case)
+        content = content.replace(/(href|src)=\/([^\s>]+)/g, function(match, attr, path) {
+          return `${attr}="${prefix}${path}"`;
+        });
+        
+        file.contents = Buffer.from(content);
+      }
+      cb(null, file);
+    }))
     .pipe(dest(path.dist));
 }
 
@@ -78,7 +97,8 @@ function copyOthers() {
     'common/font/**',
     'rookie_diary/**/*',
     'projects/**/*',
-    '!**/*.scss'
+    '!**/*.scss',
+    '!**/*.html'  // HTMLファイルは copyHtml で処理するので除外
   ], { base: '.' })
     .pipe(dest(path.dist));
 }
