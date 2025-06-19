@@ -4,6 +4,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const through2 = require('through2');
+const replace = require('gulp-replace');
 
 const path = {
   src: '.',
@@ -14,16 +15,27 @@ const path = {
   img: 'imageFile'
 };
 
-// GitHub Pages用のベースパス
-const basePath = process.env.GITHUB_PAGES ? '/tanimoto_dev' : '';
+// GitHub Pages用のベースパス - 本番環境では./で統一
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 
 // SCSSをCSSに変換・圧縮
 function styles() {
   return src(`${path.scss}/**/*.scss`)
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(replace(/url\("\/imageFile\//g, process.env.GITHUB_PAGES ? `url("${basePath}/imageFile/` : 'url("../../imageFile/'))
-    .pipe(replace(/url\(\/imageFile\//g, process.env.GITHUB_PAGES ? `url(${basePath}/imageFile/` : 'url(../../imageFile/'))
+    .pipe(through2.obj(function(file, enc, cb) {
+      if (file.isBuffer()) {
+        let content = file.contents.toString();
+        // CSSファイル内のパス修正
+        if (isGitHubPages) {
+          // GitHub Pages用: 絶対パスを相対パスに変換
+          content = content.replace(/url\(\"?\/imageFile\//g, 'url("../../imageFile/');
+          content = content.replace(/url\(\/?imageFile\//g, 'url(../../imageFile/');
+        }
+        file.contents = Buffer.from(content);
+      }
+      cb(null, file);
+    }))
     .pipe(dest(`${path.dist}/${path.css}`));
 }
 
@@ -58,7 +70,6 @@ function images() {
 }
 
 // HTMLファイルコピー（ベースパス修正付き）
-const replace = require('gulp-replace');
 
 function copyHtml() {
   return src([
@@ -70,29 +81,26 @@ function copyHtml() {
   ])
     .pipe(through2.obj(function(file, enc, cb) {
       if (file.isBuffer()) {
+        let content = file.contents.toString();
+        
+        // ファイルの深さに応じた相対パスプレフィックスを計算
         const depth = file.relative.split('/').length - 1;
         const prefix = depth > 0 ? '../'.repeat(depth) : './';
         
-        let content = file.contents.toString();
+        // 絶対パスを相対パスに変換
+        // href="/..." または src="/..." のパターンを変換
+        content = content.replace(/(href|src)="\/([^"]+)"/g, function(match, attr, pathValue) {
+          // http:// や https:// で始まる場合はそのまま
+          if (pathValue.startsWith('http://') || pathValue.startsWith('https://') || pathValue.startsWith('//')) {
+            return match;
+          }
+          return `${attr}="${prefix}${pathValue}"`;
+        });
         
-        // Replace all absolute paths with relative paths
-        // For GitHub Pages deployment, use absolute paths with base path
-        if (process.env.GITHUB_PAGES) {
-          content = content.replace(/(href|src)="\/((?!http)[^"]+)"/g, function(match, attr, path) {
-            return `${attr}="${basePath}/${path}"`;
-          });
-          content = content.replace(/(href|src)="\./g, function(match, attr) {
-            return `${attr}="${basePath}`;
-          });
-        } else {
-          // For local development, use relative paths
-          content = content.replace(/(href|src)="\/([^"]+)"/g, function(match, attr, path) {
-            return `${attr}="${prefix}${path}"`;
-          });
-          content = content.replace(/(href|src)=\/([^\s>]+)/g, function(match, attr, path) {
-            return `${attr}="${prefix}${path}"`;
-          });
-        }
+        // href=/ または src=/ のパターン（クォートなし）も変換
+        content = content.replace(/(href|src)=\/([^\s>]+)/g, function(match, attr, pathValue) {
+          return `${attr}="${prefix}${pathValue}"`;
+        });
         
         file.contents = Buffer.from(content);
       }
