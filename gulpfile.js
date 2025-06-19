@@ -63,7 +63,7 @@ function copyHtml() {
     '!dist/**',
     '!bin/**',
     '!docs/**'
-  ])
+  ], { encoding: false })
     .pipe(replace(/href="\/favicon\.png"/g, 'href="./favicon.png"'))
     .pipe(replace(/src="\/imageFile\//g, 'src="./imageFile/'))
     .pipe(replace(/href="\/common\//g, 'href="./common/'))
