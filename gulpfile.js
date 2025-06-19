@@ -18,7 +18,8 @@ function styles() {
   return src(`${path.scss}/**/*.scss`)
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(dest(`${path.css}`))
+    .pipe(replace(/url\("\/imageFile\//g, 'url("../../imageFile/'))
+    .pipe(replace(/url\(\/imageFile\//g, 'url(../../imageFile/'))
     .pipe(dest(`${path.dist}/${path.css}`));
 }
 
@@ -52,7 +53,9 @@ function images() {
     .pipe(dest(`${path.dist}/${path.img}`));
 }
 
-// HTMLファイルコピー
+// HTMLファイルコピー（ベースパス修正付き）
+const replace = require('gulp-replace');
+
 function copyHtml() {
   return src([
     '**/*.html',
@@ -61,6 +64,10 @@ function copyHtml() {
     '!bin/**',
     '!docs/**'
   ])
+    .pipe(replace(/href="\/favicon\.png"/g, 'href="./favicon.png"'))
+    .pipe(replace(/src="\/imageFile\//g, 'src="./imageFile/'))
+    .pipe(replace(/href="\/common\//g, 'href="./common/'))
+    .pipe(replace(/src="\/common\//g, 'src="./common/'))
     .pipe(dest(path.dist));
 }
 

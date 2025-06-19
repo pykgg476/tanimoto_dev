@@ -2,13 +2,13 @@
   "name": "tanimoto",
   "version": "1.0.0",
   "main": "gulpfile.js",
-  "dependencies": {},
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0",
     "gulp-autoprefixer": "^8.0.0",
-    "gulp-uglify": "^3.0.2",
     "gulp-imagemin": "^7.1.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
     "sass": "^1.62.0"
   },
   "scripts": {
