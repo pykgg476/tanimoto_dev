@@ -4,7 +4,6 @@ node_modules/
 .vscode/
 .sass-cache/
 dist/
-package-lock.json
 *.log
 npm-debug.log*
 .env
