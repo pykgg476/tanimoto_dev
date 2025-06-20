@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*============================
+@import
+============================*/
+
+@import "base";
+
+
+// パネル画像 2025年
+#yokohama_good_balance #panelArea{
+  background-image: url("../../imageFile/projects/2025/yokohama_good_balance/panel@2x.jpg");
+  background-position: center middle;
+}
+
+#yokohama_kenkou_keiei #panelArea{
+  background-image: url("../../imageFile/projects/2025/yokohama_kenkou_keiei/panel@2x.jpg");
+  background-position: center middle;
+}
+
+
+
+
+/*============================
+Function
+============================*/
