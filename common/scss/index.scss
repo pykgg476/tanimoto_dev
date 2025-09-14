@@ -154,6 +154,19 @@ body{
   }
 }
 
+/* Responsive: smartphone */
+@media screen and (max-width: 600px) {
+  #topAbout {
+    .aboutBase {
+      .copyBase {
+        .catch {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+
 /* Project */
 #topProject{
   @extend %topContentsBase;
@@ -241,5 +254,3 @@ body{
     }
   }
 }
-
-
