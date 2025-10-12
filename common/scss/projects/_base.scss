@@ -55,20 +55,34 @@ Sytle
     line-height: 110%; /* 35.2px */
     margin-bottom: 38px;
   }
-  .unitContents{
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-    align-self: stretch;
-    & + .unitContents{
-      margin-top: 40px;
-    }
-    .photo{
-      .caption{
-        margin-top: 10px;
-        display: block;
-        font-size: 12px;
-        color: #888;
+    .unitContents{
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      align-self: stretch;
+      & + .unitContents{
+        margin-top: 40px;
+      }
+      .photo{
+        // 画像サイズ統一（縦横比は保持）
+        img{
+          width: 400px;
+          height: auto;
+          // max-width: 100%;
+        }
+        // 強制的に 400x256 にトリミングしたい場合
+        &.photo--cover{
+          img{
+            width: 400px;
+            height: 256px;
+            object-fit: cover;
+          }
+        }
+        .caption{
+          margin-top: 10px;
+          display: block;
+          font-size: 12px;
+          color: #888;
         text-align: center;
         & + img{
           margin-top: $work_padding;

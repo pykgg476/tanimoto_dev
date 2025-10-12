@@ -55,4 +55,11 @@ GitHub Pages での正常表示のため、ビルド時に以下のパス変換�
 - 本番デプロイは GitHub Actions が自動実行するため手動デプロイ不要
 - ローカルビルド確認は `npm run build` 後 `dist/` フォルダを確認
 
+## Sass 運用ルール
+- CSS は原則 SCSS から生成します。`common/css/` を直接編集しないでください（ビルドで上書きされます）。
+- 各ページのパネル背景画像は `common/scss/projects/projects_2024.scss` にて指定します。
+  - 例: `#golf2024 #panelArea { background-image: url("/imageFile/projects/2024/golf2024/signboard@2x.jpg"); }`
+  - 画像パスは先頭 `/imageFile/...` の絶対パスで記述します（ビルド時に相対パスへ自動変換）。
+- 背景位置は `background-position` で個別に調整します（標準は `center center`）。
+- 画像は `imageFile/` 配下に格納し、命名は `panel@2x.jpg` など一貫性のある形式を推奨します。
 
