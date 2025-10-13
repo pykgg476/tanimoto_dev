@@ -201,6 +201,12 @@ body{
                 height: 100%;
                 object-fit: cover;
                 display: block;
+                transform: scale(1);
+                transform-origin: center center;
+                transition: transform 0.3s ease-in-out;
+                &.is-zoom{
+                  transform: scale(1.06);
+                }
               }
             }
             .projectTitle{
@@ -248,6 +254,12 @@ body{
                 height: 100%;
                 object-fit: cover;
                 display: block;
+                transform: scale(1);
+                transform-origin: center center;
+                transition: transform 0.3s ease-in-out;
+                &.is-zoom{
+                  transform: scale(1.06);
+                }
               }
             }
             .workTitle{
