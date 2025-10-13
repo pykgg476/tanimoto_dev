@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
-  <rect width="800" height="450" fill="#2a7f62"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="48" fill="#ffffff">第1回：本社での座学</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450"><path fill="#2a7f62" d="M0 0h800v450H0z"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="48" fill="#fff">第1回：本社での座学</text></svg>

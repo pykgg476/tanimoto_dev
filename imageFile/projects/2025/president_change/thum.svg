@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240">
-  <rect width="320" height="240" fill="#0a4a7a"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="28" fill="#ffffff">TANIMOTO</text>
-  <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="#ffffff">ロゴ</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240"><path fill="#0a4a7a" d="M0 0h320v240H0z"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="28" fill="#fff">TANIMOTO</text><text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="#fff">ロゴ</text></svg>

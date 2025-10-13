@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240">
-  <rect width="320" height="240" fill="#1f6d9c"/>
-  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-size="24" fill="#ffffff">放流祭</text>
-  <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" font-size="16" fill="#ffffff">金沢漁港</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240"><path fill="#1f6d9c" d="M0 0h320v240H0z"/><text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-size="24" fill="#fff">放流祭</text><text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" font-size="16" fill="#fff">金沢漁港</text></svg>
