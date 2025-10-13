@@ -55,4 +55,13 @@ GitHub Pages での正常表示のため、ビルド時に以下のパス変換�
 - 本番デプロイは GitHub Actions が自動実行するため手動デプロイ不要
 - ローカルビルド確認は `npm run build` 後 `dist/` フォルダを確認
 
+## Sass運用ルール（重要）
+- CSS を直接編集しないこと。必ず SCSS を更新し、ビルドで反映する。
+- 年度ごとの取り組みページ（projects）は `common/scss/projects/projects_YYYY.scss` を作成し、`@import "base";` を記載する。
+- 各記事ページの `<body id="...">` に対応する `#panelArea` の背景画像は SCSS に追加すること。
+  - 例：`#presidentChange2025 #panelArea { background-image: url("/imageFile/projects/2025/president_change/main.jpg"); }`
+- 画像パスは CSS 内では `/imageFile/...` の絶対パスで指定（ビルド時に相対へ自動変換）。
+- 一覧サムネイル（`about_index.html`）は原則としてパネル画像に合わせて差し替える。
+- 緊急で `common/css/*.css` に直接パッチを当てた場合は、同内容を SCSS に必ず反映し、以後は SCSS から再ビルドして整合を保つ。
+- 変更後は `npm run watch` で開発ビルド、または `npm run build` を実行して反映を確認する。
 
