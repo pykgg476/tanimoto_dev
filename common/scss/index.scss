@@ -168,7 +168,7 @@ body{
 }
 
 /* Project */
-#topProject{
+.topProject{
   @extend %topContentsBase;
   .contentsBase{
     background: $color_gray;
@@ -201,21 +201,6 @@ body{
                 height: 100%;
                 object-fit: cover;
                 display: block;
-              }
-              &.photo--placeholder{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0 24px;
-                box-sizing: border-box;
-                background: linear-gradient(135deg,#0f4c81,#1c7cba);
-                color: #fff;
-                font-weight: 700;
-                text-align: center;
-                line-height: 1.4;
-                .photo--placeholderLabel{
-                  display: block;
-                }
               }
             }
             .projectTitle{
