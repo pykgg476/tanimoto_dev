@@ -88,24 +88,8 @@ Sytle
           margin-top: $work_padding;
         }
       }
-      &.photo--placeholder{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 400px;
-        max-width: 100%;
-        min-height: 256px;
-        padding: 16px;
-        box-sizing: border-box;
-        border-radius: 12px;
-        background: linear-gradient(135deg,#0f4c81,#1c7cba);
-        color: #fff;
-        text-align: center;
-        font-weight: 700;
-        line-height: 1.6;
-        .photo--placeholderLabel{
-          display: block;
-        }
+      img + img {
+        margin-top: $work_padding;
       }
     }
     .textSet{
