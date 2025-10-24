@@ -168,7 +168,7 @@ body{
 }
 
 /* Project */
-#topProject{
+.topProject{
   @extend %topContentsBase;
   .contentsBase{
     background: $color_gray;
@@ -190,14 +190,23 @@ body{
             margin-left: 10px;
           }
           a{
-            display: inline-block;;
+            display: inline-block;
             .photo{
               width: 320px;
               height: 240px;
               overflow: hidden;
               img{
                 position: relative;
-                height: auto;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transform: scale(1);
+                transform-origin: center center;
+                transition: transform 0.3s ease-in-out;
+                &.is-zoom{
+                  transform: scale(1.06);
+                }
               }
             }
             .projectTitle{
@@ -241,7 +250,16 @@ body{
               overflow: hidden;
               img{
                 position: relative;
-                height: auto;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transform: scale(1);
+                transform-origin: center center;
+                transition: transform 0.3s ease-in-out;
+                &.is-zoom{
+                  transform: scale(1.06);
+                }
               }
             }
             .workTitle{

@@ -25,7 +25,7 @@ Sytle
 
 // 共通画像
 #common #panelArea{
-  background-image: url("/imageFile/projects/common/panel@2x.jpg");
+  background-image: url("../../imageFile/projects/common/panel@2x.jpg");
   background-position: center middle;
 }
 
@@ -64,6 +64,7 @@ Sytle
       margin-top: 40px;
     }
     .photo{
+      text-align: center;
       .caption{
         margin-top: 10px;
         display: block;
@@ -73,6 +74,9 @@ Sytle
         & + img{
           margin-top: $work_padding;
         }
+      }
+      img + img{
+        margin-top: $work_padding;
       }
     }
     .textSet{
